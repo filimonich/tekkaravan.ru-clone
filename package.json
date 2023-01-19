@@ -51,7 +51,8 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
-		"jquery": "^3.6.0"
+		"jquery": "^3.6.0",
+		"scroll-lock": "^2.1.5"
 	},
 	"externalJs": {
 		"jquery": "dist/jquery.min.js"
@@ -63,9 +64,9 @@
 		"workdir": ""
 	},
 	"bemtree": {
-		"from": "src/**/!(_|temp)*.html",
+		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened"
+		"omit": "@@,js-,active,opened,footer"
 	}
 }

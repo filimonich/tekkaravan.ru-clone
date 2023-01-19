@@ -1,0 +1,126 @@
+.navi {
+	$self: &;
+
+	&__close {
+		@extend %reset-button;		
+		position: absolute;
+		height: 25px;
+		width: 25px;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 19px 19px no-repeat transparent;
+		top: 26px;
+		right: 24px;
+	}
+
+	&__search {
+		margin-bottom: 24px;
+	}
+
+	&__menu {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	
+	&__submenu {
+		display: none;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: #{$text};
+			font-family: "RL", sans-serif;
+			font-size: 16px;
+			line-height: 24px;
+			padding: 12px 12px 12px 40px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__link {
+		color: #{$text};
+		text-decoration-color: transparent;
+		font-size: 20px;
+		line-height: 24px;
+		padding: 12px 12px 12px 40px;
+		background-position: left center;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		display: flex;
+		align-items: center;
+		
+		&:hover {
+			text-decoration-color: #{$placeholder};
+		}
+
+		&_services {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-services-view-blue');
+			background-size: 19px 20px;
+		}
+
+		&_dropdown {
+			&::after {
+				display: block;
+				content: '';
+				width: 16px;
+				height: 10px;
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-dark') center / contain no-repeat transparent;
+				margin: 2px 0 0 15px;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+			
+			&.opened::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		&_profile {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-profile-view-blue');
+			background-size: 26px 20px;
+		}
+
+		&_cargo {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cargo-view-blue');
+			background-size: 26px 20px;
+		}
+
+		&_drivers {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-drivers-view-blue');
+			background-size: 25px 20px;
+		}
+
+		&_tracks {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-tracks-view-blue');
+			background-size: 25px 20px;
+		}
+
+		&_parts {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-parts-view-blue');
+			background-size: 20px 20px;
+		}
+
+		&_carrier {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
+			background-size: 27px 20px;
+		}
+
+		&_users {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-users-view-blue');
+			background-size: 28px 20px;
+		}
+
+		&_tracking {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-tracking-view-blue');
+			background-size: 22px 20px;
+		}
+
+		&_payment {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-payment-view-blue');
+			background-size: 28px 20px;
+		}
+	}
+}

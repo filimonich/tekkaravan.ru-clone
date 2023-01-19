@@ -7,15 +7,53 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body class="home"> 
+<body class=""> 
  
-<header class="header"> 
-  
+<header class="header">
+	<div class="header__inner container">
+		<a class="header__logo" href="./"><img src="./images/logo.png" alt=""></a>
+		<form action="./" class="header__search search">
+			<input class="search__input" type="text" placeholder="Поиск">
+			<input class="search__submit" type="submit" value="">
+		</form>
+		<div class="header__navi navi">
+			<buton class="navi__close"></buton>
+			<form action="./" class="navi__search search">
+				<input class="search__input" type="text" placeholder="Поиск">
+				<input class="search__submit" type="submit" value="">
+			</form>
+			<nav class="navi__menu">
+				<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
+				<div class="navi__submenu">
+					<a href="./">WhatsApp</a>					
+					<a href="./">История рассылок WhatsApp</a>					
+					<a href="./">Push рассылка</a>
+					<a href="./">Email рассылка</a>
+					<a href="./">Контроль сотрудников</a>
+					<a href="./">Справочник</a>
+					<a href="./">Гости</a>
+				</div>
+				<a class="navi__link navi__link_profile" href="./">Профиль</a>
+				<a class="navi__link navi__link_cargo" href="./">Грузы</a>
+				<a class="navi__link navi__link_drivers" href="./">Перевозчики</a>
+				<a class="navi__link navi__link_tracks" href="./">Track-маркет</a>
+				<a class="navi__link navi__link_parts" href="./">Автозапчасти</a>
+				<a class="navi__link navi__link_carrier" href="./">Карьера</a>
+				<a class="navi__link navi__link_users" href="./">Пользователи</a>
+				<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
+				<a class="navi__link navi__link_payment" href="./">Оплата</a>
+			</nav>
+		</div>
+		<div class="header__side">
+			<a class="header__login" href="./">Вход</a>
+			<!-- <a class="header__logout" href="./">Выход</a> -->
+			<a class="header__register" href="./">Регистрация</a>
+			<button class="header__toggle"></button>
+		</div>
+	</div>
 </header> 
  
-<main class="main container"> 
-	Начало работы..
-</main> 
+
 <footer class="footer"> 
   
 </footer> 
