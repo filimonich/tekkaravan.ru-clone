@@ -1,0 +1,45 @@
+.select {
+	$self: &;
+
+	&_opened {
+		
+		#{$self}__list {
+			display: block;
+		}
+		
+		#{$self}__head::before {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__head {
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 10px 24px;
+	}
+
+	&__list {
+		box-sizing: border-box;
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		z-index: 2;
+		top: calc(100% + 12px);
+		width: 100%;
+		padding: 10px 25px;
+		border-radius: 3px;
+		
+		@include media('<=xxxs') {
+			padding: 10px 15px;
+			top: calc(100% + 6px);
+		}
+	}
+
+	&__item {
+
+	}
+}

@@ -1,12 +1,71 @@
 .button {
 	$self: &;
+	@extend %reset-button;
+	display: flex;
+	// width: 100%;
+	// max-width: 220px;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: #{$accent};
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: "RR", sans-serif;
+	height: 48px;
 
-	&_change {
-		
+	&::after {
+		display: none;
+		content: '';
+		width: 24px;
+		height: 24px;
+		margin-left: 12px;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
-
-	&_find {
-		
+	
+	&_change::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-change-view-white');;
+		background-size: 24px 22px;
 	}
-
+	
+	&_find::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-zoom-view-white');;
+		background-size: 18px 18px;
+	}
+	
+	&_profile::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-white');;
+		background-size: 18px 20px;
+	}
+	
+	&_reset::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-cancel-view-white');;
+		background-size: 18px 18px;
+	}
+	
+	&_update::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-update-view-white');;
+		background-size: 20px 20px;
+	}
+	
+	&_send::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-white');;
+		background-size: 24px 18px;
+	}
+	
+	&_more::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-white');;
+		background-size: 24px 16px;
+	}
 }

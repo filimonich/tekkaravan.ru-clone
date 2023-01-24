@@ -6,22 +6,60 @@
 	}
 
 	&__field {
+		border: 1px solid #{$light};
+		border-radius: 10px;
+		height: 48px;
+		display: flex;
+		position: relative;
+		background-color: #{$field};
 
-		&_inp {
-			
+		&::before {
+			display: block;
+			content: attr(data-title);
+			position: absolute;
+			background-color: #{$light};
+			color: #{$label};
+			font-size: 11px;
+			font-family: "RB", sans-serif;
+			left: 20px;
+			top: 0;
+			transform: translateY(-50%);
+			padding: 2px 5px;
+			border-radius: 2px;
 		}
+
+		input {
+			@extend %reset-input;
+			width: 100%;
+			padding: 10px 24px;
+
+			&::placeholder {
+				color: #{$placeholder};
+			}
+		}
+
+		&_txt {
+
+		}
+
+		&_date {
+
+		}
+
+		&_sel {
+
+		}
+
+		&_file {
+
+		}
+	}
+
+	&__buttons {
+		display: flex;
 	}
 
 	&__button {
 
 	}
-
-	&__select {
-
-	}
-
-	&__buttons {
-
-	}
-
 }
