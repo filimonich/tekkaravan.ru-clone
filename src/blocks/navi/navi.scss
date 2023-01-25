@@ -26,7 +26,7 @@
 		a {
 			display: block;
 			text-decoration: none;
-			color: #{$text};
+			color: $text;
 			font-family: "RL", sans-serif;
 			font-size: 16px;
 			line-height: 24px;
@@ -39,7 +39,7 @@
 	}
 
 	&__link {
-		color: #{$text};
+		color: $text;
 		text-decoration-color: transparent;
 		font-size: 19px;
 		line-height: 24px;
@@ -51,7 +51,7 @@
 		align-items: center;
 		
 		&:hover {
-			text-decoration-color: #{$placeholder};
+			text-decoration-color: $placeholder;
 		}
 
 		&_services {
@@ -126,7 +126,7 @@
 		&_login {
 			display: none;
 			margin-top: 24px;
-			border-top: 1px solid #{$light};
+			border-top: 1px solid $light;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-login-view-blue');
 			background-size: 28px 20px;
 
@@ -138,7 +138,7 @@
 		&_logout {
 			display: none;
 			margin-top: 24px;
-			border-top: 1px solid #{$light};
+			border-top: 1px solid $light;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-logout-view-blue');
 			background-size: 28px 20px;
 

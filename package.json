@@ -52,6 +52,7 @@
 	},
 	"dependencies": {
 		"air-datepicker": "^3.3.5",
+		"animate-scss": "^3.2.1",
 		"jquery": "^3.6.0",
 		"scroll-lock": "^2.1.5"
 	},
@@ -68,6 +69,6 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened,footer,mt,mb"
+		"omit": "@@,js-,active,opened,mt,mb"
 	}
 }

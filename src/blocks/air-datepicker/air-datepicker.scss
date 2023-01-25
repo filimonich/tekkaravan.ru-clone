@@ -1,0 +1,13 @@
+.air-datepicker {
+	$self: &;
+	--adp-cell-background-color-selected: #{$accent};
+	--adp-border-radius: 10px;
+	
+	&-overlay {
+		--adp-overlay-background-color: rgba(0, 0, 0, 0.8);
+		
+		&.-active- {
+			backdrop-filter: blur(8px);	
+		}
+	}
+}

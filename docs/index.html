@@ -42,12 +42,12 @@
 				<a class="navi__link navi__link_users" href="./">Пользователи</a>
 				<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
 				<a class="navi__link navi__link_payment" href="./">Оплата</a>
-				<a class="navi__link navi__link_login" href="./">Вход</a>
+				<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
 				<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
 			</nav>
 		</div>
 		<div class="header__side">
-			<a class="header__login" href="./">Вход</a>
+			<a class="header__login" href="./" data-modal="login">Вход</a>
 			<!-- <a class="header__logout" href="./">Выход</a> -->
 			<a class="header__register" href="./">Регистрация</a>
 			<button class="header__toggle"></button>
@@ -61,17 +61,17 @@
 		<form class="section__unit form form-s" action="./">
 			<h2 class="title mb1">Форма поиска</h2>
 			<div class="form__body form-s__layout mb1">
-				<div class="form__field form__field_inp form-s__item" data-title="Откуда">
+				<div class="form__field form__field_inp form-s__item" id="form-s__from" data-title="Откуда">
 					<input type="text"/>
 				</div>
-				<div class="form__field form__field_inp form-s__item" data-title="Радиус">
+				<div class="form__field form__field_inp form-s__item" id="form-s__from-radius" data-title="Радиус">
 					<input type="text" placeholder="км"/>
 				</div>
-				<button class="form__button button button_change form-s__item" type="button">Направление</button>
-				<div class="form__field form__field_inp form-s__item" data-title="Куда">
+				<button class="form__button button button_change form-s__item" id="form-s__change" type="button">Направление</button>
+				<div class="form__field form__field_inp form-s__item" id="form-s__to" data-title="Куда">
 					<input type="text"/>
 				</div>
-				<div class="form__field form__field_inp form-s__item" data-title="Радиус">
+				<div class="form__field form__field_inp form-s__item" id="form-s__to-radius" data-title="Радиус">
 					<input type="text" placeholder="км"/>
 				</div>
 				<div class="form__field form__field_date form-s__item" data-title="Дата">
@@ -96,9 +96,19 @@
 </section>
 
 
-<footer class="footer"> 
-  
-</footer> 
+
+<div class="modal__hidden">
+	<div id="login">
+		<h1>Авторизация</h1>
+	</div>
+	<div id="register">
+		<h1>Регистрация</h1>
+	</div>
+	<div id="restore">
+		<h1>Восстановление пароля</h1>
+	</div>
+</div> 
+
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 

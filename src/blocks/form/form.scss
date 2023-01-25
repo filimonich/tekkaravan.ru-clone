@@ -7,19 +7,19 @@
 
 	&__field {
 		box-sizing: border-box;
-		border: 1px solid #{$light};
+		border: 1px solid $light;
 		border-radius: 10px;
 		height: 48px;
 		display: flex;
 		position: relative;
-		background-color: #{$field};
+		background-color: $field;
 
 		&::before {
 			display: block;
 			content: attr(data-title);
 			position: absolute;
-			background-color: #{$light};
-			color: #{$label};
+			background-color: $light;
+			color: $label;
 			font-size: 11px;
 			font-family: "RB", sans-serif;
 			left: 20px;
@@ -35,7 +35,7 @@
 			padding: 10px 24px;
 
 			&::placeholder {
-				color: #{$placeholder};
+				color: $placeholder;
 			}
 		}
 
@@ -44,7 +44,10 @@
 		}
 
 		&_date {
-
+			background-repeat: no-repeat;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-date-view-black');
+			background-position: center right 18px;
+			background-size: 18px 20px;
 		}
 
 		&_sel {
