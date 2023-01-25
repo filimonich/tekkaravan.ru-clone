@@ -41,7 +41,7 @@
 	&__link {
 		color: #{$text};
 		text-decoration-color: transparent;
-		font-size: 20px;
+		font-size: 19px;
 		line-height: 24px;
 		padding: 12px 12px 12px 40px;
 		background-position: left center;
@@ -121,6 +121,30 @@
 		&_payment {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-payment-view-blue');
 			background-size: 28px 20px;
+		}
+
+		&_login {
+			display: none;
+			margin-top: 24px;
+			border-top: 1px solid #{$light};
+			background-image: url('#{$images-path}icons-sprite.svg#icon-login-view-blue');
+			background-size: 28px 20px;
+
+			@include media('<=xs') {
+				display: block;
+			}
+		}
+		
+		&_logout {
+			display: none;
+			margin-top: 24px;
+			border-top: 1px solid #{$light};
+			background-image: url('#{$images-path}icons-sprite.svg#icon-logout-view-blue');
+			background-size: 28px 20px;
+
+			@include media('<=xs') {
+				display: block;
+			}
 		}
 	}
 }

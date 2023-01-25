@@ -6,6 +6,7 @@
 	}
 
 	&__field {
+		box-sizing: border-box;
 		border: 1px solid #{$light};
 		border-radius: 10px;
 		height: 48px;
@@ -56,7 +57,9 @@
 	}
 
 	&__buttons {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+		grid-gap: 24px;
 	}
 
 	&__button {

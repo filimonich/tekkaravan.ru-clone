@@ -5,37 +5,71 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-gap: 24px;
+	
+		@include media('<=xxs') {
+			display: block;
+		}
 	}
 
 	&__item {
+
+		@include media('<=xxs') {
+			margin-bottom: 24px;
+		}
+
 		&:nth-child(1) {
 			grid-column: span 3;
+			
+			@include media('<=md') {
+				grid-column: span 6;
+			}
 		}
 
 		&:nth-child(2) {
 			grid-column: span 2;
+			
+			@include media('<=md') {
+				grid-column: span 6;
+			}
 		}
 
 		&:nth-child(3) {
 			grid-column: span 2;
+			
+			@include media('<=md') {
+				grid-column: span 12;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 220px;
+			}
 		}
 
 		&:nth-child(4) {
 			grid-column: span 3;
+			
+			@include media('<=md') {
+				grid-column: span 6;
+			}
 		}
 
 		&:nth-child(5) {
 			grid-column: span 2;
+			
+			@include media('<=md') {
+				grid-column: span 6;
+			}
 		}
 
 		&:nth-child(n + 6) {
 			grid-column: span 4;
+			
+			@include media('<=sm') {
+				grid-column: span 6;
+			}
 		}
 	}
 
 	&__button {
-		&:not(:last-child) {
-			margin-right: 24px;
-		}
+
 	}
 }
