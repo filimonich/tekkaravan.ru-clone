@@ -7,9 +7,21 @@
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			grid-gap: 24px;
+				
+			@include media('<=xxs') {
+				display: block;
+			}
 
 			#{$self}__field, #{$self}__button {
 				grid-column: span 4;
+				
+				@include media('<=sm') {
+					grid-column: span 6;
+				}
+				
+				@include media('<=xxs') {
+					margin-bottom: 24px;
+				}
 			}
 		}
 	}
