@@ -98,13 +98,30 @@
 		}
 	}
 
+	&__alerts {
+		color: $warn;
+	}
+
 	&__buttons {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-		grid-gap: 24px;
+
+		&_grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+			grid-gap: 24px;
+		}
 	}
 
 	&__button {
 
+	}
+
+	&__small {
+		text-align: center;
+		font-size: 10px;
+		padding-top: 10px;
+
+		a {
+			color: inherit;
+		}
 	}
 }

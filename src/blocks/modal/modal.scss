@@ -44,9 +44,9 @@
 		}
 	}
 	
-	&_login {
+	&_login, &_restore {
 		#{$self}__body {
-			max-width: 560px;
+			max-width: 450px;
 		}
 		
 		#{$self}__content {
@@ -82,25 +82,13 @@
 		border-radius: 16px;
 		// overflow: hidden;
 		margin: auto;
-		padding: 20px;
+		padding: 24px;
 		width: 100%;
 		max-width: 1000px;
 		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
-		
-		@include media('<=sm') {
-			padding: 30px;
-		}
-		
-		@include media('<=xs') {
-			padding: 20px;
-		}
 	
 		@include media('<=xxs') {
-			padding: 15px;
-		}
-		
-		@include media('<=xxxs') {
-			padding: 5px;
+			padding: 20px;
 		}
 	}
 	
