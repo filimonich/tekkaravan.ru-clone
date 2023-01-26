@@ -56,22 +56,22 @@
 </header> 
  
 
-<section class="section mt2">
+<section class="section mt2 mb1">
 	<div class="section__layout container">
 		<form class="section__unit form form-s" action="./">
 			<h2 class="title mb1">Форма поиска</h2>
 			<div class="form__body form-s__layout mb1">
-				<div class="form__field form__field_inp form-s__item" id="form-s__from" data-title="Откуда">
+				<div class="form__field form__field_txt form-s__item" id="form-s__from" data-title="Откуда">
 					<input type="text"/>
 				</div>
-				<div class="form__field form__field_inp form-s__item" id="form-s__from-radius" data-title="Радиус">
+				<div class="form__field form__field_txt form-s__item" id="form-s__from-radius" data-title="Радиус">
 					<input type="text" placeholder="км"/>
 				</div>
 				<button class="form__button button button_change form-s__item" id="form-s__change" type="button">Направление</button>
-				<div class="form__field form__field_inp form-s__item" id="form-s__to" data-title="Куда">
+				<div class="form__field form__field_txt form-s__item" id="form-s__to" data-title="Куда">
 					<input type="text"/>
 				</div>
-				<div class="form__field form__field_inp form-s__item" id="form-s__to-radius" data-title="Радиус">
+				<div class="form__field form__field_txt form-s__item" id="form-s__to-radius" data-title="Радиус">
 					<input type="text" placeholder="км"/>
 				</div>
 				<div class="form__field form__field_date form-s__item" data-title="Дата">
@@ -95,6 +95,40 @@
 	</div>
 </section>
 
+<section class="section">
+	<div class="section__layout container">
+		<form class="section__unit form" action="./">
+			<h2 class="title mb1">Форма регистрации</h2>
+			<div class="form__body form__body_triple mb1">
+				<div class="form__field form__field_txt" data-title="Ф.И.О.">
+					<input type="text"/>
+				</div>
+				<div class="form__field form__field_txt" data-title="Email">
+					<input type="text" placeholder="address@gmail.com"/>
+				</div>
+				<div class="form__field form__field_txt" data-title="Номер телефона">
+					<input type="text" placeholder="79001234567"/>
+				</div>
+				<div class="form__field form__field_txt" data-title="ИНН">
+					<input type="text"/>
+				</div>
+				<div class="form__field form__field_txt" data-title="ИП или ООО">
+					<input type="text"/>
+				</div>
+				<div class="form__field form__field_txt" data-title="Пароль">
+					<input type="text"/>
+				</div>
+				<!-- <div class="form__field form__field_pass" data-title="Пароль">
+					<input type="password"/><button type="button"></button>
+				</div> -->
+			</div>
+			<div class="form__buttons">
+				<button class="form__button button" type="button">Регистрация</button>
+				<button class="form__button button" type="button">Авторизация</button>
+			</div>
+		</form>
+	</div>
+</section>
 
 
 <div class="modal__hidden">

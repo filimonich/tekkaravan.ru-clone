@@ -3,6 +3,15 @@
 
 	&__body {
 
+		&_triple {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-gap: 24px;
+
+			#{$self}__field, #{$self}__button {
+				grid-column: span 4;
+			}
+		}
 	}
 
 	&__field {
@@ -43,6 +52,20 @@
 
 		}
 
+		&_pass {
+			display: flex;
+
+			button {
+				@extend %reset-button;
+				background: url('#{$images-path}icons-sprite.svg#icon-eye-view-black') center / 23px 16px no-repeat transparent;
+				width: 50px;
+
+				&.active {
+					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-blue');
+				}
+			}
+		}
+
 		&_date {
 			background-repeat: no-repeat;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-date-view-black');
@@ -55,6 +78,10 @@
 		}
 
 		&_file {
+
+		}
+
+		&_area {
 
 		}
 	}
