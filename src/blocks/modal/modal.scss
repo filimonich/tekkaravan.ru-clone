@@ -14,10 +14,8 @@
 	padding: 30px;
 	align-items: center;
 	overflow-y: auto;
-	@keyframes show_fade {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
+	@keyframes show_fade_first { from { opacity: 0; } to { opacity: 1; }}
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
 	
 	@include media('<=xxs') {
 		padding: 15px;
@@ -44,7 +42,17 @@
 		}
 	}
 	
-	&_login, &_restore {
+	&_login {
+		#{$self}__body {
+			max-width: 450px;
+		}
+		
+		#{$self}__content {
+			animation: show_fade_first 0.3s;
+		}
+	}
+
+	&_restore {
 		#{$self}__body {
 			max-width: 450px;
 		}

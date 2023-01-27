@@ -53,6 +53,7 @@
 	"dependencies": {
 		"air-datepicker": "^3.3.5",
 		"animate-scss": "^3.2.1",
+		"inputmask": "^5.0.7",
 		"jquery": "^3.6.0",
 		"scroll-lock": "^2.1.5"
 	},
