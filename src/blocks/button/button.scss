@@ -15,6 +15,13 @@
 	font-family: "RR", sans-serif;
 	height: 48px;
 	white-space: nowrap;
+		
+	@include media('<=xxs') {
+		border-radius: 8px;
+		line-height: 20px;
+		font-size: 13px;
+		height: 40px;
+	}
 
 	&::after {
 		display: none;
@@ -26,47 +33,91 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+		
+		@include media('<=xxs') {
+			margin-left: 10px;
+			height: 20px;			
+			width: 20px;
+		}
 	}
 	
 	&_change::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-change-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-change-view-white');
 		background-size: 24px 22px;
+		
+		@include media('<=xxs') {
+			background-size: 20px 18px;
+		}
 	}
 	
 	&_find::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-zoom-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-zoom-view-white');
 		background-size: 18px 18px;
+		
+		@include media('<=xxs') {
+			background-size: 14px 14px;
+		}
 	}
 	
 	&_profile::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-white');
 		background-size: 18px 20px;
+		
+		@include media('<=xxs') {
+			background-size: 14px 16px;
+		}
 	}
 	
 	&_reset::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-cancel-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-cancel-view-white');
 		background-size: 18px 18px;
+		
+		@include media('<=xxs') {
+			background-size: 14px 14px;
+		}
 	}
 	
 	&_update::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-update-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-update-view-white');
 		background-size: 20px 20px;
+		
+		@include media('<=xxs') {
+			background-size: 16px 16px;
+		}
 	}
 	
 	&_send::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-white');
 		background-size: 24px 18px;
+		
+		@include media('<=xxs') {
+			background-size: 20px 14px;
+		}
 	}
 	
 	&_more::after {
 		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-white');;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-white');
 		background-size: 24px 16px;
+		
+		@include media('<=xxs') {
+			background-size: 20px 12px;
+		}
+	}
+	
+	&_save::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-save-view-white');
+		background-size: 20px 20px;
+		
+		@include media('<=xxs') {
+			background-size: 16px 16px;
+		}
 	}
 }

@@ -82,3 +82,15 @@ em { font-style: italic; }
 
 .mbt1 { margin-top: 24px; margin-bottom: 24px; }
 .mbt2 { margin-top: 48px; margin-bottom: 48px; }
+
+			
+@include media('<=xxs') {
+	.mt1 { margin-top: 20px; }
+	.mt2 { margin-top: 40px; }
+	
+	.mb1 { margin-bottom: 20px; }
+	.mb2 { margin-bottom: 40px; }
+	
+	.mbt1 { margin-top: 20px; margin-bottom: 20px; }
+	.mbt2 { margin-top: 40px; margin-bottom: 40px; }
+}

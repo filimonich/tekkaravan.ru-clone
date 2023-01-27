@@ -17,4 +17,22 @@ import Inputmask from "inputmask";
 			button.classList.toggle('active');
 		});
 	});
+	
+	document.querySelectorAll('.form__field_file input[type="file"]').forEach(input => {
+		input.addEventListener('change', (e) => {
+			const text = e.target.closest('.form__field_file').dataset.title;
+			const span = e.target.nextElementSibling;
+
+			if(!! e.target.value) {
+				span.innerText = e.target.files[0].name;
+				span.classList.add('selected');
+			} else {
+				span.innerText = text;
+				span.removeAttribute('class');
+			}
+		});
+	});
+
+
+
 })();

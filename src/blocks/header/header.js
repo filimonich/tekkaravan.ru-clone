@@ -24,7 +24,7 @@ import scrollLock from 'scroll-lock';
 	});
 	
 	$(window).on('click', function(e) {
-		if($shell.hasClass('opened') && !e.target.closest('.header__navi')) {
+		if($shell.hasClass('opened') && !e.target.closest('.header__navi') && !e.target.closest('.modal')) {
 			e.preventDefault();
 			$toggle.toggleClass('opened');
 			$shell.toggleClass('opened').removeAttr('style');

@@ -14,7 +14,7 @@
 	&__item {
 
 		@include media('<=xxs') {
-			margin-bottom: 24px;
+			margin-bottom: 20px;
 		}
 
 		&:nth-child(1) {

@@ -20,7 +20,11 @@
 		align-items: center;
 		padding: 10px 24px;
 		cursor: default;
-			
+		
+		@include media('<=xxs') {
+			padding: 10px 20px;
+		}
+	
 		&::before {
 			display: block;
 			content: '';
@@ -31,8 +35,11 @@
 			right: 25px;
 			top: calc(50% - 5px);
 			
-			@include media('<=xxxs') {
-				right: 15px;
+			@include media('<=xxs') {
+				top: calc(50% - 4px);
+				width: 14px;
+				height: 9px;
+				right: 20px;
 			}
 		}
 	}
@@ -41,11 +48,11 @@
 		box-sizing: border-box;
 		display: none;
 		position: absolute;
-		left: 0;
+		left: -1px;
 		top: 100%;
 		z-index: 2;
 		top: calc(100% + 12px);
-		width: 100%;
+		width: calc(100% + 2px);
 		padding: 10px;
 		border-radius: 10px;
 		background-color: #fff;

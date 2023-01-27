@@ -13,6 +13,7 @@
 
 	&__search {
 		margin-bottom: 24px;
+		flex-shrink: 0;
 	}
 
 	&__menu {
@@ -31,6 +32,12 @@
 			font-size: 16px;
 			line-height: 24px;
 			padding: 12px 12px 12px 40px;
+			
+			@include media('<=xxs') {
+				padding: 8px 8px 8px 36px;
+				line-height: 20px;
+				font-size: 15px;
+			}
 
 			&:hover {
 				text-decoration: underline;
@@ -51,13 +58,14 @@
 		display: flex;
 		align-items: center;
 		
+		@include media('<=xxs') {
+			padding: 12px 12px 12px 36px;
+			line-height: 20px;
+			font-size: 14px;
+		}
+		
 		&:hover {
 			text-decoration-color: $placeholder;
-		}
-
-		&_services {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-services-view-blue');
-			background-size: 19px 20px;
 		}
 
 		&_dropdown {
@@ -67,7 +75,13 @@
 				width: 16px;
 				height: 10px;
 				background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-dark') center / contain no-repeat transparent;
-				margin: 2px 0 0 15px;
+				margin: 0 0 0 15px;
+				
+				@include media('<=xxs') {
+					margin: 0 0 2px 15px;
+					width: 14px;
+					height: 9px;
+				}
 			}
 
 			&:hover {
@@ -79,49 +93,94 @@
 			}
 		}
 
+		&_services {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-services-view-blue');
+			background-size: 19px 20px;
+
+			@include media('<=xxs') {
+				background-size: 17px 18px;
+			}
+		}
+
 		&_profile {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-profile-view-blue');
 			background-size: 26px 20px;
+			
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 		}
 
 		&_cargo {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-cargo-view-blue');
 			background-size: 26px 20px;
+			
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 		}
 
 		&_drivers {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-drivers-view-blue');
 			background-size: 25px 20px;
+
+			@include media('<=xxs') {
+				background-size: 21px 16px;
+			}
 		}
 
 		&_tracks {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-tracks-view-blue');
 			background-size: 25px 20px;
+
+			@include media('<=xxs') {
+				background-size: 21px 16px;
+			}
 		}
 
 		&_parts {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-parts-view-blue');
 			background-size: 20px 20px;
+
+			@include media('<=xxs') {
+				background-size: 16px 16px;
+			}
 		}
 
 		&_carrier {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
 			background-size: 27px 20px;
+
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 		}
 
 		&_users {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-users-view-blue');
 			background-size: 28px 20px;
+
+			@include media('<=xxs') {
+				background-size: 24px 16px;
+			}
 		}
 
 		&_tracking {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-tracking-view-blue');
-			background-size: 22px 20px;
+			background-size: 22px 22px;
+
+			@include media('<=xxs') {
+				background-size: 20px 20px;
+			}
 		}
 
 		&_payment {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-payment-view-blue');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-card-view-blue');
 			background-size: 28px 20px;
+
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 		}
 
 		&_login {
@@ -130,6 +189,10 @@
 			border-top: 1px solid $light;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-login-view-blue');
 			background-size: 28px 20px;
+
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 
 			@include media('<=xs') {
 				display: block;
@@ -142,6 +205,10 @@
 			border-top: 1px solid $light;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-logout-view-blue');
 			background-size: 28px 20px;
+
+			@include media('<=xxs') {
+				background-size: 22px 16px;
+			}
 
 			@include media('<=xs') {
 				display: block;

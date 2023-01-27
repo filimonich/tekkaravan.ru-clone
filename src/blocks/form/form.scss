@@ -7,7 +7,7 @@
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			grid-gap: 24px;
-				
+			
 			@include media('<=xxs') {
 				display: block;
 			}
@@ -20,8 +20,12 @@
 				}
 				
 				@include media('<=xxs') {
-					margin-bottom: 24px;
+					margin-bottom: 20px;
 				}
+			}
+			
+			#{$self}__field_wide {
+				grid-column: span 12;
 			}
 		}
 	}
@@ -34,9 +38,15 @@
 		display: flex;
 		position: relative;
 		background-color: $field;
+		
+		@include media('<=xxs') {
+			border-radius: 8px;
+			font-size: 13px;
+			height: 40px;
+		}
 
 		&::before {
-			display: block;
+			display: none;
 			content: attr(data-title);
 			position: absolute;
 			background-color: $light;
@@ -48,30 +58,51 @@
 			transform: translateY(-50%);
 			padding: 2px 5px;
 			border-radius: 2px;
+			
+			@include media('<=xxs') {
+				padding: 1px 5px;
+				font-size: 10px;
+				left: 15px;
+			}
 		}
 
-		input {
+		input, textarea {
 			@extend %reset-input;
 			width: 100%;
 			padding: 10px 24px;
-
+			resize: none;
+			
+			@include media('<=xxs') {
+				padding: 10px 20px;
+			}
+	
 			&::placeholder {
 				color: $placeholder;
 			}
 		}
 
 		&_txt {
-
+			&::before {
+				display: block;
+			}
 		}
 
 		&_pass {
 			display: flex;
 
+			&::before {
+				display: block;
+			}
+
 			button {
 				@extend %reset-button;
 				background: url('#{$images-path}icons-sprite.svg#icon-eye-view-black') center / 23px 16px no-repeat transparent;
 				width: 50px;
-
+	
+				@include media('<=xxs') {
+					background-size: 18px 12px;
+				}
+		
 				&.active {
 					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-blue');
 				}
@@ -79,22 +110,73 @@
 		}
 
 		&_date {
+
+			&::before {
+				display: block;
+			}
+
 			background-repeat: no-repeat;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-date-view-black');
 			background-position: center right 18px;
 			background-size: 18px 20px;
+			
+			@include media('<=xxs') {
+				background-size: 14px 16px;
+			}
 		}
 
 		&_sel {
-
+			&::before {
+				display: block;
+			}
 		}
 
 		&_file {
+			position: relative;
+			padding-left: 80px;
+			align-items: center;
+			
+			@include media('<=xxs') {
+				padding-left: 70px;
+			}
 
+			input[type="file"] {
+				display: none;
+			}
+
+			&::after {
+				box-sizing: border-box;
+				position: absolute;
+				display: block;
+				content: '';
+				width: 65px;
+				height: calc(100% + 2px);
+				left: -1px;
+				top: -1px;
+				border-radius: 10px 0 0 10px;
+				background: url('#{$images-path}icons-sprite.svg#icon-photo-view-white') center / 21px 19px no-repeat $accent;
+				cursor: pointer;
+				
+				@include media('<=xxs') {
+					width: 55px;
+				}
+			}
+
+			span {
+				color: $placeholder;
+
+				&.selected {
+					color: $text;
+				}
+			}
 		}
 
 		&_area {
+			&::before {
+				display: block;
+			}
 
+			height: 120px;
 		}
 	}
 
@@ -108,6 +190,11 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 			grid-gap: 24px;
+			
+			@include media('<=xxs') {
+				grid-gap: 20px;
+				grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+			}
 		}
 	}
 
