@@ -46,7 +46,7 @@ $breakpoints: (
 @include font-face("Roboto-Bold", "RB");
 @include font-face("Roboto-Black", "RBL");
 @import '../../node_modules/air-datepicker/air-datepicker';
-// @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";
 
 
 // Import BEM blocks scss

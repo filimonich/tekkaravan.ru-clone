@@ -1,0 +1,91 @@
+.card {
+	$self: &;
+
+	&_own {
+		background-color: $own !important;
+	}
+
+	&__top {
+		margin-bottom: 24px;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__title {
+		font-family: "RB", sans-serif;
+	}
+	
+	&__top-side {
+		font-family: "RM", sans-serif;
+		font-size: 18px;
+
+		span {
+			color: $accent;
+		}
+	}
+	
+	&__images {
+		height: 240px;
+		margin-bottom: 24px;
+	}
+	
+	&__desctiption {
+		margin-bottom: 24px;
+		font-family: "RL", sans-serif;
+	}
+	
+	&__lines {
+		margin-bottom: 24px;
+	}
+	
+	&__line {
+		
+	}
+	
+	&__line-name {
+		
+	}
+	
+	&__line-value {
+		
+	}
+	
+	&__panel {
+		margin-bottom: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__date {
+		font-size: 14px;
+		line-height: 24px;
+		color: $placeholder;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			margin-right: 5px;
+			background: url('#{$images-path}icons-sprite.svg#icon-clock-view-dark') center / auto no-repeat transparent;
+		}
+	}
+
+	&__contacts {
+		display: grid;
+		grid-template-columns: repeat(3, 24px);
+		grid-gap: 10px;
+	}
+
+	&__buttons {
+
+	}
+
+	&__button {
+		max-width: 180px;
+		margin: 0 auto;
+	}
+}

@@ -2,8 +2,6 @@
 	$self: &;
 	@extend %reset-button;
 	display: flex;
-	// width: 100%;
-	// max-width: 220px;
 	align-items: center;
 	justify-content: center;
 	padding: 10px 15px;
@@ -71,13 +69,17 @@
 		}
 	}
 	
-	&_reset::after {
-		display: block;
-		background-image: url('#{$images-path}icons-sprite.svg#icon-cancel-view-white');
-		background-size: 18px 18px;
-		
-		@include media('<=xxs') {
-			background-size: 14px 14px;
+	&_reset {
+		background-color: $light;
+
+		&::after {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cancel-view-white');
+			background-size: 18px 18px;
+			
+			@include media('<=xxs') {
+				background-size: 14px 14px;
+			}
 		}
 	}
 	

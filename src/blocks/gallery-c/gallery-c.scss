@@ -1,0 +1,68 @@
+.gallery-c {
+	$self: &;
+	position: relative;
+
+	&__images {
+		box-sizing: border-box;
+		display: block;
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		border: 1px solid $light;
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&.active {
+			opacity: 1;
+		}
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__prev, &__next {
+		@extend %reset-button;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 36px;
+		width: 28px;
+		background-repeat: no-repeat;
+		background-size: 11px 18px;
+		background-color: $light;
+	}
+	
+	&__prev {
+		left: 0;
+		background-position: center left 7px;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-dark');
+		border-radius: 0 10px 10px 0;
+		
+		&.disabled {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-white');
+		}
+	}
+	
+	&__next {
+		right: 0;
+		background-position: center right 7px;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-dark');
+		border-radius: 10px 0 0 10px;
+		
+		&.disabled {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-white');
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.top {
+	$self: &;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__side {
+		flex-grow: 1;
+	}
+
+	&__buttons {
+
+	}
+
+	&__button {
+		@extend %reset-button;
+		font-family: "RR", sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		text-decoration: underline;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			display: none;
+			content: '';
+			width: 18px;
+			height: 18px;
+			margin-right: 7px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&_filter::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue');
+			background-size: 18px 16px;
+		}
+	}
+}

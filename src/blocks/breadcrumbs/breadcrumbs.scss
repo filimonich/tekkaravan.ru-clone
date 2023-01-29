@@ -1,0 +1,31 @@
+.breadcrumbs {
+	$self: &;
+
+	a {
+		color: $text;
+		text-decoration: underline;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__item {
+		display: inline-flex;
+		line-height: 24px;
+		align-items: center;
+
+		&:not(:last-child)::after {
+			display: block;
+			content: '';
+			height: 9px;
+			width: 6px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-blue') center / contain no-repeat transparent;
+			margin: 0 12px;
+		}
+
+		&_current {
+			color: $label;
+		}
+	}
+}

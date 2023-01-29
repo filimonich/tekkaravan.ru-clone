@@ -1,0 +1,21 @@
+.social {
+	$self: &;
+
+	&__link {
+		width: 24px;
+		height: 24px;
+		border-radius: 3px;
+
+		&_phone {
+			background: url('#{$images-path}icons-sprite.svg#icon-phone-view-white') center / 16px 17px no-repeat $accent;
+		}
+		
+		&_mail {
+			background: url('#{$images-path}icons-sprite.svg#icon-env-view-white') center / 18px 14px no-repeat #3B60C4;
+		}
+		
+		&_wapp {
+			background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 18px 18px no-repeat #00D33B;
+		}
+	}
+}

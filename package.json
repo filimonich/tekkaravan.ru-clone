@@ -55,7 +55,8 @@
 		"animate-scss": "^3.2.1",
 		"inputmask": "^5.0.7",
 		"jquery": "^3.6.0",
-		"scroll-lock": "^2.1.5"
+		"scroll-lock": "^2.1.5",
+		"swiper": "^8.4.6"
 	},
 	"externalJs": {
 		"jquery": "dist/jquery.min.js"
@@ -70,6 +71,6 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened,mt,mb"
+		"omit": "@@,js-,active,opened,mt,mb,swiper"
 	}
 }
