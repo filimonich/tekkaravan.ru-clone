@@ -22,6 +22,11 @@
 		display: flex;
 		align-items: center;
 
+		@include media('<=xs') {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
 		&::before {
 			display: none;
 			content: '';
@@ -32,12 +37,21 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
+
+			@include media('<=xs') {
+				width: 16px;
+				height: 16px;
+			}
 		}
 
 		&_filter::before {
 			display: block;
 			background-image: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue');
 			background-size: 18px 16px;
+			
+			@include media('<=xs') {
+				background-size: 16px 14px;
+			}
 		}
 	}
 }

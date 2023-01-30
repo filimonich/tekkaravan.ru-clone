@@ -33,6 +33,4 @@ import Inputmask from "inputmask";
 		});
 	});
 
-
-
 })();

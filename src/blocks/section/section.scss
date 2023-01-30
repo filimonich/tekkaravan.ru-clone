@@ -3,6 +3,24 @@
 
 	&__layout {
 
+		&_double {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-gap: 24px;
+			
+			@include media('<=sm') {
+				display: block;
+			}
+
+			#{$self}__unit {
+				grid-column: span 6;
+				
+				@include media('<=sm') {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
 		&_triple {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
@@ -33,9 +51,23 @@
 		border-radius: 10px;
 		padding: 24px;
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
 			border-radius: 8px;
 			padding: 20px;
 		}
+	}
+
+	&__toggle {
+		padding-right: 50px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-dark') center right 24px / 16px 10px no-repeat transparent;
+		cursor: pointer;
+
+		&.closed {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-dark');
+		}
+	}
+
+	&__collapse {
+		
 	}
 }

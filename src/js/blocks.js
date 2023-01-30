@@ -4,6 +4,7 @@ import "../blocks/form/form.js";
 import "../blocks/air-datepicker/air-datepicker.js";
 import "../blocks/form-s/form-s.js";
 import "../blocks/modal/modal.js";
-import "../blocks/top/top.js";
 import "../blocks/filter/filter.js";
 import "../blocks/gallery-c/gallery-c.js";
+import "../blocks/section/section.js";
+import "../blocks/map/map.js";

@@ -9,15 +9,29 @@
 		margin-bottom: 24px;
 		display: flex;
 		justify-content: space-between;
+		
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__title {
 		font-family: "RB", sans-serif;
+		line-height: 24px;			
+
+		@include media('<=xs') {
+			font-size: 14px;
+			line-height: 20px;			
+		}
 	}
 	
 	&__top-side {
 		font-family: "RM", sans-serif;
 		font-size: 18px;
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
 
 		span {
 			color: $accent;
@@ -27,27 +41,55 @@
 	&__images {
 		height: 240px;
 		margin-bottom: 24px;
+		
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxxs') {
+			height: 200px;
+		}
 	}
 	
 	&__desctiption {
 		margin-bottom: 24px;
 		font-family: "RL", sans-serif;
+
+		@include media('<=xs') {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__lines {
 		margin-bottom: 24px;
+		font-size: 14px;
+
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__line {
-		
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 36px;
+		padding: 6px 10px;
+
+		&:nth-child(odd) {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
 	}
 	
 	&__line-name {
-		
+		font-family: "RM", sans-serif;
+		margin-right: 12px;
 	}
 	
 	&__line-value {
-		
+		text-align: right;
 	}
 	
 	&__panel {
@@ -55,6 +97,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__date {
@@ -63,6 +109,15 @@
 		color: $placeholder;
 		display: flex;
 		align-items: center;
+		
+		@include media('<=xs') {
+			font-size: 13px;
+			line-height: 20px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 12px;
+		}
 
 		&::before {
 			display: block;
@@ -71,6 +126,11 @@
 			height: 18px;
 			margin-right: 5px;
 			background: url('#{$images-path}icons-sprite.svg#icon-clock-view-dark') center / auto no-repeat transparent;
+			
+			@include media('<=xs') {
+				width: 16px;
+				height: 16px;
+			}
 		}
 	}
 
@@ -78,6 +138,16 @@
 		display: grid;
 		grid-template-columns: repeat(3, 24px);
 		grid-gap: 10px;
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(3, 30px);
+			grid-gap: 16px;
+		}
+		
+		@include media('<=xxxs') {
+			grid-template-columns: repeat(3, 26px);
+			grid-gap: 8px;
+		}
 	}
 
 	&__buttons {

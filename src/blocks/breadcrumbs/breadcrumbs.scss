@@ -14,6 +14,11 @@
 		display: inline-flex;
 		line-height: 24px;
 		align-items: center;
+		
+		@include media('<=xs') {
+			font-size: 14px;
+			line-height: 20px;
+		}
 
 		&:not(:last-child)::after {
 			display: block;
@@ -22,6 +27,10 @@
 			width: 6px;
 			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-blue') center / contain no-repeat transparent;
 			margin: 0 12px;
+			
+			@include media('<=xs') {
+				margin: 0 4px 0 8px;
+			}
 		}
 
 		&_current {

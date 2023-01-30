@@ -84,7 +84,7 @@ em { font-style: italic; }
 .mbt2 { margin-top: 48px; margin-bottom: 48px; }
 
 			
-@include media('<=xxs') {
+@include media('<=xs') {
 	.mt1 { margin-top: 20px; }
 	.mt2 { margin-top: 40px; }
 	
