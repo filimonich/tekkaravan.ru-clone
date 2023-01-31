@@ -8,3 +8,4 @@ import "../blocks/filter/filter.js";
 import "../blocks/gallery-c/gallery-c.js";
 import "../blocks/section/section.js";
 import "../blocks/map/map.js";
+import "../blocks/gallery-d/gallery-d.js";

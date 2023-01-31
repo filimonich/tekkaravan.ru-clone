@@ -88,7 +88,7 @@ export const makeGallery = (items, options = {}) => {
 			const _next = document.createElement('button');
 			_prev.className = `${cls}__prev`;
 			_next.className = `${cls}__next`;
-			_wrapper.append(_prev, _next);
+			frame.append(_prev, _next);
 		}
 
 		_wrapper.addEventListener('click', function(e) {
