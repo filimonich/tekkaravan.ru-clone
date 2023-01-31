@@ -1,0 +1,343 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<link rel="shortcut icon" href="images/favicon.ico"> 
+	<link rel="stylesheet" href="style.css"> 
+	<title></title> 
+</head> 
+<body class=""> 
+
+<header class="header">
+	<div class="header__inner container">
+		<a class="header__logo" href="./"><img src="./images/logo.png" alt=""></a>
+		<form action="./" class="header__search search">
+			<input class="search__input" type="text" placeholder="Поиск">
+			<input class="search__submit" type="submit" value="">
+		</form>
+		<div class="header__navi navi" data-scroll-lock-scrollable>
+			<buton class="navi__close"></buton>
+			<form action="./" class="navi__search search">
+				<input class="search__input" type="text" placeholder="Поиск">
+				<input class="search__submit" type="submit" value="">
+			</form>
+			<nav class="navi__menu">
+				<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
+				<div class="navi__submenu">
+					<a href="./">WhatsApp</a>					
+					<a href="./">История рассылок WhatsApp</a>					
+					<a href="./">Push рассылка</a>
+					<a href="./">Email рассылка</a>
+					<a href="./">Контроль сотрудников</a>
+					<a href="./">Справочник</a>
+					<a href="./">Гости</a>
+				</div>
+				<a class="navi__link navi__link_profile" href="./">Профиль</a>
+				<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
+				<a class="navi__link navi__link_drivers" href="./">Перевозчики</a>
+				<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
+				<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
+				<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
+				<a class="navi__link navi__link_users" href="./">Пользователи</a>
+				<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
+				<a class="navi__link navi__link_payment" href="./">Оплата</a>
+				<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
+				<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
+			</nav>
+		</div>
+		<div class="header__side">
+			<a class="header__login" href="./" data-modal="login">Вход</a>
+			<!-- <a class="header__logout" href="./">Выход</a> -->
+			<a class="header__register" href="./">Регистрация</a>
+			<button class="header__toggle"></button>
+		</div>
+	</div>
+</header> 
+
+
+<div class="top mbt1">
+	<div class="top__inner container">
+		<div class="top__side breadcrumbs">
+			<a class="breadcrumbs__item" href="./">Главная</a>
+			<span class="breadcrumbs__item breadcrumbs__item_current">карьера</span>
+		</div>
+		<div class="top__buttons">
+			<button class="top__button top__button_filter filter__toggle">Фильтр</button>
+		</div>
+	</div>
+</div>
+
+<section class="section mb1 filter">
+	<div class="section__layout container">
+		<div class="section__unit form filter__form">
+			<h2 class="title">Расширенный поиск</h2>
+			<div class="form__body form__body_fourfold mbt1">
+				<label class="form__field form__field_txt" data-title="Наименование">
+					<input type="text"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="Сфера деятельности">
+					<input type="text"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="График">
+					<input type="text"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="Опыт работы">
+					<input type="text"/>
+				</label>
+			</div>
+			<div class="form__buttons form__buttons_grid">
+				<button class="form__button button button_find" type="button">Найти</button>
+				<button class="form__button button button_reset" type="button">Сбросить</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section mb2">
+	<div class="section__layout section__layout_triple container">
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit card_own">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit card_own">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+		<div class="card section__unit">
+	<div class="card__top">
+		<h3 class="card__title">Название вакансии</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__desctiption">Длинное и очень подробное описание этой, конкретной вакансии</div>
+	<div class="card__panel">
+		<div class="card__date">17.12.2022 в 15:45</div>
+		<div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div>
+	</div>
+	<div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div>
+</div>
+	</div>
+</section>
+
+<div class="pagination mb2">
+	<div class="pagination__inner container">
+		<a class="pagination__link pagination__link_start" href="./"></a>
+		<a class="pagination__link pagination__link_prev" href="./"></a>
+		<a class="pagination__link" href="./">1</a>
+		<a class="pagination__link pagination__link_current" href="./">2</a>
+		<a class="pagination__link" href="./">3</a>
+		<a class="pagination__link" href="./">4</a>
+		<a class="pagination__link" href="./">5</a>
+		<a class="pagination__link pagination__link_next" href="./"></a>
+		<a class="pagination__link pagination__link_end" href="./"></a>
+	</div>
+</div>
+
+<div class="modal__hidden">
+	<div id="login">
+		<form class="form form-ln" action="./">
+			<h2 class="title mb1">Авторизация</h2>
+			<div class="form__body form-ln__layout">
+				<label class="form__field form__field_txt form-ln__item" data-title="Номер телефона">
+					<input type="tel" placeholder="+7 (900) 123-45-67"/>
+				</label>
+				<label class="form__field form__field_pass form-ln__item" data-title="Пароль">
+					<input type="password"/><button type="button"></button>
+				</label>
+			</div>
+			<div class="form__alerts"></div>
+			<div class="form__buttons form-ln__buttons form-ln__buttons_grid">
+				<button class="form__button button form-ln__button" type="button">Войти</button>
+				<button class="form__button button form-ln__button" type="button">Регистрация</button>
+			</div>
+			<div class="form__small">
+				<strong><a href="./" data-modal="restore">Забыли пароль?</a></strong>
+			</div>
+		</form>
+	</div>
+	<div id="restore">
+		<form class="form form-ln" action="./">
+			<h2 class="title mb1">Восстановление пароля</h2>
+			<div class="form__body form-ln__layout">
+				<label class="form__field form__field_txt form-ln__item" data-title="Номер телефона">
+					<input type="tel" placeholder="+7 (900) 123-45-67"/>
+				</label>
+				<label class="form__field form__field_txt form-ln__item" data-title="Email">
+					<input type="password" placeholder="address@gmail.com"/>
+				</label>
+			</div>
+			<div class="form__alerts"></div>
+			<div class="form__buttons form-ln__buttons">
+				<button class="form__button button form-ln__button" type="button">Восстановить</button>
+			</div>
+			<div class="form__small">
+				Уже есть аккаунт? <strong><a href="./" data-modal="login">Войти</a></strong>
+			</div>
+		</form>
+	</div>
+</div> 
+
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script src="common.js"></script> 
+</body> 
+</html> 
