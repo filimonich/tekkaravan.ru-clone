@@ -122,4 +122,14 @@
 			background-size: 16px 16px;
 		}
 	}
+	
+	&_edit::after {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-edit-view-white');
+		background-size: 22px 20px;
+		
+		@include media('<=xs') {
+			background-size: 18px 16px;
+		}
+	}
 }

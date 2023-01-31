@@ -40,6 +40,11 @@
 		outline-offset: -4px;
 		transition: outline-color 0.3s;
 		background-size: cover;
+		
+		@include media('<=xs') {
+			outline-width: 3px;
+			outline-offset: -3px;
+		}
 
 		&:not(:last-child) {
 			margin-right: 12px;

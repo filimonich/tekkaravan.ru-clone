@@ -1,0 +1,36 @@
+.tab {
+	$self: &;
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		grid-gap: 24px;
+		
+		@include media('<=xs') {
+			grid-gap: 20px;
+			grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+		}
+	}
+
+	&__button {
+		&.button {
+			background-color: $light;
+			
+			&.active {
+				background-color: $accent;
+			}
+		}
+	}
+
+	&__blocks {
+
+	}
+
+	&__block {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
