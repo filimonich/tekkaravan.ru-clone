@@ -3,6 +3,24 @@
 
 	&__body {
 
+		&_double {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-gap: 24px;
+			
+			@include media('<=xxs') {
+				display: block;
+			}
+
+			#{$self}__field, #{$self}__button {
+				grid-column: span 6;
+				
+				@include media('<=xxs') {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
 		&_triple {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
@@ -22,10 +40,6 @@
 				@include media('<=xxs') {
 					margin-bottom: 20px;
 				}
-			}
-			
-			#{$self}__field_wide {
-				grid-column: span 12;
 			}
 		}
 
@@ -53,10 +67,6 @@
 					margin-bottom: 20px;
 				}
 			}
-			
-			#{$self}__field_wide {
-				grid-column: span 12;
-			}
 		}
 	}
 
@@ -69,7 +79,7 @@
 		position: relative;
 		background-color: $field;
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
 			border-radius: 8px;
 			font-size: 13px;
 			height: 40px;
@@ -89,7 +99,7 @@
 			padding: 2px 5px;
 			border-radius: 2px;
 			
-			@include media('<=xxs') {
+			@include media('<=xs') {
 				padding: 1px 5px;
 				font-size: 10px;
 				left: 15px;
@@ -102,13 +112,18 @@
 			padding: 10px 24px;
 			resize: none;
 			
-			@include media('<=xxs') {
+			@include media('<=xs') {
 				padding: 10px 20px;
 			}
 	
 			&::placeholder {
+				font-family: "RL", sans-serif;
 				color: $placeholder;
 			}
+		}
+
+		&_wide {
+			grid-column: span 12 !important;
 		}
 
 		&_txt {
@@ -193,6 +208,7 @@
 			}
 
 			span {
+				font-family: "RL", sans-serif;
 				color: $placeholder;
 
 				&.selected {

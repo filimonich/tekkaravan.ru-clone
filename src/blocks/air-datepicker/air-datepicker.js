@@ -2,9 +2,11 @@ import AirDatepicker from "air-datepicker"
 
 (() => {
 
-	new AirDatepicker('.form__field_date input[type="text"]', {
-		isMobile: true,
-		autoClose: true
-	});
+	document.querySelectorAll('.form__field_date input[type="text"]').forEach((item) => {
+		new AirDatepicker(item, {
+			isMobile: true,
+			autoClose: true
+		});
+	})
 
 })();

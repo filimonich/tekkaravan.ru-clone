@@ -1,0 +1,129 @@
+.line {
+	$self: &;
+	
+	box-sizing: border-box;
+	min-height: 36px;
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+
+	@include media('<=xs') {
+		flex-flow: column nowrap;
+		align-items: flex-start;
+	}
+
+	a {
+		color: $accent;
+	}
+
+	p {
+		margin-bottom: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 24px;
+		margin-right: 12px;
+		font-family: "RL", sans-serif;
+		
+		@include media('<=xs') {
+			white-space: normal;
+			margin: 0;
+		}
+		
+		&::before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			width: 14px;
+			height: 18px;
+			margin: 0 5px 3px 0;
+			background: url('#{$images-path}icons-sprite.svg#icon-text-view-dark') center / auto no-repeat transparent;
+		}
+		
+		span {
+			font-family: "RR", sans-serif;
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+	&__name {
+		margin-right: 5px;
+		font-family: "RM", sans-serif;
+	}
+	
+	&__restrict {
+		color: $warn;
+	}
+
+	&__date {
+		display: block;
+		min-width: 145px;
+		margin-right: 22px;
+		font-family: "RL", sans-serif;
+		
+		@include media('<=xs') {
+			margin-right: 12px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin-left: auto;
+	}
+
+	&__button {
+		@extend %reset-button;
+		display: block;
+		flex-shrink: 0;
+		height: 24px;
+		width: 24px;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		
+		&_edit {
+			background: url('#{$images-path}icons-sprite.svg#icon-edit-view-blue') center left / 21px 18px no-repeat transparent;
+		}
+		
+		&_delete {
+			background: url('#{$images-path}icons-sprite.svg#icon-del-view-blue') center left / 17px 20px no-repeat transparent;
+			filter: hue-rotate(155deg) brightness(50%) saturate(200%);
+		}
+	}
+
+	&__breadcrumbs {
+
+		&::before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			width: 14px;
+			height: 18px;
+			margin: 0 5px 3px 0;
+			background: url('#{$images-path}icons-sprite.svg#icon-file-view-dark') center / auto no-repeat transparent;
+		}
+	
+		a {
+			color: $text;
+			font-family: "RL", sans-serif;
+
+			&:not(:last-child)::after {
+				display: inline-block;
+				content: '>';
+				margin-left: 5px;
+			}
+
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+	&__ip {
+		width: 140px;
+	}
+
+}

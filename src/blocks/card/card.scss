@@ -104,32 +104,23 @@
 	}
 
 	&__date {
-		font-size: 14px;
-		line-height: 24px;
-		color: $placeholder;
-		display: flex;
-		align-items: center;
-		
-		@include media('<=xs') {
-			font-size: 13px;
-			line-height: 20px;
-		}
-		
-		@include media('<=xs') {
-			font-size: 12px;
-		}
 
-		&::before {
-			display: block;
-			content: '';
-			width: 18px;
-			height: 18px;
-			margin-right: 5px;
-			background: url('#{$images-path}icons-sprite.svg#icon-clock-view-dark') center / auto no-repeat transparent;
+		&.date {
+
+			@include media('<=xs') {
+				font-size: 13px;
+				line-height: 20px;
+			}
 			
 			@include media('<=xs') {
-				width: 16px;
-				height: 16px;
+				font-size: 12px;
+			}
+	
+			&::before {
+				@include media('<=xs') {
+					width: 16px;
+					height: 16px;
+				}
 			}
 		}
 	}

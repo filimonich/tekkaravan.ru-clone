@@ -2,12 +2,10 @@ import ymaps from 'ymaps';
 
 (() => {
 
-	const id_map = document.querySelector('#map1');
-
-	if (id_map) {
+	document.querySelectorAll('.map').forEach((item) => {
 		ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU').then(maps => {
 	
-			const map = new maps.Map(id_map, {
+			const map = new maps.Map(item, {
 				center: [57.555691, 61.731427],
 				zoom: 12,
 				controls: ['zoomControl'],
@@ -20,6 +18,7 @@ import ymaps from 'ymaps';
 	
 		})
 		.catch(error => console.log('Failed to load Yandex Maps', error));
-	}
+	});
+
 
 })();
