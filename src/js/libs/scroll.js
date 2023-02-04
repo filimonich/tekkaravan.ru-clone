@@ -101,13 +101,35 @@ import { scrollClassToggle } from "../../js/libs/scroll";
 scrollClassToggle('animation', 'active');
 */
 
-export const scrollClassToggle = (data = 'animation', cls = "active") => {
+/* export const scrollClassToggle = (data = 'shift', cls = "active") => {
 	const classToggle = (item) => {
 		const repeat = item.dataset['repeat'] != undefined;
 		const box = item.getBoundingClientRect();
 		const shift = box.height * item.dataset[`${data}`] || 0;
 		const over = box.bottom + shift > 0;
-		const under = box.bottom + shift - window.innerHeight < 0;
+		const under = box.bottom - shift - window.innerHeight < 0;
+
+		if (repeat || !item.classList.contains(`${cls}`))
+			item.classList[(over && under) ? 'add': 'remove'](`${cls}`);
+	};
+	
+	document.querySelectorAll(`[data-${data}]`).forEach((item) => {
+		window.addEventListener('scroll', () => classToggle(item));
+		classToggle(item);
+	});
+} */
+
+
+export const scrollClassToggle = (data = 'animation', cls = "active") => {
+	const classToggle = (item) => {
+		const repeat = item.dataset['repeat'] != undefined;
+		const box = item.getBoundingClientRect();
+		
+		let shift = item.dataset[`${data}`] || 0;
+		shift = shift.includes('px') ? box.height - parseFloat(shift) : box.height * shift;
+	
+		const over = box.bottom + shift > 0;
+		const under = box.bottom - shift - window.innerHeight < 0;
 
 		if (repeat || !item.classList.contains(`${cls}`))
 			item.classList[(over && under) ? 'add': 'remove'](`${cls}`);
