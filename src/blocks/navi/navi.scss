@@ -1,5 +1,15 @@
 .navi {
 	$self: &;
+	padding: 75px 55px 30px;
+	margin: 0;
+	
+	@include media('<=xxs') {
+		padding: 60px 30px 30px;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 50px 20px 20px;
+	}
 
 	&__close {
 		@extend %reset-button;		
@@ -9,6 +19,18 @@
 		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 19px 19px no-repeat transparent;
 		top: 26px;
 		right: 24px;
+		
+		@include media('<=xxs') {
+			background-size: 17px 17px;
+			right: 17px;
+			top: 17px;
+		}
+		
+		@include media('<=xxxs') {
+			background-size: 16px 16px;
+			right: 13px;
+			top: 13px;
+		}
 	}
 
 	&__search {
