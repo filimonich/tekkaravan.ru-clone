@@ -2,23 +2,26 @@
 	$self: &;
 	background-color: #fff;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	width: 100%;
 	
 	&__inner {
 		box-sizing: border-box;
-		padding-bottom: 24px;
-		padding-top: 24px;
+		padding-bottom: 10px;
+		padding-top: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		min-height: 95px;
 		
 		@include media('<=xs') {
-			padding-bottom: 20px;
-			padding-top: 20px;
+			min-height: 80px;
 		}
 		
 		@include media('<=xxs') {
-			padding-bottom: 10px;
-			padding-top: 10px;
+			min-height: 60px;
 		}
 	}
 

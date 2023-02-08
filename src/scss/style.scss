@@ -63,11 +63,24 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 }
+
+body {
+	padding-top: 95px;
+	
+	@include media('<=xs') {
+		padding-top: 80px;
+	}
+	
+	@include media('<=xxs') {
+		padding-top: 60px;
+	}
+}
+
 // .main { flex: 1 0 auto; }
-.footer { 
+/* .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
-}
+} */
 
 
 p { margin-bottom: 10px; }

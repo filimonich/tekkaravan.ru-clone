@@ -13,12 +13,17 @@
 	font-family: "RR", sans-serif;
 	height: 48px;
 	white-space: nowrap;
+	transition: transform 0.1s;
 		
 	@include media('<=xs') {
 		border-radius: 8px;
 		line-height: 20px;
 		font-size: 13px;
 		height: 40px;
+	}
+
+	&:active {
+		transform: scale(95%);
 	}
 
 	&::after {
