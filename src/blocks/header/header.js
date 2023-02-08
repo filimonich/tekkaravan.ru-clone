@@ -44,7 +44,7 @@ import scrollLock from 'scroll-lock';
 	});
 
 	// открытие и закрытие меню, свайпом на мобильных устройствах
-	document.addEventListener('swiped-right', (e) => open(e));
+	// document.addEventListener('swiped-right', (e) => open(e));
 	document.addEventListener('swiped-left', (e) => close(e));
 
 

@@ -42,17 +42,18 @@ export const cloneObj = (obj) => {
 
 
 // Отложить вызов функции
-export const throttle = (fn, delay) => {
-	let inProgress = false;
+export const throttle = (fn, delay = 250) => {
+	let timeout = null;
+
 	return (...args) => {
-		if (inProgress) {
-			return;
+		if (timeout === null) {
+			// fn.apply(this, args);
+			
+			timeout = setTimeout(() => {
+				fn.apply(this, args);
+				timeout = null;
+			}, delay)
 		}
-		inProgress = true;
-		setTimeout(() => {
-			fn(...args); // Consider moving this line before the set timeout if you want the very first one to be immediate
-			inProgress = false;
-		}, delay);
 	}
 }
 

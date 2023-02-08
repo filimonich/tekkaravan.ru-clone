@@ -8,11 +8,10 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	height: calc(var(--vvph, 1vh) * 100);
 	background-color: rgba(0, 0, 0, 0.8);
 	backdrop-filter: blur(8px);	
 	padding: 30px;
-	align-items: center;
 	overflow-y: auto;
 	@keyframes show_fade_first { from { opacity: 0; } to { opacity: 1; }}
 	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
@@ -43,8 +42,15 @@
 	}
 	
 	&_login {
+
 		#{$self}__body {
 			max-width: 450px;
+			
+			@include media('<=xxs') {
+				&.focused {
+					margin-top: 0;
+				}
+			}
 		}
 		
 		#{$self}__content {
@@ -53,8 +59,15 @@
 	}
 
 	&_restore {
+		
 		#{$self}__body {
 			max-width: 450px;
+			
+			@include media('<=xxs') {
+				&.focused {
+					margin-top: 0;
+				}
+			}
 		}
 		
 		#{$self}__content {
