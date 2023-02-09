@@ -51,6 +51,7 @@
 		margin: 0;
 		
 		@include media('<=xs') {
+			margin: 0;
 			background-size: 20px 18px;
 		}
 	}
