@@ -37,6 +37,9 @@
 		
 		@include media('<=xs') {
 			margin: 0 auto;
+		}
+		
+		@include media('<=xxs') {
 			max-width: 180px;
 		}
 
