@@ -139,6 +139,7 @@
 		
 		@include media('<=xs') {
 			order: -1;
+			margin-left: 10px;
 		}
 	}
 	
