@@ -136,9 +136,21 @@
 		width: 28px;
 		height: 20px;
 		background: url('#{$images-path}icons-sprite.svg#icon-toggle-view-black') center / contain no-repeat transparent;
-
+		
 		@include media('<=xs') {
 			order: -1;
+		}
+	}
+	
+	&__talk {
+		@extend %reset-button;
+		width: 35px;
+		height: 34px;
+		background: url('#{$images-path}ic-talk.svg') center / contain no-repeat transparent;
+		display: none;
+
+		@include media('<=xs') {
+			display: block;
 		}
 	}
 }
