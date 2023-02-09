@@ -3,12 +3,16 @@
 	padding: 75px 55px 30px;
 	margin: 0;
 	
+	@include media('<=xs') {
+		padding: 45px 30px 30px;
+	}
+	
 	@include media('<=xxs') {
-		padding: 60px 30px 30px;
+		padding: 30px;
 	}
 	
 	@include media('<=xxxs') {
-		padding: 50px 20px 20px;
+		padding: 20px 20px 20px;
 	}
 
 	&__close {
@@ -19,6 +23,10 @@
 		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 19px 19px no-repeat transparent;
 		top: 26px;
 		right: 24px;
+		
+		@include media('<=xs') {
+			display: none;
+		}
 		
 		@include media('<=xxs') {
 			background-size: 17px 17px;
