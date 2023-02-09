@@ -1,19 +1,17 @@
 (() => {
 
 	const button = document.querySelector('button#form-s__change');
-	const from = document.querySelector('#form-s__from input');
-	const to = document.querySelector('#form-s__to input');
-	const radius_from = document.querySelector('#form-s__from-radius input');
-	const radius_to = document.querySelector('#form-s__to-radius input');
+	const from = document.querySelectorAll('#form-s__from input');
+	const to = document.querySelectorAll('#form-s__to input');
 	
 	if (button) {
 		button.addEventListener('click', () => {
-			const values = [from.value, to.value, radius_from.value, radius_to.value];
+			const values = [from[0].value, to[0].value, from[1].value, to[1].value];
 	
-			from.value = values[1];
-			to.value = values[0];
-			radius_from.value = values[3];
-			radius_to.value = values[2];
+			from[0].value = values[1];
+			to[0].value = values[0];
+			from[1].value = values[3];
+			to[1].value = values[2];
 		});
 	}
 

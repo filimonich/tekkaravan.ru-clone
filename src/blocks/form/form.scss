@@ -132,6 +132,30 @@
 			}
 		}
 
+		&_geo {
+			&[data-title]::before {
+				display: block;
+			}
+
+			input:first-child {
+				padding-right: 10px;
+			}
+
+			input:last-child {
+				max-width: 60px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			hr {
+				border: none;
+				width: 1px;
+				height: 20px;
+				background-color: $placeholder;
+				align-self: center;
+			}
+		}
+
 		&_pass {
 			display: flex;
 

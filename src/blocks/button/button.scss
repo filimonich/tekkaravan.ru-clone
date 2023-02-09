@@ -48,6 +48,7 @@
 		display: block;
 		background-image: url('#{$images-path}icons-sprite.svg#icon-change-view-white');
 		background-size: 24px 22px;
+		margin: 0;
 		
 		@include media('<=xs') {
 			background-size: 20px 18px;
