@@ -12,3 +12,4 @@ import "../blocks/gallery-d/gallery-d.js";
 import "../blocks/info/info.js";
 import "../blocks/tab/tab.js";
 import "../blocks/anim/anim.js";
+import "../blocks/slider-f/slider-f.js";

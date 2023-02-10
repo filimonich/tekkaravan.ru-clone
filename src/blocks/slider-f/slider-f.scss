@@ -1,0 +1,34 @@
+.slider-f {
+	$self: &;
+
+	&__inner {
+		&.swiper {
+
+			@include media('>xxs') {
+				height: auto;
+				overflow: visible;
+			}
+		
+			.swiper-wrapper {
+				@include media('>xxs') {
+					height: 100%;
+					display: block;	
+					position: static;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	&__item {
+
+	}
+
+	&__prev {
+
+	}
+
+	&__next {
+		
+	}
+}
