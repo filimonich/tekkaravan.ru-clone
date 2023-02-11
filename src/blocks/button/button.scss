@@ -18,8 +18,12 @@
 	@include media('<=xs') {
 		border-radius: 8px;
 		line-height: 20px;
-		font-size: 13px;
+		font-size: 14px;
 		height: 40px;
+	}
+		
+	@include media('<=xxs') {
+		font-size: 13px;
 	}
 
 	&:active {

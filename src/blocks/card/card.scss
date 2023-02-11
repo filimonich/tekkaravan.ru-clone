@@ -6,13 +6,8 @@
 	}
 
 	&__top {
-		margin-bottom: 24px;
 		display: flex;
 		justify-content: space-between;
-		
-		@include media('<=xs') {
-			margin-bottom: 20px;
-		}
 	}
 	
 	&__title {
@@ -40,11 +35,6 @@
 	
 	&__images {
 		height: 240px;
-		margin-bottom: 24px;
-		
-		@include media('<=xs') {
-			margin-bottom: 20px;
-		}
 		
 		@include media('<=xxxs') {
 			height: 200px;
@@ -52,22 +42,15 @@
 	}
 	
 	&__desctiption {
-		margin-bottom: 24px;
 		font-family: "RL", sans-serif;
 
 		@include media('<=xs') {
 			font-size: 14px;
-			margin-bottom: 20px;
 		}
 	}
 	
 	&__lines {
-		margin-bottom: 24px;
 		font-size: 14px;
-
-		@include media('<=xs') {
-			margin-bottom: 20px;
-		}
 	}
 	
 	&__line {
@@ -93,17 +76,14 @@
 	}
 	
 	&__panel {
-		margin-bottom: 24px;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-
-		@include media('<=xs') {
-			margin-bottom: 20px;
-		}
 	}
 
 	&__date {
+		margin: 5px 5px  5px 0;
 
 		&.date {
 
@@ -148,5 +128,26 @@
 	&__button {
 		max-width: 180px;
 		margin: 0 auto;
+
+		&_panel {
+			margin: 0;
+
+			&.button {
+				border-radius: 7px;
+				padding: 5px 15px;
+				height: 36px;
+				width: 100%;
+				max-width: 150px;
+				font-size: 15px;
+				
+				@include media('<=xs') {
+					font-size: 14px;
+				}
+				
+				@include media('<=xxs') {
+					font-size: 13px;
+				}
+			}
+		}
 	}
 }
