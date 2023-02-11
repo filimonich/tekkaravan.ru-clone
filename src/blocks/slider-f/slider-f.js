@@ -13,8 +13,21 @@ import Swiper, { Pagination } from 'swiper';
 			swiper = new Swiper(el, {
 				slidesPerView: 1,
 				spaceBetween: 24,
+				threshold: 10,
 				loop: false,
-				modules: [Pagination]
+				modules: [Pagination],
+				pagination: {
+					el: `.slider-f__pagination_${i}`,
+					type: "progressbar",
+				},
+				on: {
+					beforeInit: function () {
+						$item
+							.prev('.slider-f__top')
+							.find('.slider-f__pagination')
+							.addClass(`slider-f__pagination_${i}`);
+					},
+				}
 			});
 		}
 

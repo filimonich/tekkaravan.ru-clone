@@ -27,7 +27,7 @@
 		
 		&_profile {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-blue');
-			background-size: 25px 28px;
+			background-size: 22px 25px;
 		}
 		
 		&_calc {
@@ -37,12 +37,12 @@
 		
 		&_exit {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-logout-view-blue');
-			background-size: 30px 23px;
+			background-size: 27px 20px;
 		}
 		
 		&_login {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-login-view-blue');
-			background-size: 30px 23px;
+			background-size: 27px 20px;
 		}
 	}
 }

@@ -24,11 +24,35 @@
 
 	}
 
-	&__prev {
+	&__top {
+		display: none;
 
+		@include media('<=xxs') {
+			display: block;
+		}
 	}
 
-	&__next {
+	&__pagination {
+		display: flex;
+		flex-flow: row nowrap;
 		
+		span.swiper-pagination-progressbar-fill {
+			height: 8px;
+			width: 100%;
+			background-color: $accent;
+			transform-origin: left top;
+		}
+
+		/* span.swiper-pagination-bullet {
+			height: 8px;
+			flex-grow: 1;
+			background-color: $light;
+			transition: background-color 0.2s;
+			
+			&.swiper-pagination-bullet-active {
+				background-color: $accent;
+
+			}
+		} */
 	}
 }

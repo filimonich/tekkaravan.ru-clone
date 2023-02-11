@@ -2,10 +2,11 @@
 	$self: &;
 	opacity: 0;
 	transition: transform 0.5s, opacity 0.5s;
-	transform: translate(0, 20%);
+	// transform: translate(0, 20%);
+	transform: translate(0, 100px);
 
 	&.active {
-		transform: translate(0, 0);
+		transform: none;
 		opacity: 1;
 	}
 }

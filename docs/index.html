@@ -87,6 +87,8 @@
 						<option value="1">Верхняя</option>
 						<option value="2">Нижняя</option>
 						<option value="3">Боковая</option>
+						<option value="4">Передняя</option>
+						<option value="5">Задняя</option>
 					</select>
 				</div>
 				<div class="form__buttons form__buttons_grid">
@@ -157,152 +159,146 @@
 	</div>
 </section>
 
-<div class="slider-f">
+<section class="section slider-f">
+	<div class="slider-f__top container mb1">
+		<div class="section__unit form anim slider-f__top-body" data-animation="200px">
+			<h3 class="title mb1">Слайдер форм</h3>
+			<div class=" slider-f__pagination"></div>
+		</div>
+	</div>
 	<div class="slider-f__inner container swiper">
 		<div class="swiper-wrapper">
-			<div class="slider-f__item swiper-slide">
-				<section class="section mb1">
-					<div class="section__layout">
-						<form class="section__unit form anim" action="./" data-animation="200px">
-							<h2 class="title">Добавить вакансию</h2>
-							<div class="form__body form__body_triple mbt1">
-								<label class="form__field form__field_file" data-title="Выберите фото">
-									<input type="file"/><span>Выберите фото</span>
-								</label>
-								<label class="form__field form__field_txt" data-title="Заголовок">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Зарплата">
-									<input type="text"/>
-								</label>
-								<select class="form__field form__field_sel" data-title="Частота выплат">
-									<option value="1">Почасовая оплата</option>
-									<option value="2">Ежедневная оплата</option>
-								</select>
-								<label class="form__field form__field_txt" data-title="Сфера деятельности">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Профессия">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="График работы">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Где предстоит работать">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Опыт работы">
-									<input type="text"/>
-								</label>
-								<select class="form__field form__field_sel" data-title="В том числе для кандидатов">
-									<option value="1">Старше 45 лет</option>
-									<option value="2">Моложе 45 лет</option>
-								</select>
-								<label class="form__field form__field_txt" data-title="Номер телефона">
-									<input type="tel" placeholder="+7 (900) 123-45-67"/>
-								</label>
-								<label class="form__field form__field_area form__field_wide" data-title="Описание">
-									<textarea></textarea>
-								</label>
-							</div>
-							<div class="form__buttons form__buttons_grid">
-								<button class="form__button button" type="button">Добавить</button>
-							</div>
-						</form>
+			<div class="slider-f__item swiper-slide mb1">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Добавить вакансию</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_file" data-title="Выберите фото">
+							<input type="file"/><span>Выберите фото</span>
+						</label>
+						<label class="form__field form__field_txt" data-title="Заголовок">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Зарплата">
+							<input type="text"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="Частота выплат">
+							<option value="1">Почасовая оплата</option>
+							<option value="2">Ежедневная оплата</option>
+						</select>
+						<label class="form__field form__field_txt" data-title="Сфера деятельности">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Профессия">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="График работы">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Где предстоит работать">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Опыт работы">
+							<input type="text"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="В том числе для кандидатов">
+							<option value="1">Старше 45 лет</option>
+							<option value="2">Моложе 45 лет</option>
+						</select>
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_area form__field_wide" data-title="Описание">
+							<textarea></textarea>
+						</label>
 					</div>
-				</section>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button" type="button">Добавить</button>
+					</div>
+				</form>
 			</div>
-			<div class="slider-f__item swiper-slide">
-				<section class="section mb1">
-					<div class="section__layout">
-						<form class="section__unit form anim" action="./" data-animation="200px">
-							<h2 class="title">Редактировать профиль перевозчика</h2>
-							<div class="form__body form__body_triple mbt1">
-								<label class="form__field form__field_txt" data-title="Ф.И.О.">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Номер телефона">
-									<input type="tel" placeholder="+7 (900) 123-45-67"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Email">
-									<input type="text" placeholder="address@gmail.com"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Организация">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Номер машины">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Номер прицепа">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_file" data-title="Ксерокопия паспорта ТС">
-									<input type="file"/><span>Ксерокопия паспорта ТС</span>
-								</label>
-								<label class="form__field form__field_txt" data-title="Место регистрации ">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Месторасположение ТС">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Предпочтение по портам">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Грузоподъемность ТС">
-									<input type="text"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Стивдор">
-									<input type="text"/>
-								</label>
-							</div>
-							<div class="form__buttons form__buttons_grid">
-								<button class="form__button button button_save" type="button">Сохранить</button>
-							</div>
-						</form>
+			<div class="slider-f__item swiper-slide mb1">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Редактировать профиль перевозчика</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_txt" data-title="Ф.И.О.">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Email">
+							<input type="text" placeholder="address@gmail.com"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Организация">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер машины">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер прицепа">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_file" data-title="Ксерокопия паспорта ТС">
+							<input type="file"/><span>Ксерокопия паспорта ТС</span>
+						</label>
+						<label class="form__field form__field_txt" data-title="Место регистрации ">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Месторасположение ТС">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Предпочтение по портам">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Грузоподъемность ТС">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Стивдор">
+							<input type="text"/>
+						</label>
 					</div>
-				</section>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_save" type="button">Сохранить</button>
+					</div>
+				</form>
 			</div>
-			<div class="slider-f__item swiper-slide">
-				<section class="section mb1">
-					<div class="section__layout">
-						<form class="section__unit form anim" action="./" data-animation="200px">
-							<h2 class="title">Редактировать профиль грузовладельца</h2>
-							<div class="form__body form__body_triple mbt1">
-								<label class="form__field form__field_txt" data-title="Номер телефона">
-									<input type="tel" placeholder="+7 (900) 123-45-67"/>
-								</label>
-								<label class="form__field form__field_txt" data-title="Email">
-									<input type="text" placeholder="address@gmail.com"/>
-								</label>
-								<select class="form__field form__field_sel" data-title="Тип">
-									<option value="1">Грузовладелец</option>
-									<option value="2">Перевозчик</option>
-								</select>
-								<select class="form__field form__field_sel" data-title="Уровень доступа">
-									<option value="1">Пользователь</option>
-									<option value="2">Администратор</option>
-								</select>
-								<select class="form__field form__field_sel" data-title="Доступ к контактам">
-									<option value="1">Открыт</option>
-									<option value="2">Закрыт</option>
-								</select>
-							</div>
-							<div class="form__buttons form__buttons_grid">
-								<button class="form__button button button_save" type="button">Сохранить</button>
-							</div>
-						</form>
+			<div class="slider-f__item swiper-slide mb1">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Редактировать профиль грузовладельца</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Email">
+							<input type="text" placeholder="address@gmail.com"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="Тип">
+							<option value="1">Грузовладелец</option>
+							<option value="2">Перевозчик</option>
+						</select>
+						<select class="form__field form__field_sel" data-title="Уровень доступа">
+							<option value="1">Пользователь</option>
+							<option value="2">Администратор</option>
+						</select>
+						<select class="form__field form__field_sel" data-title="Доступ к контактам">
+							<option value="1">Открыт</option>
+							<option value="2">Закрыт</option>
+						</select>
 					</div>
-				</section>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_save" type="button">Сохранить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <div class="panel" data-scroll-lock-fill-gap>
 	<a class="panel__link panel__link_profile" href="./"></a>
 	<a class="panel__link panel__link_calc" href="./"></a>
-	<!-- <a class="panel__link panel__link_exit" href="./"></a> -->
-	<a class="panel__link panel__link_login" href="./"></a>
+	<a class="panel__link panel__link_exit" href="./"></a>
+	<!-- <a class="panel__link panel__link_login" href="./"></a> -->
 </div>
 
 <div class="modal__hidden">
