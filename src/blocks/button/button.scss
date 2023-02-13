@@ -14,20 +14,23 @@
 	height: 48px;
 	white-space: nowrap;
 	transition: transform 0.1s;
-		
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+	border: 2px solid #bec3c8;
+	
 	@include media('<=xs') {
 		border-radius: 8px;
 		line-height: 20px;
 		font-size: 14px;
 		height: 40px;
 	}
-		
+	
 	@include media('<=xxs') {
 		font-size: 13px;
 	}
-
+	
 	&:active {
 		transform: scale(95%);
+		box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.5);
 	}
 
 	&::after {
