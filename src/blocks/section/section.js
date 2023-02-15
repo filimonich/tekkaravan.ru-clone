@@ -4,7 +4,7 @@
 		let $self = $(e.target);
 
 		$self.next('.section__collapse').slideToggle('fast', function() {
-			$self.toggleClass('closed');
+			$self.toggleClass('section__toggle_closed');
 		});
 	});
 

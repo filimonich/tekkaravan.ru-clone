@@ -16,68 +16,78 @@
 * @вызов
 * 
 import scrollLock from 'scroll-lock';
-import { menuToggle } from "../../js/lib";
+import { menuToggle } from "../../js/libs/menuToggle";
 const menu = document.querySelector('.menu');
 const toggles = document.querySelectorAll('.menu__toggle, .menu__close');
 menuToggle(menu, toggles,  {
-	scrollLock,
-	cls: 'opened',
-	open: function() {
-		console.log(this)
-	},
-	close: function() {
-		...
-	}
+	scrollLock: scrollLock,
+	globalClose: true,
+	class: 'opened'
 });
 * 
 */
 
-export const menuToggle = (menu, toggles, props = {}) => {
-	if(!toggles || !menu) return;
-	
-	const { scrollLock } = props;
-	const cls = props.cls || 'opened';
-	
-	const menuOpen = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		menu.classList.add('opened');
+export const menuToggle = (menu, toggles, options = {}) => {
+	class Menu {
+		constructor(menu, toggles, options) {
+			if(!menu || !menu instanceof Element || !toggles) return;
 
-		if(typeof scrollLock !== 'undefined') {
-			Object.assign(menu.style, { maxWidth: parseInt(getComputedStyle(menu).maxWidth) + scrollLock.getPageScrollBarWidth() + 'px' });
-			scrollLock.disablePageScroll();
-		}
+			this.options = {
+				class: 'opened',
+				globalClose: true,
+				...options
+			};
 
-		if (typeof props.open === 'function') 
-			return props.open.call(menu);
-	}
-	
-	const menuClose = (e) => {
-		e.stopPropagation();
-		menu.classList.remove(`${cls}`);
-		menu.removeAttribute('style');
-		
-		if(typeof scrollLock !== 'undefined') {
-			scrollLock.clearQueueScrollLocks();
-			scrollLock.enablePageScroll();
-		}
-
-		if (typeof props.close === 'function') 
-			return props.close.call(menu);
-	}
-
-	toggles.forEach(toggle => {
-		toggle.addEventListener('click', function(e) {
-			menu.classList.contains(`${cls}`) ? menuClose(e) : menuOpen(e);
-		});
-	});
-
-	['click','touchend'].forEach(event => {
-		document.addEventListener(event, (e) => {
-			if(menu.classList.contains(`${cls}`) && !e.target.closest(`.${menu.className.split(' ')[0]}`)) {
-				e.preventDefault();
-				menuClose(e);
+			toggles.forEach(toggle => {
+				toggle.addEventListener('click', (e) => {
+					menu.classList.contains(`${this.options.class}`) ? this.menuClose(e) : this.menuOpen(e);
+				});
+			});
+			
+			if(this.options.globalClose) {
+				['click','touchstart'].forEach(event => {
+					document.addEventListener(event, (e) => {
+						if(menu.classList.contains(`${this.options.class}`) && !e.target.closest(`.${menu.className.split(' ')[0]}`)) {
+							e.preventDefault();
+							this.menuClose(e);
+						}
+					});
+				});
 			}
-		}, true);
-	});
+		}
+			
+		menuOpen(e) {
+			if(e) {
+				e.preventDefault();
+				e.stopPropagation();
+			}
+
+			menu.classList.add('opened');
+	
+			if(typeof this.options.scrollLock !== 'undefined') {
+				Object.assign(menu.style, { maxWidth: parseInt(getComputedStyle(menu).maxWidth) + this.options.scrollLock.getPageScrollBarWidth() + 'px' });
+				this.options.scrollLock.disablePageScroll();
+			}
+
+			if (typeof this.options.open === 'function') 
+				return this.options.open.call(menu);
+		}
+		
+		menuClose(e) {
+			if(e) e.stopPropagation();
+
+			menu.classList.remove(`${this.options.class}`);
+			menu.removeAttribute('style');
+			
+			if(typeof this.options.scrollLock !== 'undefined') {
+				this.options.scrollLock.clearQueueScrollLocks();
+				this.options.scrollLock.enablePageScroll();
+			}
+	
+			if (typeof this.options.close === 'function') 
+				return this.options.close.call(menu);
+		}
+	}
+
+	return new Menu(menu, toggles, options);
 }

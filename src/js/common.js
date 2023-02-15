@@ -1,24 +1,21 @@
 import "../../node_modules/swiped-events/dist/swiped-events.min.js";
+import "./polyfills.js";
 import "./blocks.js";
 
-/* Polyfills */
-(function(e) {
-	e.matches = e.matches || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector || e.webkitMatchesSelector;
-	e.closest = e.closest || function closest(selector) {
-		if (!this) return null;
-		if (this.matches(selector)) return this;
-		if (!this.parentElement) {return null}
-			else return this.parentElement.closest(selector)
-		};
-}(Element.prototype));
+/* Тут можно писать код общий для всего проекта и требующий единого пространства имен */
 
-(function(e) {
-	let matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
-	!matches ? (e.matches = e.matchesSelector = function matches(selector) {
-		let matches = document.querySelectorAll(selector);
-		let th = this;
-		return Array.prototype.some.call(matches, function(e) {
-			return e === th;
-		});
-	}) : (e.matches = e.matchesSelector = matches);
-})(Element.prototype);
+import scrollLock from 'scroll-lock';
+import { menuToggle } from "./libs/menuToggle";
+
+
+const $header = document.querySelector('.header');
+const $menu = $header.querySelector('.header__navi');
+const $toggles = $header.querySelectorAll('.header__toggle, .header__close');
+
+const menu = menuToggle($menu, $toggles, {
+	scrollLock: scrollLock,
+	class: 'opened'
+});
+
+// открытие и закрытие меню, свайпом на мобильных устройствах
+document.addEventListener('swiped-left', (e) => menu.menuClose(e));

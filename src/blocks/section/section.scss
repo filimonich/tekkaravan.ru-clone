@@ -77,12 +77,15 @@
 		background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-dark') center right 24px / 16px 10px no-repeat transparent;
 		cursor: pointer;
 
-		&.closed {
+		&_closed {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-dark');
 		}
 	}
 
 	&__collapse {
 		
+		&_collapsed {
+			display: none;
+		}
 	}
 }

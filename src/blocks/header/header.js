@@ -1,11 +1,20 @@
-import scrollLock from 'scroll-lock';
+// import scrollLock from 'scroll-lock';
+// import { menuToggle } from "../../js/libs/menuToggle";
 
 (() => {
-	const $header = $('.header');
+	// решение проблемы 100vh для меню на мобильных устройствах
+	const vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	
+	window.addEventListener('resize', () => {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+
+	/* const $header = $('.header');
 	const $shell = $header.find('.header__navi');
 	const $toggle = $header.find('.header__toggle');
 	const $close = $header.find('.navi__close')
-	const vh = window.innerHeight * 0.01; // решение проблемы 100vh для меню на мобильных устройствах
 	
 	// открыть меню
 	const open = (e) => {
@@ -41,19 +50,6 @@ import scrollLock from 'scroll-lock';
 
 		if(isopened && !isnavi && !ismodal)
 			close(e);
-	});
-
-	// открытие и закрытие меню, свайпом на мобильных устройствах
-	// document.addEventListener('swiped-right', (e) => open(e));
-	document.addEventListener('swiped-left', (e) => close(e));
-
-
-	// решение проблемы 100vh для меню на мобильных устройствах
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-	
-	window.addEventListener('resize', () => {
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+	}); */
 
 })();
