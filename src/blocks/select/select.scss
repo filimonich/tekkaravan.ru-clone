@@ -57,10 +57,30 @@
 		border-radius: 10px;
 		background-color: #fff;
 		border: 1px solid $light;
+		max-height: 365px;
+		overflow: auto;
 		
 		@include media('<=xxxs') {
 			padding: 10px 15px;
 			top: calc(100% + 6px);
+		}
+	
+		&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+		
+		&::-webkit-scrollbar-track {
+			background-color: $light;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: $placeholder;
+			border-radius: 10px;
+		}
+		
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
 		}
 	}
 

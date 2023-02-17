@@ -65,10 +65,10 @@
 		"jquery": "dist/jquery.min.js"
 	},
 	"ftp": {
-		"host": "",
-		"user": "",
-		"password": "",
-		"workdir": ""
+		"host": "95.216.77.150",
+		"user": "shurinskiy2@tekkaravan.ru",
+		"password": "4lt20Gzp",
+		"workdir": "/assets/"
 	},
 	"bemtree": {
 		"from": "src/**/*.html",

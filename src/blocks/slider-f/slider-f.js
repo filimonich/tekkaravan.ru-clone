@@ -18,7 +18,16 @@ import Swiper, { Pagination } from 'swiper';
 				modules: [Pagination],
 				pagination: {
 					el: `.slider-f__pagination_${i}`,
-					type: "progressbar",
+					// type: "progressbar",
+					bulletClass: 'slider-f__dot',
+					bulletActiveClass: 'active',
+					clickable: true,
+					renderBullet: function (index, cls) {
+						// const $current = this.$el.find(`[data-swiper-slide-index="${index}"]`);
+						// const title = $slides.eq(index).find('h2.title').text();
+						const icon = $slides.eq(index).data('icon');
+						return `<span class='${cls} ${cls}_${icon}'></span>`;
+					}
 				},
 				on: {
 					beforeInit: function () {

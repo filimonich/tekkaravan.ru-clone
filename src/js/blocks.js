@@ -7,7 +7,6 @@ import "../blocks/modal/modal.js";
 import "../blocks/filter/filter.js";
 import "../blocks/gallery-c/gallery-c.js";
 import "../blocks/section/section.js";
-import "../blocks/map/map.js";
 import "../blocks/gallery-d/gallery-d.js";
 import "../blocks/info/info.js";
 import "../blocks/tab/tab.js";

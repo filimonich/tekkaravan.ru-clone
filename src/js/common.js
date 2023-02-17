@@ -10,7 +10,7 @@ import { menuToggle } from "./libs/menuToggle";
 
 const $header = document.querySelector('.header');
 const $menu = $header.querySelector('.header__navi');
-const $toggles = $header.querySelectorAll('.header__toggle, .header__close');
+const $toggles = $header.querySelectorAll('.header__toggle, .navi__close');
 
 const menu = menuToggle($menu, $toggles, {
 	scrollLock: scrollLock,

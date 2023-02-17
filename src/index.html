@@ -21,8 +21,53 @@
 						<input type="text" placeholder="дд.мм.гг."/>
 					</label>
 					<select class="form__field form__field_sel form-s__item" data-title="Тип кузова">
-						<option value="1">Тентованный</option>
-						<option value="2">Не тентованный</option>
+						<option value='тентованный'>тентованный</option>
+						<option value='контейнер'>контейнер</option>
+						<option value='фургон'>фургон</option>
+						<option value='цельнометалл'>цельнометалл.</option>
+						<option value='все закр. +изотерм'>все закр. +изотерм</option>
+						<option value='изотермическийреф.+изотерм'>изотермическийреф.+изотерм</option>
+						<option value='рефрижератор'>рефрижератор</option>
+						<option value='реф. мультирежимный'>реф. мультирежимный</option>
+						<option value='реф. с перегородкой'>реф. с перегородкой</option>
+						<option value='реф. тушевоз'>реф. тушевоз</option>
+						<option value='все открытые'>все открытые</option>
+						<option value='бортовой'>бортовой</option>
+						<option value='открытый конт.'>открытый конт.</option>
+						<option value='площадка без бортов'>площадка без бортов</option>
+						<option value='самосвал'>самосвал</option>
+						<option value='шаланда'>шаланда</option>
+						<option value='негабарит'>негабарит</option>
+						<option value='низкорамный'>низкорамный</option>
+						<option value='низкорам.платф.'>низкорам.платф.</option>
+						<option value='телескопический'>телескопический</option>
+						<option value='тралбалковоз(негабарит)'>тралбалковоз(негабарит)</option>
+						<option value='автовоз'>автовоз</option>
+						<option value='автотранспортер'>автотранспортер</option>
+						<option value='бетоновоз'>бетоновоз</option>
+						<option value='битумовоз'>битумовоз</option>
+						<option value='бензовоз'>бензовоз</option>
+						<option value='вездеход'>вездеход</option>
+						<option value='газовоз'>газовоз</option>
+						<option value='зерновоз'>зерновоз</option>
+						<option value='коневоз'>коневоз</option>
+						<option value='контейнеровоз'>контейнеровоз</option>
+						<option value='кормовоз'>кормовоз</option>
+						<option value='лесовоз'>лесовоз</option>
+						<option value='ломовоз'>ломовоз</option>
+						<option value='муковоз'>муковоз</option>
+						<option value='панелевоз'>панелевоз</option>
+						<option value='рулоновоз'>рулоновоз</option>
+						<option value='седельный тягач'>седельный тягач</option>
+						<option value='скотовоз'>скотовоз</option>
+						<option value='стекловоз'>стекловоз</option>
+						<option value='трубовоз'>трубовоз</option>
+						<option value='цементовоз'>цементовоз</option>
+						<option value='цистерна'>цистерна</option>
+						<option value='щеповоз'>щеповоз</option>
+						<option value='мусоровоз'>мусоровоз</option>
+						<option value='20 танк-контейнер'>20 танк-контейнер</option>
+						<option value='40 танк-контейнер'>40 танк-контейнер</option>						
 					</select>
 					<select class="form__field form__field_sel form-s__item" data-title="Тип загрузки">
 						<option value="1">Верхняя</option>
@@ -103,13 +148,13 @@
 <section class="section slider-f">
 	<div class="slider-f__top container mb1">
 		<div class="section__unit form anim slider-f__top-body" data-animation="200px">
-			<h3 class="title mb1">Слайдер форм</h3>
+			<!-- <h3 class="title mb1">Слайдер форм</h3> -->
 			<div class=" slider-f__pagination"></div>
 		</div>
 	</div>
 	<div class="slider-f__inner container swiper">
 		<div class="swiper-wrapper">
-			<div class="slider-f__item swiper-slide mb1">
+			<div class="slider-f__item swiper-slide mb1" data-icon="cargo">
 				<form class="section__unit form anim" action="./" data-animation="200px">
 					<h2 class="title">Добавить вакансию</h2>
 					<div class="form__body form__body_triple mbt1">
@@ -157,7 +202,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="slider-f__item swiper-slide mb1">
+			<div class="slider-f__item swiper-slide mb1" data-icon="drivers">
 				<form class="section__unit form anim" action="./" data-animation="200px">
 					<h2 class="title">Редактировать профиль перевозчика</h2>
 					<div class="form__body form__body_triple mbt1">
@@ -203,7 +248,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="slider-f__item swiper-slide mb1">
+			<div class="slider-f__item swiper-slide mb1" data-icon="parts">
 				<form class="section__unit form anim" action="./" data-animation="200px">
 					<h2 class="title">Редактировать профиль грузовладельца</h2>
 					<div class="form__body form__body_triple mbt1">

@@ -82,6 +82,18 @@
 		}
 	}
 
+	&__map {
+		overflow: hidden;
+		backface-visibility: hidden;
+		transform: translate3d(0, 0, 0);
+		height: 400px;
+		background: url('#{$images-path}map-yandex-bg.svg') center / 80% auto no-repeat transparent;
+		
+		[class*="copyrights-pane"] {
+			display: none;
+		}
+	}
+
 	&__collapse {
 		
 		&_collapsed {
