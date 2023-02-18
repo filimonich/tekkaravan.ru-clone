@@ -22,6 +22,7 @@ const toggles = document.querySelectorAll('.menu__toggle, .menu__close');
 menuToggle(menu, toggles,  {
 	scrollLock: scrollLock,
 	globalClose: true,
+	omitToClose: '.modal, .form',
 	class: 'opened'
 });
 * 
@@ -38,24 +39,10 @@ export const menuToggle = (menu, toggles, options = {}) => {
 				...options
 			};
 
-			toggles.forEach(toggle => {
-				toggle.addEventListener('click', (e) => {
-					menu.classList.contains(`${this.options.class}`) ? this.menuClose(e) : this.menuOpen(e);
-				});
-			});
-			
-			if(this.options.globalClose) {
-				['click','touchstart'].forEach(event => {
-					document.addEventListener(event, (e) => {
-						if(menu.classList.contains(`${this.options.class}`) && !e.target.closest(`.${menu.className.split(' ')[0]}`)) {
-							e.preventDefault();
-							this.menuClose(e);
-						}
-					});
-				});
-			}
+			this.init();
 		}
 			
+
 		menuOpen(e) {
 			if(e) {
 				e.preventDefault();
@@ -65,7 +52,10 @@ export const menuToggle = (menu, toggles, options = {}) => {
 			menu.classList.add('opened');
 	
 			if(typeof this.options.scrollLock !== 'undefined') {
-				Object.assign(menu.style, { maxWidth: parseInt(getComputedStyle(menu).maxWidth) + this.options.scrollLock.getPageScrollBarWidth() + 'px' });
+				const maxw = parseInt(getComputedStyle(menu).maxWidth);
+				const scrollw = this.options.scrollLock.getPageScrollBarWidth();
+				
+				Object.assign(menu.style, { maxWidth: maxw + scrollw + 'px' });
 				this.options.scrollLock.disablePageScroll();
 			}
 
@@ -73,6 +63,7 @@ export const menuToggle = (menu, toggles, options = {}) => {
 				return this.options.open.call(menu);
 		}
 		
+
 		menuClose(e) {
 			if(e) e.stopPropagation();
 
@@ -86,6 +77,35 @@ export const menuToggle = (menu, toggles, options = {}) => {
 	
 			if (typeof this.options.close === 'function') 
 				return this.options.close.call(menu);
+		}
+
+
+		omitToClose(e) {
+			const omits = this.options.omitToClose.split(",").map((item) => item.trim());
+			return omits.some(omit => !!e.target.closest(`${omit}`));
+		}
+
+
+		init() {
+			toggles.forEach(toggle => {
+				toggle.addEventListener('click', (e) => {
+					menu.classList.contains(`${this.options.class}`) ? this.menuClose(e) : this.menuOpen(e);
+				});
+			});
+
+			if(this.options.globalClose) {
+				['click','touchstart'].forEach(event => {
+					document.addEventListener(event, (e) => {
+						const isopen = menu.classList.contains(`${this.options.class}`);
+						const isself = e.target.closest(`.${menu.className.split(' ')[0]}`);
+
+						if(isopen && !isself && !this.omitToClose(e)) {
+							e.preventDefault();
+							this.menuClose(e);
+						}
+					});
+				});
+			}
 		}
 	}
 

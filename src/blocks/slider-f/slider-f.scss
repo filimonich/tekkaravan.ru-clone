@@ -4,7 +4,11 @@
 
 	&__inner {
 		&.swiper {
-
+			padding-top: 12px;
+			padding-bottom: 12px;
+			margin-top: -12px;
+			margin-bottom: -12px;
+	
 			@include media('>xxs') {
 				height: auto;
 				overflow: visible;
@@ -85,6 +89,11 @@
 		&_parts {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-parts-view-blue');
 			background-size: 32px 32px;
+		}
+		
+		&_carrier {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
+			background-size: 34px 26px;
 		}
 	}
 }
