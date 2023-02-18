@@ -40,7 +40,7 @@
 			content: '';
 			width: 40px;
 			height: 40px;
-			margin-bottom: 12px;
+			margin-bottom: 10px;
 			background-color: transparent;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -87,6 +87,8 @@
 		}
 
 		span {
+			font-family: "RB", sans-serif;
+
 			@include media('<=md') {
 				font-size: 14px;
 			}
