@@ -7,8 +7,24 @@
 	top: 0;
 	z-index: 4;
 	width: 100%;
+
+	&_home {
+		#{$self}__navi {
+			@include media('<=xs') {
+				top: 135px;
+				height: calc(100vh - 135px);
+				height: calc((var(--vh, 1vh) * 100) - 135px);
+			}
 	
-	&__inner {
+			@include media('<=xxs') {
+				top: 110px;
+				height: calc(100vh - 110px);
+				height: calc((var(--vh, 1vh) * 100) - 110px);
+			}
+		}
+	}
+	
+	&__top {
 		box-sizing: border-box;
 		padding-bottom: 10px;
 		padding-top: 10px;
@@ -157,5 +173,9 @@
 		@include media('<=xs') {
 			display: block;
 		}
+	}
+
+	&__bottom {
+
 	}
 }

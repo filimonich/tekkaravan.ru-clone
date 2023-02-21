@@ -1,0 +1,343 @@
+@@include("_head.html") 
+@@include("_header.html")
+
+<section class="section mbt1">
+	<div class="section__layout tab container">
+		<div class="section__unit tab__buttons tab__buttons_caps mb1">
+			<button class="tab__button tab__button_cargo active">Заголовок первой формы</button>
+			<button class="tab__button tab__button_tracks">Заголовок второй формы</button>
+			<button class="tab__button tab__button_carrier">Заголовок третьей формы</button>
+			<button class="tab__button tab__button_parts">Заголовок четвертой формы</button>
+		</div>
+		<div class="section__unit tab__blocks">
+			<div class="tab__block active">
+				<p>Placeat deleniti quibusdam corrupti nisi consectetur et vitae tempore beatae inventore quasi impedit debitis nesciunt, magnam repellendus delectus sint libero aut recusandae quae autem dignissimos quas accusamus. Harum minus tempore blanditiis velit exercitationem, sequi consequatur doloribus inventore, ab est quos facilis ex. Deserunt quo error architecto ratione, sint sapiente obcaecati dolorum, vitae iste temporibus placeat iure? Temporibus, qui recusandae placeat animi laboriosam vitae nostrum vero est quod aliquid nihil aspernatur suscipit. Ex, esse repellendus veniam, nostrum quaerat voluptatum error dolores accusantium hic nobis facere ut. Cupiditate, animi. Sequi!</p>
+			</div>
+			<div class="tab__block">
+				<p>Natus numquam officia neque provident, ipsam, voluptatibus dignissimos obcaecati nisi voluptatum incidunt eius odio recusandae at voluptas debitis voluptates molestiae quasi delectus omnis perferendis quos minima soluta culpa! Provident perspiciatis sequi nostrum. Quae provident, qui libero nobis voluptatibus nam dignissimos aspernatur repudiandae minus odit? Explicabo nemo aliquam porro, dolores vel quidem mollitia eveniet ipsam tempore nobis illo qui iusto error magnam perspiciatis rem architecto, molestias tempora unde exercitationem quos expedita quis cum voluptatibus? Quos dignissimos ad nostrum iure impedit iste cupiditate qui velit ratione nihil, tenetur at sit nesciunt saepe suscipit accusamus.</p>
+			</div>
+			<div class="tab__block">
+				<p>Voluptas magni ea neque repellendus quae? Maxime atque voluptatibus, quos ad voluptates impedit laborum nobis officiis recusandae cupiditate tempore adipisci sint enim optio animi praesentium quasi repellendus ipsa pariatur incidunt quibusdam placeat quas omnis ducimus. Quisquam quae saepe debitis ducimus asperiores, ex in quia repellendus sunt, iure adipisci et quis enim! Iusto porro doloribus et. Voluptatem ullam perferendis deserunt, hic autem doloribus saepe, fuga, dignissimos quae nisi ducimus quasi illo? Cum ullam, voluptatibus pariatur ratione tenetur voluptatum eveniet molestias iure, deleniti omnis, distinctio beatae iste explicabo dolorum doloremque non fugit ducimus? Tempora.</p>
+			</div>
+			<div class="tab__block">
+				<p>Alias quaerat facilis tenetur quisquam quia exercitationem. Explicabo similique, adipisci commodi doloremque eligendi qui, sunt, praesentium dolorum quia nam temporibus et. Perspiciatis recusandae nam, dolore molestiae magni, voluptates voluptatem at obcaecati soluta quasi aspernatur facere! Numquam illum architecto eos id pariatur sunt mollitia vitae beatae veniam totam ex inventore accusamus, earum animi, repellat voluptatum reprehenderit sequi sit harum reiciendis fuga accusantium voluptas. Tenetur id quidem facere cupiditate labore aperiam quos totam necessitatibus amet, quod numquam quasi blanditiis voluptatibus fugit quae odio. Commodi accusamus mollitia vel. Nisi aperiam tempora minus molestiae est quisquam.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section mb1">
+	<div class="section__layout container">
+		<form class="section__unit form form-s anim" action="./" data-animation="200px">
+			<h2 class="title section__toggle">Форма поиска</h2>
+			<div class="section__collapse">
+				<div class="form__body form-s__layout mbt1">
+					<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
+						<input type="text"/><hr>
+						<input type="text" placeholder="км"/>
+					</label>
+					</label>
+					<button class="form__button button button_change form-s__item" id="form-s__change" type="button"></button>
+					<label class="form__field form__field_geo form-s__item" id="form-s__to" data-title="Куда">
+						<input type="text"/><hr>
+						<input type="text" placeholder="км"/>
+					</label>
+					<label class="form__field form__field_date form-s__item" data-title="Дата">
+						<input type="text" placeholder="дд.мм.гг."/>
+					</label>
+					<select class="form__field form__field_sel form-s__item" data-title="Тип кузова">
+						<option value='тентованный'>тентованный</option>
+						<option value='контейнер'>контейнер</option>
+						<option value='фургон'>фургон</option>
+						<option value='цельнометалл'>цельнометалл.</option>
+						<option value='все закр. +изотерм'>все закр. +изотерм</option>
+						<option value='изотермическийреф.+изотерм'>изотермическийреф.+изотерм</option>
+						<option value='рефрижератор'>рефрижератор</option>
+						<option value='реф. мультирежимный'>реф. мультирежимный</option>
+						<option value='реф. с перегородкой'>реф. с перегородкой</option>
+						<option value='реф. тушевоз'>реф. тушевоз</option>
+						<option value='все открытые'>все открытые</option>
+						<option value='бортовой'>бортовой</option>
+						<option value='открытый конт.'>открытый конт.</option>
+						<option value='площадка без бортов'>площадка без бортов</option>
+						<option value='самосвал'>самосвал</option>
+						<option value='шаланда'>шаланда</option>
+						<option value='негабарит'>негабарит</option>
+						<option value='низкорамный'>низкорамный</option>
+						<option value='низкорам.платф.'>низкорам.платф.</option>
+						<option value='телескопический'>телескопический</option>
+						<option value='тралбалковоз(негабарит)'>тралбалковоз(негабарит)</option>
+						<option value='автовоз'>автовоз</option>
+						<option value='автотранспортер'>автотранспортер</option>
+						<option value='бетоновоз'>бетоновоз</option>
+						<option value='битумовоз'>битумовоз</option>
+						<option value='бензовоз'>бензовоз</option>
+						<option value='вездеход'>вездеход</option>
+						<option value='газовоз'>газовоз</option>
+						<option value='зерновоз'>зерновоз</option>
+						<option value='коневоз'>коневоз</option>
+						<option value='контейнеровоз'>контейнеровоз</option>
+						<option value='кормовоз'>кормовоз</option>
+						<option value='лесовоз'>лесовоз</option>
+						<option value='ломовоз'>ломовоз</option>
+						<option value='муковоз'>муковоз</option>
+						<option value='панелевоз'>панелевоз</option>
+						<option value='рулоновоз'>рулоновоз</option>
+						<option value='седельный тягач'>седельный тягач</option>
+						<option value='скотовоз'>скотовоз</option>
+						<option value='стекловоз'>стекловоз</option>
+						<option value='трубовоз'>трубовоз</option>
+						<option value='цементовоз'>цементовоз</option>
+						<option value='цистерна'>цистерна</option>
+						<option value='щеповоз'>щеповоз</option>
+						<option value='мусоровоз'>мусоровоз</option>
+						<option value='20 танк-контейнер'>20 танк-контейнер</option>
+						<option value='40 танк-контейнер'>40 танк-контейнер</option>						
+					</select>
+					<select class="form__field form__field_sel form-s__item" data-title="Тип загрузки">
+						<option value="1">Верхняя</option>
+						<option value="2">Нижняя</option>
+						<option value="3">Боковая</option>
+						<option value="4">Передняя</option>
+						<option value="5">Задняя</option>
+					</select>
+				</div>
+				<div class="form__buttons form__buttons_grid">
+					<button class="form__button button button_find form-s__button" type="button">Найти грузы</button>
+					<button class="form__button button button_find form-s__button" type="button">Найти машины</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section class="section mb1">
+	<div class="section__layout container">
+		<form class="section__unit form anim" action="./" data-animation="200px">
+			<h2 class="title section__toggle">Форма регистрации</h2>
+			<div class="section__collapse">
+				<div class="form__body form__body_triple mbt1">
+					<label class="form__field form__field_txt" data-title="Ф.И.О.">
+						<input type="text"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="Email">
+						<input type="text" placeholder="address@gmail.com"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="Номер телефона">
+						<input type="tel" placeholder="+7 (900) 123-45-67"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="ИНН">
+						<input type="text"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="ИП или ООО">
+						<input type="text"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="Пароль">
+						<input type="text"/>
+					</label>
+				</div>
+				<div class="form__buttons form__buttons_grid">
+					<button class="form__button button" type="button">Регистрация</button>
+					<button class="form__button button" type="button">Авторизация</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section class="section slider-fd slider-fd-js mb1">
+	<div class="slider-fd__top container mb1">
+		<div class="section__unit form anim slider-fd__top-body" data-animation="200px">
+			<div class=" slider-fd__pagination"></div>
+		</div>
+	</div>
+	<div class="slider-fd__inner container swiper anim" data-animation="200px">
+		<div class="swiper-wrapper">
+			<div class="slider-fd__item swiper-slide" data-icon="cargo">
+				<div class="section__unit">
+					<h2 class="title mb1">Заголовок первого слайда</h2>
+					<p>Placeat deleniti quibusdam corrupti nisi consectetur et vitae tempore beatae inventore quasi impedit debitis nesciunt, magnam repellendus delectus sint libero aut recusandae quae autem dignissimos quas accusamus. Harum minus tempore blanditiis velit exercitationem, sequi consequatur doloribus inventore, ab est quos facilis ex. Deserunt quo error architecto ratione, sint sapiente obcaecati dolorum, vitae iste temporibus placeat iure? Temporibus, qui recusandae placeat animi laboriosam vitae nostrum vero est quod aliquid nihil aspernatur suscipit. Ex, esse repellendus veniam, nostrum quaerat voluptatum error dolores accusantium hic nobis facere ut. Cupiditate, animi. Sequi!</p>
+				</div>
+			</div>
+			<div class="slider-fd__item swiper-slide" data-icon="drivers">
+				<div class="section__unit">
+					<h2 class="title mb1">Заголовок второго слайда</h2>
+					<p>Natus numquam officia neque provident, ipsam, voluptatibus dignissimos obcaecati nisi voluptatum incidunt eius odio recusandae at voluptas debitis voluptates molestiae quasi delectus omnis perferendis quos minima soluta culpa! Provident perspiciatis sequi nostrum. Quae provident, qui libero nobis voluptatibus nam dignissimos aspernatur repudiandae minus odit? Explicabo nemo aliquam porro, dolores vel quidem mollitia eveniet ipsam tempore nobis illo qui iusto error magnam perspiciatis rem architecto, molestias tempora unde exercitationem quos expedita quis cum voluptatibus? Quos dignissimos ad nostrum iure impedit iste cupiditate qui velit ratione nihil, tenetur at sit nesciunt saepe suscipit accusamus.</p>
+				</div>
+			</div>
+			<div class="slider-fd__item swiper-slide" data-icon="parts">
+				<div class="section__unit">
+					<h2 class="title mb1">Заголовок третьего слайда</h2>
+					<p>Voluptas magni ea neque repellendus quae? Maxime atque voluptatibus, quos ad voluptates impedit laborum nobis officiis recusandae cupiditate tempore adipisci sint enim optio animi praesentium quasi repellendus ipsa pariatur incidunt quibusdam placeat quas omnis ducimus. Quisquam quae saepe debitis ducimus asperiores, ex in quia repellendus sunt, iure adipisci et quis enim! Iusto porro doloribus et. Voluptatem ullam perferendis deserunt, hic autem doloribus saepe, fuga, dignissimos quae nisi ducimus quasi illo? Cum ullam, voluptatibus pariatur ratione tenetur voluptatum eveniet molestias iure, deleniti omnis, distinctio beatae iste explicabo dolorum doloremque non fugit ducimus? Tempora.</p>
+				</div>
+			</div>
+			<div class="slider-fd__item swiper-slide" data-icon="carrier">
+				<div class="section__unit">
+					<h2 class="title mb1">Заголовок четвертого слайда</h2>
+					<p>Alias quaerat facilis tenetur quisquam quia exercitationem. Explicabo similique, adipisci commodi doloremque eligendi qui, sunt, praesentium dolorum quia nam temporibus et. Perspiciatis recusandae nam, dolore molestiae magni, voluptates voluptatem at obcaecati soluta quasi aspernatur facere! Numquam illum architecto eos id pariatur sunt mollitia vitae beatae veniam totam ex inventore accusamus, earum animi, repellat voluptatum reprehenderit sequi sit harum reiciendis fuga accusantium voluptas. Tenetur id quidem facere cupiditate labore aperiam quos totam necessitatibus amet, quod numquam quasi blanditiis voluptatibus fugit quae odio. Commodi accusamus mollitia vel. Nisi aperiam tempora minus molestiae est quisquam.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section mb1">
+	<div class="section__layout container">
+		<form class="section__unit form anim" action="./" data-animation="200px">
+			<h2 class="title">Добавить пользователя</h2>
+			<div class="form__body form__body_triple mbt1">
+				<label class="form__field form__field_txt" data-title="ФИО или организация">
+					<input type="text"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="Номер телефона">
+					<input type="tel" placeholder="+7 (900) 123-45-67"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="Email">
+					<input type="text" placeholder="address@gmail.com"/>
+				</label>
+				<label class="form__field form__field_txt" data-title="Регион">
+					<input type="text"/>
+				</label>
+			</div>
+			<div class="form__buttons form__buttons_grid">
+				<button class="form__button button button_save" type="button">Сохранить</button>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section class="section slider-f">
+	<div class="slider-f__top container mb1">
+		<div class="section__unit form anim slider-f__top-body" data-animation="200px">
+			<div class=" slider-f__pagination"></div>
+		</div>
+	</div>
+	<div class="slider-f__inner container swiper">
+		<div class="swiper-wrapper">
+			<div class="slider-f__item swiper-slide mb1" data-icon="cargo">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Добавить вакансию</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_file" data-title="Выберите фото">
+							<input type="file"/><span>Выберите фото</span>
+						</label>
+						<label class="form__field form__field_txt" data-title="Заголовок">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Зарплата">
+							<input type="text"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="Частота выплат">
+							<option value="1">Почасовая оплата</option>
+							<option value="2">Ежедневная оплата</option>
+						</select>
+						<label class="form__field form__field_txt" data-title="Сфера деятельности">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Профессия">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="График работы">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Где предстоит работать">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Опыт работы">
+							<input type="text"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="В том числе для кандидатов">
+							<option value="1">Старше 45 лет</option>
+							<option value="2">Моложе 45 лет</option>
+						</select>
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_area form__field_wide" data-title="Описание">
+							<textarea></textarea>
+						</label>
+					</div>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button" type="button">Добавить</button>
+					</div>
+				</form>
+			</div>
+			<div class="slider-f__item swiper-slide mb1" data-icon="drivers">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Редактировать профиль перевозчика</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_txt" data-title="Ф.И.О.">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Email">
+							<input type="text" placeholder="address@gmail.com"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Организация">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер машины">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Номер прицепа">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_file" data-title="Ксерокопия паспорта ТС">
+							<input type="file"/><span>Ксерокопия паспорта ТС</span>
+						</label>
+						<label class="form__field form__field_txt" data-title="Место регистрации ">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Месторасположение ТС">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Предпочтение по портам">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Грузоподъемность ТС">
+							<input type="text"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Стивдор">
+							<input type="text"/>
+						</label>
+					</div>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_save" type="button">Сохранить</button>
+					</div>
+				</form>
+			</div>
+			<div class="slider-f__item swiper-slide mb1" data-icon="carrier">
+				<form class="section__unit form anim" action="./" data-animation="200px">
+					<h2 class="title">Редактировать профиль грузовладельца</h2>
+					<div class="form__body form__body_triple mbt1">
+						<label class="form__field form__field_txt" data-title="Номер телефона">
+							<input type="tel" placeholder="+7 (900) 123-45-67"/>
+						</label>
+						<label class="form__field form__field_txt" data-title="Email">
+							<input type="text" placeholder="address@gmail.com"/>
+						</label>
+						<select class="form__field form__field_sel" data-title="Тип">
+							<option value="1">Грузовладелец</option>
+							<option value="2">Перевозчик</option>
+						</select>
+						<select class="form__field form__field_sel" data-title="Уровень доступа">
+							<option value="1">Пользователь</option>
+							<option value="2">Администратор</option>
+						</select>
+						<select class="form__field form__field_sel" data-title="Доступ к контактам">
+							<option value="1">Открыт</option>
+							<option value="2">Закрыт</option>
+						</select>
+					</div>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_save" type="button">Сохранить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html") 
