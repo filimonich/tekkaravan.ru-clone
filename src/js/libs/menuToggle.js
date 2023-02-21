@@ -28,18 +28,18 @@ menuToggle(menu, toggles,  {
 * 
 */
 
-export const menuToggle = (menu, toggles, options = {}) => {
+export const menuToggle = (menu, toggles, props = {}) => {
 	class Menu {
-		constructor(menu, toggles, options) {
+		constructor(menu, toggles, props) {
 			if(!menu || !menu instanceof Element || !toggles) return;
 
-			this.options = {
+			this.props = {
 				class: 'opened',
 				globalClose: true,
-				...options
+				...props
 			};
 
-			this.init();
+			this._init();
 		}
 			
 
@@ -51,55 +51,55 @@ export const menuToggle = (menu, toggles, options = {}) => {
 
 			menu.classList.add('opened');
 	
-			if(typeof this.options.scrollLock !== 'undefined') {
+			if(typeof this.props.scrollLock !== 'undefined') {
 				const maxw = parseInt(getComputedStyle(menu).maxWidth);
-				const scrollw = this.options.scrollLock.getPageScrollBarWidth();
+				const scrollw = this.props.scrollLock.getPageScrollBarWidth();
 				
 				Object.assign(menu.style, { maxWidth: maxw + scrollw + 'px' });
-				this.options.scrollLock.disablePageScroll();
+				this.props.scrollLock.disablePageScroll();
 			}
 
-			if (typeof this.options.open === 'function') 
-				return this.options.open.call(menu);
+			if (typeof this.props.open === 'function') 
+				return this.props.open.call(menu);
 		}
 		
 
 		menuClose(e) {
 			if(e) e.stopPropagation();
 
-			menu.classList.remove(`${this.options.class}`);
+			menu.classList.remove(`${this.props.class}`);
 			menu.removeAttribute('style');
 			
-			if(typeof this.options.scrollLock !== 'undefined') {
-				this.options.scrollLock.clearQueueScrollLocks();
-				this.options.scrollLock.enablePageScroll();
+			if(typeof this.props.scrollLock !== 'undefined') {
+				this.props.scrollLock.clearQueueScrollLocks();
+				this.props.scrollLock.enablePageScroll();
 			}
 	
-			if (typeof this.options.close === 'function') 
-				return this.options.close.call(menu);
+			if (typeof this.props.close === 'function') 
+				return this.props.close.call(menu);
 		}
 
 
-		omitToClose(e) {
-			const omits = this.options.omitToClose.split(",").map((item) => item.trim());
+		_omitToClose(e) {
+			const omits = this.props.omitToClose.split(",").map((item) => item.trim());
 			return omits.some(omit => !!e.target.closest(`${omit}`));
 		}
 
 
-		init() {
+		_init() {
 			toggles.forEach(toggle => {
 				toggle.addEventListener('click', (e) => {
-					menu.classList.contains(`${this.options.class}`) ? this.menuClose(e) : this.menuOpen(e);
+					menu.classList.contains(`${this.props.class}`) ? this.menuClose(e) : this.menuOpen(e);
 				});
 			});
 
-			if(this.options.globalClose) {
+			if(this.props.globalClose) {
 				['click','touchstart'].forEach(event => {
 					document.addEventListener(event, (e) => {
-						const isopen = menu.classList.contains(`${this.options.class}`);
+						const isopen = menu.classList.contains(`${this.props.class}`);
 						const isself = e.target.closest(`.${menu.className.split(' ')[0]}`);
 
-						if(isopen && !isself && !this.omitToClose(e)) {
+						if(isopen && !isself && !this._omitToClose(e)) {
 							e.preventDefault();
 							this.menuClose(e);
 						}
@@ -109,5 +109,5 @@ export const menuToggle = (menu, toggles, options = {}) => {
 		}
 	}
 
-	return new Menu(menu, toggles, options);
+	return new Menu(menu, toggles, props);
 }

@@ -3,18 +3,18 @@ import { menuToggle } from "../../js/libs/menuToggle";
 
 (() => {
 	const vh = window.innerHeight * 0.01;
-	const $header = document.querySelector('.header');
-	const $menu = $header.querySelector('.header__navi');
-	const $toggles = $header.querySelectorAll('.header__toggle, .navi__close');
+	const header = document.querySelector('.header');
+	const navi = header.querySelector('.header__navi');
+	const toggles = header.querySelectorAll('.header__toggle, .navi__close');
 	
-	const menu = menuToggle($menu, $toggles, {
+	const menu = menuToggle(navi, toggles, {
 		scrollLock: scrollLock,
 		omitToClose: '.modal, .form__small',
 		class: 'opened'
 	});
 	
 	// открытие и закрытие меню, свайпом на мобильных устройствах
-	document.addEventListener('swiped-left', (e) => menu.menuClose(e));
+	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
 	
 	// решение проблемы 100vh для меню на мобильных устройствах
 	document.documentElement.style.setProperty('--vh', `${vh}px`);

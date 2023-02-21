@@ -32,31 +32,61 @@ driveTabs({
 * 
 */
 
-export const driveTabs = (options = {}, cb) => {
-	const containers = options.container || '.tab';
-	const button = options.button || `.${containers}__button`;
-	const block = options.block || `.${containers}__block`;
-	const cls = options.cls || 'active';
+export const driveTabs = (items, props = {}) => {
+	class Tabs {
+		constructor(item, props) {
+			if(!item || !item instanceof Element) return;
 
-	document.querySelectorAll(containers).forEach((container) => {
-		const buttons = container.querySelectorAll(button);
-		const blocks = container.querySelectorAll(block);
+			this.props = {
+				active: 'active',
+				...props
+			};
 
-		buttons.forEach((button, i) => {
-			button.addEventListener('click', (e) => {
-				if (! e.target.classList.contains(`${cls}`)) {
-					buttons.forEach((button, i) => {
-						button.classList.remove(`${cls}`);
-						blocks[i].classList.remove(`${cls}`);
-					});
-		
-					button.classList.add(`${cls}`);
-					blocks[i].classList.add(`${cls}`);
+			this.container = item;
+			this.blocks = item.querySelectorAll(`${this.props.blocks} > *`);
+ 			this.buttons = item.querySelectorAll(`${this.props.buttons} > *`);
+
+			this._init();
+		}
+
+		move(direction = 1) {
+			let indexActive = [...this.buttons].findIndex(el => el.classList.contains('active'));
+			indexActive += +direction;
+			
+			if (indexActive >= this.buttons.length) {
+				indexActive = 0;
+			} else if(indexActive < 0) {
+				indexActive = this.buttons.length - 1;
+			}
+			
+			this._sync(this.buttons[indexActive], indexActive);
+		}
+
+		_sync(button, i) {
+			if (! button.classList.contains(`${this.props.active}`)) {
+				this.buttons.forEach((button, j) => {
+					button.classList.remove(`${this.props.active}`);
+					this.blocks[j].classList.remove(`${this.props.active}`);
+				});
 	
-					if (typeof cb === 'function') 
-						return cb.call(blocks[i]);
-				}
-			});
-		});
-	});
+				button.classList.add(`${this.props.active}`);
+				this.blocks[i].classList.add(`${this.props.active}`);
+
+				if (typeof props.cb === 'function') 
+					return props.cb.call(this.blocks[i]);
+			}
+		}
+
+		_init() {
+			this.buttons.forEach((button, i) => button.addEventListener('click', (e) => this._sync(e.target, i)));
+			this.container.addEventListener('swiped-left', (e) => this.move(-1));
+			this.container.addEventListener('swiped-right', (e) => this.move(1));
+		}
+	}
+
+	if(items instanceof NodeList) {
+		items.forEach((item) => new Tabs(item, props));
+	} else {
+		return new Tabs(items, props);
+	}
 }

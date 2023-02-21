@@ -2,13 +2,9 @@ import { driveTabs } from "../../js/libs/driveTabs";
 
 (() => {
 
-	driveTabs({
-		container: '.tab',
-		button: '.tab__button',
-		block: '.tab__block',
-		cls: 'active'
-	}, function() {
-		// console.log(this);
+	driveTabs(document.querySelectorAll('.tab'), {
+		buttons: '.tab__buttons',
+		blocks: '.tab__blocks'
 	});
 
 })();
