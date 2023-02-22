@@ -114,6 +114,20 @@ export const getHeight = (el) => {
 	return height;
 }
 
+// Возвращает индекс следующего активного элемента, после переданного шага
+export const getStepIndex = function(items, direction = 1, cls = 'active') {
+	let indexActive = [...items].findIndex(el => el.classList.contains(`${cls}`));
+	indexActive += +direction;
+	
+	if (indexActive >= items.length) {
+		indexActive = 0;
+	} else if(indexActive < 0) {
+		indexActive = items.length - 1;
+	}
+
+	return indexActive;
+}
+
 
 // Плавно скрыть элемент
 export const slideUp = (el, duration = 500, cb) => {
