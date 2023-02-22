@@ -15,11 +15,11 @@ import { getStepIndex } from "../../js/libs/helpers";
 		scrollClassToggle('animation');
 	});
 
-	content.addEventListener('swiped-right', (e) => {
+	content.addEventListener('swiped-left', (e) => {
 		buttons[getStepIndex(buttons, 1)].click();
 	});
 
-	content.addEventListener('swiped-left', (e) => {
+	content.addEventListener('swiped-right', (e) => {
 		buttons[getStepIndex(buttons, -1)].click();
 	});
 	

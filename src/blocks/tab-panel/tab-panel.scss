@@ -37,9 +37,11 @@
 		align-items: center;
 		transition: color 0.4s;
 		position: relative;
+		color: $text;
 		
 		@include media('<=xs') {
 			font-size: 15px;
+			color: #7b7a78;
 		}
 		
 		@include media('<=xxs') {
