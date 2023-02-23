@@ -5,7 +5,7 @@
 	// transform: translate(0, 20%);
 	transform: translate(0, 100px);
 
-	&.active {
+	&.showed {
 		transform: none;
 		opacity: 1;
 	}

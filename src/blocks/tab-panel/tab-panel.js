@@ -12,7 +12,7 @@ import { getStepIndex } from "../../js/libs/helpers";
 	
 		$self.addClass('active').siblings().removeClass('active');
 		$('.tab-content .tab-content__block').removeClass('active').eq($self.index()).addClass('active');
-		scrollClassToggle('animation');
+		scrollClassToggle('animation', 'showed');
 	});
 
 	content.addEventListener('swiped-left', (e) => {

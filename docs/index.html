@@ -70,9 +70,9 @@
 
 <div class="tab-content mt1">
 	<div class="tab-content__block active">
-		<div class="section mb1">
-			<div class="section__layout container">
-				<form class="section__unit form form-s anim" action="./" data-animation="200px">
+		<div class="section">
+			<div class="section__layout container pin-h">
+				<form class="section__unit form form-s anim pin-h__block mb1" action="./" data-animation="200px">
 					<h2 class="title">Поиск грузов</h2>
 					<div class="form__body form-s__layout mbt1">
 						<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
@@ -105,6 +105,7 @@
 						<button class="form__button button button_find form-s__button" type="button">Найти машины</button>
 					</div>
 				</form>
+				<button class="pin-h__toggle"></button>
 			</div>
 		</div>
 		<div class="section mb1">
@@ -365,9 +366,9 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section mb1">
-			<div class="section__layout container">
-				<form class="section__unit form anim" action="./" data-animation="200px">
+		<div class="section">
+			<div class="section__layout pin-h container">
+				<form class="section__unit form anim pin-h__block mb1" action="./" data-animation="200px">
 					<h2 class="title">Поиск техники</h2>
 					<div class="form__body form__body_double mbt1">
 						<label class="form__field form__field_txt" data-title="Марка">
@@ -434,30 +435,549 @@
 						<button class="form__button button button_find form-s__button" type="button">Найти технику</button>
 					</div>
 				</form>
+				<button class="pin-h__toggle"></button>
+			</div>
+		</div>
+		<div class="section mb1">
+			<div class="section__layout section__layout_triple container">
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
 			</div>
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section mb1">
-			<div class="section__layout container">
-				<form class="section__unit form anim" action="./" data-animation="200px>
+		<div class="section">
+			<div class="section__layout pin-h container">
+				<form class="section__unit form anim pin-h__block mb1" action="./" data-animation="200px">
 					<h2 class="title">Поиск автозапчастей</h2>
 					<div class="form__body form__body_triple mbt1">
 						
 					</div>
 				</form>
+				<button class="pin-h__toggle"></button>
+			</div>
+		</div>
+		<div class="section mb1">
+			<div class="section__layout section__layout_triple container">
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
 			</div>
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section mb1">
-			<div class="section__layout container">
-				<form class="section__unit form anim" action="./" data-animation="200px>
+		<div class="section">
+			<div class="section__layout pin-h container">
+				<form class="section__unit form anim pin-h__block mb1" action="./" data-animation="200px">
 					<h2 class="title">Поиск вакансий</h2>
 					<div class="form__body form__body_triple mbt1">
 					
 					</div>
 				</form>
+				<button class="pin-h__toggle"></button>
+			</div>
+		</div>
+		<div class="section mb1">
+			<div class="section__layout section__layout_triple container">
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit card_own" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
+				<div class="card anim section__unit" data-animation="0.9">
+	<div class="card__top mb1">
+		<h3 class="card__title">ТЭК Караван</h3>
+		<div class="card__top-side">
+			<span>15000</span> ₽
+		</div>
+	</div>
+	<div class="card__lines mb1">
+		<div class="card__line">
+			<span class="card__line-name">Погрузка:</span>
+			<span class="card__line-value">г Каменск-Шахтинский</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Выгрузка:</span>
+			<span class="card__line-value">г Таганрог, ул Ростовская</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Расстояние:</span>
+			<span class="card__line-value">400</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Культура-класс:</span>
+			<span class="card__line-value">Пшеница</span>
+		</div>
+		<div class="card__line">
+			<span class="card__line-name">Объем:</span>
+			<span class="card__line-value">3000 тонн</span>
+		</div>
+	</div>
+	<div class="card__panel">
+		<div class="card__date date">17.12.2022</div>
+		<a class="card__button card__button_panel button" href="./">Подробнее</a>
+		<!-- <div class="card__contacts social">
+			<a class="social__link social__link_phone" href="./"></a>
+			<a class="social__link social__link_mail" href="./"></a>
+			<a class="social__link social__link_wapp" href="./"></a>
+		</div> -->
+	</div>
+	<!-- <div class="card__buttons">
+		<a class="card__button button" href="./">Подробнее</a>
+	</div> -->
+</div>
 			</div>
 		</div>
 	</div>
@@ -518,4 +1038,3 @@
 <script src="common.js"></script> 
 </body> 
 </html> 
- 

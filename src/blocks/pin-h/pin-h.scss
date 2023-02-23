@@ -1,0 +1,61 @@
+.pin-h {
+	$self: &;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	&.opened {
+		#{$self}__block {
+			left: 15px;
+		}
+
+		#{$self}__toggle {
+			display: none;
+		}
+	}
+
+	&__block {
+		@include media('<=xs') {
+			width: calc(100% - 30px);
+			max-width: 610px;
+			position: fixed;
+			z-index: 9;
+			top: 150px;
+			left: -610px;
+			transition: left 0.4s ease-in;
+		}
+		
+		@include media('<=xxs') {
+			top: 125px;
+		}
+	}
+	
+	&__toggle {
+		display: none;
+		@extend %reset-button;
+		width: 55px;
+		height: 48px;
+		border-radius: 0 100px 100px 0;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		position: fixed;
+		z-index: 10;
+		left: 0;
+		top: 30%;
+		background-color: #fff;
+		animation: show_fade 0.3s;
+
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			content: '';
+			width: 38px;
+			height: 38px;
+			background: url('#{$images-path}icons-sprite.svg#icon-filter-view-white') center / 23px 20px no-repeat $accent;
+			border-radius: 50%;
+			margin: 0 5px 0 auto;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+}
