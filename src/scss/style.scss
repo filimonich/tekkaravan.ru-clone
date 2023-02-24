@@ -68,10 +68,10 @@ body {
 	padding-top: 95px;
 	
 	&.home {
-		padding-top: 130px;
+		padding-top: 125px;
 		
 		@include media('<=xxs') {
-			padding-top: 105px;
+			padding-top: 100px;
 		}
 	}
 	

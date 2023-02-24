@@ -103,7 +103,7 @@ export const menuToggle = (menu, toggles, props = {}) => {
 							e.preventDefault();
 							this.menuClose(e);
 						}
-					});
+					}, { passive: false });
 				});
 			}
 		}

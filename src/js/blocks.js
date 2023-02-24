@@ -13,5 +13,4 @@ import "../blocks/tab/tab.js";
 import "../blocks/anim/anim.js";
 import "../blocks/slider-f/slider-f.js";
 import "../blocks/slider-fd/slider-fd.js";
-import "../blocks/tab-panel/tab-panel.js";
-import "../blocks/pin-h/pin-h.js";
+import "../blocks/tab-head/tab-head.js";
