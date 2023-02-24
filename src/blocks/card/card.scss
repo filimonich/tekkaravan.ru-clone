@@ -12,7 +12,12 @@
 	
 	&__title {
 		font-family: "RB", sans-serif;
-		line-height: 24px;			
+		line-height: 24px;
+		
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 
 		@include media('<=xs') {
 			font-size: 14px;
@@ -80,6 +85,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+		margin-top: auto;
 	}
 
 	&__date {

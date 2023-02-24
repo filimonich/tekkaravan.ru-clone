@@ -49,6 +49,7 @@ export const selectTweaker = (items, name = 'select') => {
 		_wrapper.className = `${select.className} ${name}`;
 		_head.className = `${name}__head`;
 		_list.className = `${name}__list`;
+		_list.setAttribute('data-scroll-lock-scrollable', '');
 	
 		select.style.display = 'none';
 		select.removeAttribute('class');

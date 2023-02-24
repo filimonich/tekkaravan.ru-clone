@@ -65,7 +65,7 @@
 				<button class="tab-head__button tab-head__button_parts">Автозапчасти</button>
 				<button class="tab-head__button tab-head__button_carrier">Карьера</button>
 			</div>
-			<div class="tab-head__blocks">
+			<div class="tab-head__blocks" data-swipe-threshold="50" data-swipe-unit="vh" data-scroll-lock-scrollable>
 				<div class="tab-head__block active">
 					<form class="form form-s" action="./">
 						<h2 class="title">Поиск грузов</h2>
@@ -187,7 +187,8 @@
 					</form>
 				</div>
 			</div>
-			<button class="tab-head__toggle">Поиск</button>
+			<button class="tab-head__close"></button>
+			<button class="tab-head__open">Поиск</button>
 		</div>
 	</div>
 </header> 

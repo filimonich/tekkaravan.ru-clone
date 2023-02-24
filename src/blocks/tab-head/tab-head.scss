@@ -23,7 +23,7 @@
 			margin: 0;
 			padding: 0 10px;
 			box-shadow: none;
-			border-radius: none;
+			border-radius: 0;
 		}
 		
 		@include media('<=xxs') {
@@ -121,33 +121,29 @@
 	}
 
 	&__blocks {
+		display: none;
 		overflow: hidden;
 		position: relative;
 		height: 0;
-		transition: height 0.3s linear;
+		transition: height 0.2s linear;
 		overflow: auto;
 	
-		/* &::-webkit-scrollbar {
-			width: 8px;
-			height: 8px;
+		@include media('<=xs') {
+			display: block;
 		}
-		
-		&::-webkit-scrollbar-track {
-			background-color: $light;
-		}
-		
-		&::-webkit-scrollbar-thumb {
-			background-color: $placeholder;
-			border-radius: 10px;
-		}
-		
-		&::-webkit-scrollbar-corner {
-			background-color: transparent;
-		} */
 	
-		&.showed {
-			height: calc(100vh - 100px);
-			height: calc(var(--vh, 1vh) * 100 - 100px);
+		&.showed {	
+			height: calc(100vh - 125px);
+			height: calc(var(--vh, 1vh) * 100 - 125px);
+
+			@include media('<=xxs') {
+				height: calc(100vh - 100px);
+				height: calc(var(--vh, 1vh) * 100 - 100px);
+			}
+
+			& ~ #{$self}__close {
+				display: block;
+			}
 		}
 	}
 
@@ -160,9 +156,11 @@
 		}
 	}
 
-	&__toggle {
+	&__open {
 		@extend %reset-button;
+		display: none;
 		position: absolute;
+		z-index: 1;
 		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, 100%);
@@ -172,12 +170,19 @@
 		background-color: #fff;
 		border-radius: 0 0 10px 10px;
 		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-		font-size: 13px;
 		color: #7b7a78;
 		font-family: "RB", sans-serif;
-		display: flex;
 		align-items: center;
-
+		
+		@include media('<=xs') {
+			font-size: 15px;
+			display: flex;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+		
 		&::after {
 			display: block;
 			content: '';
@@ -185,6 +190,27 @@
 			height: 14px;
 			background: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue') center / contain no-repeat transparent;
 			margin-left: 5px;
+		}
+	}
+
+	&__close {
+		@extend %reset-button;
+		display: none;
+		animation: show_fade 0.2s;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		// box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		transform: translateX(-50%);
+		height: 35px;
+		width: 35px;
+		z-index: 2;
+		border-radius: 50% 50% 0 0;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 13px 13px no-repeat #fff;
+
+		@include media('>xs') {
+			display: none !important;
 		}
 	}
 }
