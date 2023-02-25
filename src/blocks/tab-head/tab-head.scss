@@ -165,7 +165,7 @@
 		left: 50%;
 		transform: translate(-50%, 100%);
 		// width: 60px;
-		height: 30px;
+		height: 25px;
 		padding: 0 15px;
 		background-color: #fff;
 		border-radius: 0 0 10px 10px;
@@ -186,10 +186,13 @@
 		&::after {
 			display: block;
 			content: '';
-			width: 14px;
-			height: 14px;
-			background: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue') center / contain no-repeat transparent;
-			margin-left: 5px;
+			width: 50px;
+			height: 2px;
+			background-color: #7b7a78;
+			// width: 14px;
+			// height: 14px;
+			// background: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue') center / contain no-repeat transparent;
+			// margin-left: 5px;
 		}
 	}
 

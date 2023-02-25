@@ -10,4 +10,10 @@
 			display: block;
 		}
 	}
+
+	&__hidden {
+		@include media('<=xs') {
+			display: none;
+		}
+	}
 }

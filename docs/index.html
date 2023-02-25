@@ -188,7 +188,7 @@
 				</div>
 			</div>
 			<button class="tab-head__close"></button>
-			<button class="tab-head__open">Поиск</button>
+			<button class="tab-head__open"></button>
 		</div>
 	</div>
 </header> 
@@ -196,6 +196,43 @@
 
 <div class="tab-content mt1">
 	<div class="tab-content__block active">
+		<div class="section tab-content__desktop mb1">
+			<div class="section__layout container">
+				<form class="form form-s" action="./">
+					<h2 class="title">Поиск грузов</h2>
+					<div class="form__body form-s__layout mbt1">
+						<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
+							<input type="text"/><hr>
+							<input type="text" placeholder="км"/>
+						</label>
+						</label>
+						<button class="form__button button button_change form-s__item" id="form-s__change" type="button"></button>
+						<label class="form__field form__field_geo form-s__item" id="form-s__to" data-title="Куда">
+							<input type="text"/><hr>
+							<input type="text" placeholder="км"/>
+						</label>
+						<label class="form__field form__field_date form-s__item" data-title="Дата">
+							<input type="text" placeholder="дд.мм.гг."/>
+						</label>
+						<select class="form__field form__field_sel form-s__item" data-title="Тип кузова">
+							<option value="1">Тентованный</option>
+							<option value="2">Не тентованный</option>
+						</select>
+						<select class="form__field form__field_sel form-s__item" data-title="Тип загрузки">
+							<option value="1">Верхняя</option>
+							<option value="2">Нижняя</option>
+							<option value="3">Боковая</option>
+							<option value="4">Передняя</option>
+							<option value="5">Задняя</option>
+						</select>
+					</div>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_find form-s__button" type="button">Найти грузы</button>
+						<button class="form__button button button_find form-s__button" type="button">Найти машины</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<div class="section mb1">
 			<div class="section__layout section__layout_triple container">
 				<div class="card anim section__unit" data-animation="0.9">
@@ -454,6 +491,11 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
+		<div class="section tab-content__desktop mb1">
+			<div class="section__layout container">
+
+			</div>
+		</div>
 		<div class="section mb1">
 			<div class="section__layout section__layout_triple container">
 				<div class="card anim section__unit card_own" data-animation="0.9">
@@ -628,6 +670,11 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
+		<div class="section tab-content__desktop mb1">
+			<div class="section__layout container">
+
+			</div>
+		</div>
 		<div class="section mb1">
 			<div class="section__layout section__layout_triple container">
 				<div class="card anim section__unit" data-animation="0.9">
@@ -802,6 +849,11 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
+		<div class="section tab-content__desktop mb1">
+			<div class="section__layout container">
+
+			</div>
+		</div>
 		<div class="section mb1">
 			<div class="section__layout section__layout_triple container">
 				<div class="card anim section__unit card_own" data-animation="0.9">
@@ -1028,6 +1080,7 @@
 	</div>
 </div> 
 
+<script>let outer_data =  { loading: 'Воронежская обл, г Богучар', unloading: 'Миллерово' };</script>
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 

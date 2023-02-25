@@ -1,8 +1,19 @@
-import ymaps from 'ymaps';
+// import ymaps from 'ymaps';
 
 (() => {
+	document.querySelectorAll('.section__unit').forEach((unit) => {	
+		const $toggle = unit.querySelector('.section__toggle');
 
-	document.querySelectorAll('.section__unit').forEach((unit) => {
+		$($toggle).on('click', (e) => {
+			let $self = $(e.target);
+
+			$self.next('.section__collapse').slideToggle('fast', function() {
+				$self.toggleClass('section__toggle_closed');
+			});
+		});
+	});
+		
+	/* document.querySelectorAll('.section__unit').forEach((unit) => {
 		let map;
 		const $map = unit.querySelector('.section__map');
 		const $toggle = unit.querySelector('.section__toggle');
@@ -31,6 +42,6 @@ import ymaps from 'ymaps';
 				map?.container.fitToViewport();
 			});
 		});
-	});
+	}); */
 
 })();
