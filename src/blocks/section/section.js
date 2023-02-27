@@ -1,18 +1,6 @@
 // import ymaps from 'ymaps';
 
 (() => {
-	document.querySelectorAll('.section__unit').forEach((unit) => {	
-		const $toggle = unit.querySelector('.section__toggle');
-
-		$($toggle).on('click', (e) => {
-			let $self = $(e.target);
-
-			$self.next('.section__collapse').slideToggle('fast', function() {
-				$self.toggleClass('section__toggle_closed');
-			});
-		});
-	});
-		
 	/* document.querySelectorAll('.section__unit').forEach((unit) => {
 		let map;
 		const $map = unit.querySelector('.section__map');

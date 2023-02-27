@@ -3,9 +3,9 @@
 
 <div class="tab-content mt1">
 	<div class="tab-content__block active">
-		<div class="section tab-content__desktop mb1">
+		<div class="section filter mb1">
 			<div class="section__layout container">
-				<form class="form form-s" action="./">
+				<form class="section__unit form form-s" action="./">
 					<h2 class="title">Поиск грузов</h2>
 					<div class="form__body form-s__layout mbt1">
 						<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
@@ -52,8 +52,75 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section tab-content__desktop mb1">
+		<div class="section filter mb1">
 			<div class="section__layout container">
+				<form class="section__unit form mb1" action="./">
+					<h2 class="title">Поиск техники</h2>
+					<div class="form__body form__body_double mbt1">
+						<label class="form__field form__field_txt" data-title="Марка">
+							<input type="text" name="stamp" id="stamp" />
+						</label>
+						<label class="form__field form__field_txt" data-title="Модель">
+							<input type="text" name="model" id="model" />
+						</label>
+						<select class="form__field form__field_sel" data-title="Тип кузова">
+							<option value='все закр. +изотерм'>все закр. +изотерм</option>
+							<option value='тентованный'>тентованный</option>
+							<option value='контейнер'>контейнер</option>
+							<option value='фургон'>фургон</option>
+							<option value='цельнометалл'>цельнометалл.</option>
+							<option value='изотермическийреф.+изотерм'>изотермическийреф.+изотерм</option>
+							<option value='рефрижератор'>рефрижератор</option>
+							<option value='реф. мультирежимный'>реф. мультирежимный</option>
+							<option value='реф. с перегородкой'>реф. с перегородкой</option>
+							<option value='реф. тушевоз'>реф. тушевоз</option>
+							<option value='все открытые'>все открытые</option>
+							<option value='бортовой'>бортовой</option>
+							<option value='открытый конт.'>открытый конт.</option>
+							<option value='площадка без бортов'>площадка без бортов</option>
+							<option value='самосвал'>самосвал</option>
+							<option value='шаланда'>шаланда</option>
+							<option value='негабарит'>негабарит</option>
+							<option value='низкорамный'>низкорамный</option>
+							<option value='низкорам.платф.'>низкорам.платф.</option>
+							<option value='телескопический'>телескопический</option>
+							<option value='тралбалковоз(негабарит)'>тралбалковоз(негабарит)</option>
+							<option value='автовоз'>автовоз</option>
+							<option value='автотранспортер'>автотранспортер</option>
+							<option value='бетоновоз'>бетоновоз</option>
+							<option value='битумовоз'>битумовоз</option>
+							<option value='бензовоз'>бензовоз</option>
+							<option value='вездеход'>вездеход</option>
+							<option value='газовоз'>газовоз</option>
+							<option value='зерновоз'>зерновоз</option>
+							<option value='коневоз'>коневоз</option>
+							<option value='контейнеровоз'>контейнеровоз</option>
+							<option value='кормовоз'>кормовоз</option>
+							<option value='лесовоз'>лесовоз</option>
+							<option value='ломовоз'>ломовоз</option>
+							<option value='муковоз'>муковоз</option>
+							<option value='панелевоз'>панелевоз</option>
+							<option value='рулоновоз'>рулоновоз</option>
+							<option value='седельный тягач'>седельный тягач</option>
+							<option value='скотовоз'>скотовоз</option>
+							<option value='стекловоз'>стекловоз</option>
+							<option value='трубовоз'>трубовоз</option>
+							<option value='цементовоз'>цементовоз</option>
+							<option value='цистерна'>цистерна</option>
+							<option value='щеповоз'>щеповоз</option>
+							<option value='мусоровоз'>мусоровоз</option>
+							<option value='20 танк-контейнер'>20 танк-контейнер</option>
+							<option value='40 танк-контейнер'>40 танк-контейнер</option>						
+						</select>
+						<select class="form__field form__field_sel" data-title="Состояние">
+							<option value="1">Новый</option>
+							<option value="2">БУ</option>
+						</select>
+					</div>
+					<div class="form__buttons form__buttons_grid">
+						<button class="form__button button button_find form-s__button" type="button">Найти технику</button>
+					</div>
+				</form>
 
 			</div>
 		</div>
@@ -67,9 +134,14 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section tab-content__desktop mb1">
+		<div class="section filter mb1">
 			<div class="section__layout container">
+				<form class="section__unit form mb1" action="./">
+					<h2 class="title">Поиск автозапчастей</h2>
+					<div class="form__body mbt1">
 
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="section mb1">
@@ -82,9 +154,14 @@
 		</div>
 	</div>
 	<div class="tab-content__block">
-		<div class="section tab-content__desktop mb1">
+		<div class="section filter mb1">
 			<div class="section__layout container">
+				<form class="section__unit form mb1" action="./">
+					<h2 class="title">Поиск вакансий</h2>
+					<div class="form__body mbt1">
 
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="section mb1">

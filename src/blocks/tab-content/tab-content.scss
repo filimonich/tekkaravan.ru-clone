@@ -11,9 +11,7 @@
 		}
 	}
 
-	&__hidden {
-		@include media('<=xs') {
-			display: none;
-		}
+	&__filter {
+		display: none;
 	}
 }

@@ -178,4 +178,44 @@
 	&__bottom {
 
 	}
+
+	&__tongue {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 100%);
+		// width: 60px;
+		height: 25px;
+		padding: 0 15px;
+		background-color: #fff;
+		border-radius: 0 0 10px 10px;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+		color: #7b7a78;
+		font-family: "RB", sans-serif;
+		align-items: center;
+		
+		@include media('<=xs') {
+			font-size: 15px;
+			display: flex;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 50px;
+			height: 2px;
+			background-color: #7b7a78;
+			// width: 14px;
+			// height: 14px;
+			// background: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue') center / contain no-repeat transparent;
+			// margin-left: 5px;
+		}
+	}
 }

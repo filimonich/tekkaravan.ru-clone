@@ -1,35 +1,32 @@
 .tab-head {
 	$self: &;
+	box-sizing: border-box;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	padding: 0 24px;
+	height: 36px;
+	// border: 1px solid lighten($accent, 30%);
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: -18px;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
 	
-	&__buttons {
-		box-sizing: border-box;
-		background-color: #fff;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-		border-radius: 10px;
-		padding: 0 24px;
-		height: 36px;
-		// border: 1px solid lighten($accent, 30%);
-		display: flex;
-		justify-content: space-around;
-		margin-bottom: -18px;
-		@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
-		
-		@include media('<=sm') {
-			justify-content: space-between;
-		}
-		
-		@include media('<=xs') {
-			height: 45px;
-			margin: 0;
-			padding: 0 10px;
-			box-shadow: none;
-			border-radius: 0;
-		}
-		
-		@include media('<=xxs') {
-			height: 40px;
-			padding: 0 5px;
-		}
+	@include media('<=sm') {
+		justify-content: space-between;
+	}
+	
+	@include media('<=xs') {
+		height: 45px;
+		margin: 0;
+		padding: 0 10px;
+		box-shadow: none;
+		border-radius: 0;
+	}
+	
+	@include media('<=xxs') {
+		height: 40px;
+		padding: 0 5px;
 	}
 
 	&__button {
@@ -117,103 +114,6 @@
 		&_carrier::before {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
 			background-size: 25px 20px;
-		}
-	}
-
-	&__blocks {
-		display: none;
-		overflow: hidden;
-		position: relative;
-		height: 0;
-		transition: height 0.2s linear;
-		overflow: auto;
-	
-		@include media('<=xs') {
-			display: block;
-		}
-	
-		&.showed {	
-			height: calc(100vh - 125px);
-			height: calc(var(--vh, 1vh) * 100 - 125px);
-
-			@include media('<=xxs') {
-				height: calc(100vh - 100px);
-				height: calc(var(--vh, 1vh) * 100 - 100px);
-			}
-
-			& ~ #{$self}__close {
-				display: block;
-			}
-		}
-	}
-
-	&__block {
-		display: none;
-		padding: 30px 0;
-
-		&.active {
-			display: block;
-		}
-	}
-
-	&__open {
-		@extend %reset-button;
-		display: none;
-		position: absolute;
-		z-index: 1;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%, 100%);
-		// width: 60px;
-		height: 25px;
-		padding: 0 15px;
-		background-color: #fff;
-		border-radius: 0 0 10px 10px;
-		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-		color: #7b7a78;
-		font-family: "RB", sans-serif;
-		align-items: center;
-		
-		@include media('<=xs') {
-			font-size: 15px;
-			display: flex;
-		}
-		
-		@include media('<=xxs') {
-			font-size: 13px;
-		}
-		
-		&::after {
-			display: block;
-			content: '';
-			width: 50px;
-			height: 2px;
-			background-color: #7b7a78;
-			// width: 14px;
-			// height: 14px;
-			// background: url('#{$images-path}icons-sprite.svg#icon-filter-view-blue') center / contain no-repeat transparent;
-			// margin-left: 5px;
-		}
-	}
-
-	&__close {
-		@extend %reset-button;
-		display: none;
-		animation: show_fade 0.2s;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		// box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.1);
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-		transform: translateX(-50%);
-		height: 35px;
-		width: 35px;
-		z-index: 2;
-		border-radius: 50% 50% 0 0;
-		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 13px 13px no-repeat #fff;
-
-		@include media('>xs') {
-			display: none !important;
 		}
 	}
 }

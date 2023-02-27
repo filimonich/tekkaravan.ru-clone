@@ -237,7 +237,7 @@ export const scrollToId = (items) => {
 * Плавная прокрутка к верху страницы
 * @вызов:
 * 
-import { scrollToTop } from "../../js/lib";
+import { scrollToTop } from "../../js/helpers";
 scrollToTop(document.querySelector('a[href^="top"]'));
 * 
 */

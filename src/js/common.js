@@ -5,20 +5,21 @@ import ymaps from 'ymaps';
 
 /* Тут можно писать код общий для всего проекта и требующий единого пространства имен */
 
-let range;
-const range_dom = document.querySelector('.section__map_range');
-const yurl = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=f204c2ff-657c-46d4-8a58-1837db80421d';
+const yurl = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f204c2ff-657c-46d4-8a58-1837db80421d';
+let maps = [];
 
-ymaps.load(yurl).then(maps => {
+ymaps.load(yurl).then(map => {
+	const range_dom = document.querySelector('.section__map_range');
+	
 	if (range_dom) {
 	
-		let range = new maps.Map(range_dom, {
+		let range = new map.Map(range_dom, {
 			center: [60.906882, 30.067233],
 			zoom: 9,
 			controls: [],
 		}),
-		// Кнопки зума
-		zoomControl = new maps.control.ZoomControl({
+
+		zoomControl = new map.control.ZoomControl({
 			options: {
 				size: 'small',
 				float: 'none',
@@ -28,18 +29,16 @@ ymaps.load(yurl).then(maps => {
 				}
 			}
 		}),
-		// Панель маршрутизации.
-		routePanelControl = new maps.control.RoutePanel({
+
+		routePanelControl = new map.control.RoutePanel({
 			options: {
 				showHeader: true,
 				title: 'Расчёт маршрута'
 			}
 		});
 
-		// Пользователь сможет построить только автомобильный маршрут.
 		routePanelControl.routePanel.options.set({ types: { auto: true }});
 
-		// Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
 		routePanelControl.routePanel.state.set({
 			fromEnabled: false,
 			from: outer_data.loading,
@@ -53,18 +52,34 @@ ymaps.load(yurl).then(maps => {
 		routePanelControl.routePanel.getRouteAsync().then((route) => {
 
 			route.model.setParams({ results: 1 }, true);
-
 			route.model.events.add('requestsuccess', () => {
 
 				let activeRoute = route.getActiveRoute();
 				if (activeRoute) {
 					let length = route.getActiveRoute().properties.get("distance"),
-					balloonContentLayout = ymaps.templateLayoutFactory.createClass(`<span>Расстояние: ${length.text}.</span><br/><span style="font-weight: bold; font-style: italic"></span>`);
+					balloonContentLayout = map.templateLayoutFactory.createClass(`<span>Расстояние: ${length.text}.</span><br/><span style="font-weight: bold; font-style: italic"></span>`);
 					route.options.set('routeBalloonContentLayout', balloonContentLayout);
 					activeRoute.balloon.open();
 				}
 			});
 
 		});
+
+		maps.push(range);
 	}
 }).catch(error => console.log('Failed to load Yandex Maps', error));
+
+// Закрывать блоки кликом по заголовку
+document.querySelectorAll('.section__unit').forEach((unit) => {	
+	const $toggle = unit.querySelector('.section__toggle');
+
+	$($toggle).on('click', (e) => {
+		let $self = $(e.target);
+
+		$self.next('.section__collapse').slideToggle('fast', function() {
+			$self.toggleClass('section__toggle_closed');
+			maps.forEach((map) => map.container.fitToViewport());
+		});
+	});
+});
+	
