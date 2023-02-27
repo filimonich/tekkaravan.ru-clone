@@ -73,6 +73,12 @@
 		background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-dark') center right 24px / 16px 10px no-repeat transparent;
 		cursor: pointer;
 
+		&_desktop {
+			@include media('<=xs') {
+				background: none !important;
+			}
+		}
+
 		&_closed {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-dark');
 		}
@@ -95,6 +101,12 @@
 	}
 
 	&__collapse {
+
+		&_desktop {
+			@include media('<=xs') {
+				display: block !important;
+			}
+		}
 		
 		&_collapsed {
 			display: none;
