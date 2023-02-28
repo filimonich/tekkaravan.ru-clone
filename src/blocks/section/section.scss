@@ -42,6 +42,28 @@
 				}
 			}
 		}
+
+		&_triple-less {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-gap: 24px;
+
+			@include media('<=xs') {
+				grid-gap: 15px;
+			}
+
+			#{$self}__unit {
+				grid-column: span 4;
+				
+				@include media('<=md') {
+					grid-column: span 6;
+				}
+				
+				@include media('<=xs') {
+
+				}
+			}
+		}
 	}
 
 	&__unit {
@@ -58,13 +80,14 @@
 			border-radius: 8px;
 			padding: 20px;
 		}
-	
+		
 		&_shrink {
 			align-self: start;
 		}
-
+		
 		&_desktop {
 			@include media('<=xs') {
+				padding: 24px 0;
 				background: none;
 				box-shadow: none;
 				border-radius: 0;
