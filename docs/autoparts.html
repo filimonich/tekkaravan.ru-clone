@@ -78,31 +78,33 @@
 
 <section class="section mb1 filter">
 	<div class="section__layout container">
-		<div class="section__unit form filter__form">
-			<h2 class="title">Расширенный поиск</h2>
-			<div class="form__body form__body_fourfold mbt1">
-				<label class="form__field form__field_txt" data-title="Марка">
-					<input type="text"/>
-				</label>
-				<label class="form__field form__field_txt" data-title="Модель">
-					<input type="text"/>
-				</label>
-				<select class="form__field form__field_sel" data-title="Тип кузова">
-					<option value="1">Тентованный</option>
-					<option value="2">Не тентованный</option>
-				</select>
-				<select class="form__field form__field_sel" data-title="Состояние">
-					<option value="1">Новый</option>
-					<option value="2">Подержанный</option>
-					<option value="3">Требует ремонта</option>
-					<option value="4">Только на запчасти</option>
-				</select>
+		<form class="section__unit section__unit_desktop form filter__form" action="./">
+			<h2 class="title section__toggle section__toggle_desktop">Расширенный поиск</h2>
+			<div class="section__collapse section__collapse_desktop">
+				<div class="form__body form__body_fourfold mbt1">
+					<label class="form__field form__field_txt" data-title="Марка">
+						<input type="text"/>
+					</label>
+					<label class="form__field form__field_txt" data-title="Модель">
+						<input type="text"/>
+					</label>
+					<select class="form__field form__field_sel" data-title="Тип кузова">
+						<option value="1">Тентованный</option>
+						<option value="2">Не тентованный</option>
+					</select>
+					<select class="form__field form__field_sel" data-title="Состояние">
+						<option value="1">Новый</option>
+						<option value="2">Подержанный</option>
+						<option value="3">Требует ремонта</option>
+						<option value="4">Только на запчасти</option>
+					</select>
+				</div>
+				<div class="form__buttons form__buttons_grid">
+					<button class="form__button button button_find" type="button">Найти</button>
+					<button class="form__button button button_reset" type="button">Сбросить</button>
+				</div>
 			</div>
-			<div class="form__buttons form__buttons_grid">
-				<button class="form__button button button_find" type="button">Найти</button>
-				<button class="form__button button button_reset" type="button">Сбросить</button>
-			</div>
-		</div>
+		</form>
 	</div>
 </section>
 

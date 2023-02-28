@@ -40,27 +40,9 @@
 				@include media('<=xs') {
 					margin-bottom: 20px;
 				}
-			}
-		}
-
-		&_triple-less {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			grid-gap: 24px;
-
-			@include media('<=xs') {
-				grid-gap: 15px;
-			}
-
-			#{$self}__unit {
-				grid-column: span 4;
 				
-				@include media('<=md') {
-					grid-column: span 6;
-				}
-				
-				@include media('<=xs') {
-
+				@include media('<=xxs') {
+					margin-bottom: 15px;
 				}
 			}
 		}
@@ -79,6 +61,10 @@
 		@include media('<=xs') {
 			border-radius: 8px;
 			padding: 20px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 15px;
 		}
 		
 		&_shrink {

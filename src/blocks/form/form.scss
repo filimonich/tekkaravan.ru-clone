@@ -16,7 +16,7 @@
 				grid-column: span 6;
 				
 				@include media('<=xxs') {
-					margin-bottom: 20px;
+					margin-bottom: 15px;
 				}
 			}
 		}
@@ -38,7 +38,7 @@
 				}
 				
 				@include media('<=xxs') {
-					margin-bottom: 20px;
+					margin-bottom: 15px;
 				}
 			}
 		}
@@ -64,7 +64,7 @@
 				}
 				
 				@include media('<=xxs') {
-					margin-bottom: 20px;
+					margin-bottom: 15px;
 				}
 			}
 		}

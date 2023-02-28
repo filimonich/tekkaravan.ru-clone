@@ -71,7 +71,7 @@ body {
 		padding-top: 125px;
 		
 		@include media('<=xxs') {
-			padding-top: 100px;
+			padding-top: 95px;
 		}
 	}
 	
@@ -115,4 +115,15 @@ em { font-style: italic; }
 	
 	.mbt1 { margin-top: 20px; margin-bottom: 20px; }
 	.mbt2 { margin-top: 40px; margin-bottom: 40px; }
+}
+
+@include media('<=xxs') {
+	.mt1 { margin-top: 15px; }
+	.mt2 { margin-top: 30px; }
+	
+	.mb1 { margin-bottom: 15px; }
+	.mb2 { margin-bottom: 30px; }
+	
+	.mbt1 { margin-top: 15px; margin-bottom: 15px; }
+	.mbt2 { margin-top: 30px; margin-bottom: 30px; }
 }

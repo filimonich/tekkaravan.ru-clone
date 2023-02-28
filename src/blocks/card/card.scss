@@ -6,7 +6,15 @@
 	}
 
 	&_less {
-		
+		@include media('<=xxs') {
+			#{$self}__top, #{$self}__lines, #{$self}__panel {
+				display: none;
+			}
+
+			#{$self}__hidden {
+				display: block;
+			}
+		}
 	}
 
 	&__top {
@@ -159,5 +167,9 @@
 				}
 			}
 		}
+	}
+
+	&__hidden {
+		display: none;
 	}
 }
