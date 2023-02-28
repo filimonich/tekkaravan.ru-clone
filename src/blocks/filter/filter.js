@@ -10,13 +10,12 @@ import { slideDown } from "../../js/libs/helpers";
 
 			if ((filters.length > 1 && filter.closest('.active')) || filters.length == 1) {
 				if (! filter.classList.contains('opened')) {
-					// filter.classList.add('opened');
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+
 					slideDown(filter, 300, function() {
 						this.classList.add('opened');
 					});
-					window.scrollTo({ top: 0, behavior: 'smooth' });
 				} else {
-					// filter.classList.remove('opened');
 					slideUp(filter, 300, function() {
 						this.classList.remove('opened');
 					});

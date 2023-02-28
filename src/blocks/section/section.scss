@@ -62,6 +62,15 @@
 		&_shrink {
 			align-self: start;
 		}
+
+		&_desktop {
+			@include media('<=xs') {
+				background: none;
+				box-shadow: none;
+				border-radius: 0;
+				border: none;
+			}
+		}
 	}
 
 	&__gallery {
