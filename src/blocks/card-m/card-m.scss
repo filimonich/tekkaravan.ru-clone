@@ -70,12 +70,12 @@
 		}
 		
 		&_one::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-aang-view-dark');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-start-view-dark');
 		}
 		
 		&_two::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-flag-view-dark');
-			background-size: 12px 15px;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-finished-view-dark');
+			// background-size: 12px 15px;
 		}
 	}
 	
