@@ -106,7 +106,7 @@
 		}
 		
 		&_desktop {
-			@include media('<=xs') {
+			@include media('<=xxs') {
 				padding: 24px 0 !important;
 				background: none;
 				box-shadow: none;
@@ -126,7 +126,7 @@
 		cursor: pointer;
 
 		&_desktop {
-			@include media('<=xs') {
+			@include media('<=xxs') {
 				background: none !important;
 			}
 		}
@@ -155,7 +155,7 @@
 	&__collapse {
 
 		&_desktop {
-			@include media('<=xs') {
+			@include media('<=xxs') {
 				display: block !important;
 			}
 		}

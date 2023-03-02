@@ -1,0 +1,70 @@
+.feed {
+	$self: &;
+	box-sizing: border-box;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	@include media('<=xxs') {
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		background-color: #fff;
+		position: fixed;
+		z-index: 2;
+		bottom: 50px;
+		width: 100%;
+		padding-top: 35px;
+		transition: height 0.4s;
+		height: calc(100vh - 150px);
+		overflow: auto;
+	}
+	
+	&.dropped {
+		height: calc(50vh - 150px);
+		
+		#{$self}__up {
+			background-color: transparent;
+		
+			&::before {
+				display: block;
+			}
+		}
+	}
+	
+	&__inner {
+		box-sizing: border-box;
+		height: 100%;
+		padding-top: 10px;
+	}
+
+	&__up {
+		@extend %reset-button;
+		display: none;
+		height: 35px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		align-items: center;
+		justify-content: center;
+
+		&::before {
+			display: none;
+			content: '';
+			width: 50px;
+			height: 2px;
+			background-color: $label;
+			animation: show_fade 0.4s;
+		}
+
+		@include media('<=xxs') {
+			display: flex;
+		}
+	}
+
+	&__tab-block {
+		animation: show_fade 0.4s;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}

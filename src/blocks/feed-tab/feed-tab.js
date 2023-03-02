@@ -3,19 +3,19 @@ import { getStepIndex } from "../../js/libs/helpers";
 
 (() => {
 	
-	const panel = document.querySelector('.tab-head');
+	const panel = document.querySelector('.feed-tab');
 	
 	if(panel) {
-		const buttons = panel.querySelectorAll('.tab-head__button');
-		const content = document.querySelector('.tab-content');
+		const buttons = panel.querySelectorAll('.feed-tab__button');
+		const content = document.querySelector('.feed');
 
-		$('.tab-head').on('click', '.tab-head__button:not(.active)', function(e) {
+		$('.feed-tab').on('click', '.feed-tab__button:not(.active)', function(e) {
 			e.preventDefault();
 			let $self = $(this);
 		
 			$self.addClass('active').siblings().removeClass('active');
-			$('.tab-content .tab-content__block').removeClass('active').eq($self.index()).addClass('active');
-			$('.tab-head .tab-head__block').removeClass('active').eq($self.index()).addClass('active');
+			$('.feed .feed__tab-block').removeClass('active').eq($self.index()).addClass('active');
+			$('.filters .filters__tab-block').removeClass('active').eq($self.index()).addClass('active');
 			scrollClassToggle('animation', 'showed');
 		});
 

@@ -1,10 +1,10 @@
-import { slideUp } from "../../js/libs/helpers";
-import { slideDown } from "../../js/libs/helpers";
+// import { slideUp } from "../../js/libs/helpers";
+// import { slideDown } from "../../js/libs/helpers";
 
 (() => {
 
-	document.querySelector('.header__tongue').addEventListener('click', (e) => {
-		let filters = document.querySelectorAll('.filter');
+	/* document.querySelector('.header__tongue').addEventListener('click', (e) => {
+		let filters = document.querySelectorAll('.filters__block');
 
 		filters.forEach(filter => {
 
@@ -22,6 +22,6 @@ import { slideDown } from "../../js/libs/helpers";
 				}
 			}
 		});
-	});
+	}); */
 
 })();
