@@ -120,23 +120,34 @@ scrollClassToggle('animation', 'active');
 } */
 
 
-export const scrollClassToggle = (data = 'animation', cls = "active") => {
+export const scrollClassToggle = (options) => {
+	let props = {
+		nodes: [],
+		data: 'animation',
+		class: 'active',
+		...options
+	}
+
+	let nodes = [ window, ...props.nodes ];
+
 	const classToggle = (item) => {
 		const repeat = item.dataset['repeat'] != undefined;
 		const box = item.getBoundingClientRect();
 		
-		let shift = item.dataset[`${data}`] || 0;
+		let shift = item.dataset[`${props.data}`] || 0;
 		shift = shift.includes('px') ? box.height - parseFloat(shift) : box.height * shift;
 	
 		const over = box.bottom + shift > 0;
 		const under = box.bottom - shift - window.innerHeight < 0;
 
-		if (repeat || !item.classList.contains(`${cls}`))
-			item.classList[(over && under) ? 'add': 'remove'](`${cls}`);
+		if (repeat || !item.classList.contains(`${props.class}`))
+			item.classList[(over && under) ? 'add': 'remove'](`${props.class}`);
 	};
 	
-	document.querySelectorAll(`[data-${data}]`).forEach((item) => {
-		window.addEventListener('scroll', () => classToggle(item));
+	document.querySelectorAll(`[data-${props.data}]`).forEach((item) => {
+		nodes.forEach(node => {
+			node.addEventListener('scroll', () => classToggle(item));
+		});
 		classToggle(item);
 	});
 }

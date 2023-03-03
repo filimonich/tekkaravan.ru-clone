@@ -1,6 +1,8 @@
 import { scrollClassToggle } from "../../js/libs/scroll";
 
 (() => {
-	scrollClassToggle('animation', 'showed');
-
+	scrollClassToggle({
+		nodes: document.querySelectorAll('.blind__inner'),
+		class: 'showed'
+	});
 })();

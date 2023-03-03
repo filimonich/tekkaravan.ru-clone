@@ -12,5 +12,5 @@ import "../blocks/tab/tab.js";
 import "../blocks/anim/anim.js";
 import "../blocks/slider-f/slider-f.js";
 import "../blocks/slider-fd/slider-fd.js";
-import "../blocks/feed-tab/feed-tab.js";
+import "../blocks/blind-tab/blind-tab.js";
 import "../blocks/filters/filters.js";

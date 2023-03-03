@@ -24,12 +24,11 @@ import { menuToggle } from "../../js/libs/menuToggle";
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 
-	document.querySelectorAll('.header__tongue, .feed__up').forEach(button => {
+	document.querySelectorAll('.header__tongue, .blind__up').forEach(button => {
 		button.addEventListener('click', (e) => {
-			document.querySelector('.feed').classList.toggle('dropped');
+			document.querySelector('.blind').classList.toggle('dropped');
 		});
 	});
-
 
 	/* const $header = $('.header');
 	const $shell = $header.find('.header__navi');
