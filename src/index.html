@@ -3,7 +3,7 @@
 
 <div class="filters">
 	<div class="section filters__tab-block active">
-		<div class="section__layout filters__block container mb1">
+		<div class="section__layout filters__block container">
 			<form class="section__unit section__unit_desktop form form-s mt1" action="./">
 				<h2 class="title section__toggle section__toggle_desktop">Поиск грузов</h2>
 				<div class="section__collapse section__collapse_desktop">
@@ -39,14 +39,6 @@
 					</div>
 				</div>
 			</form>
-		</div>
-		<div class="section container">
-			<div class="section__unit">
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora illum quod saepe omnis soluta eligendi quidem, quo sequi enim recusandae animi commodi eum hic voluptatem accusantium nobis impedit et repudiandae error vero distinctio laudantium laborum! Temporibus commodi quasi est eum harum ullam quibusdam suscipit vitae iusto, perspiciatis expedita fugiat voluptatem facere neque placeat, ea eveniet optio inventore accusantium voluptate reprehenderit possimus sit hic. Sapiente debitis id molestias amet, repellat ut officia pariatur, expedita illum fugiat tenetur eveniet eos deserunt fugit qui velit tempore quibusdam laborum saepe veritatis eligendi, dolorem earum iusto? Iure, magnam laudantium rem officia sint dicta voluptatem blanditiis.</p>
-				<p>Soluta obcaecati tempora quam nobis similique laborum accusantium voluptate! Earum quia aperiam nulla deleniti velit expedita a corrupti suscipit natus quasi dolorem perspiciatis, deserunt animi aspernatur. Magni quae harum non! Facere molestiae, sequi error necessitatibus amet debitis voluptas dolorem doloribus aut autem. Itaque a ipsam asperiores quidem ullam deleniti aperiam non, suscipit sint quia, excepturi odio voluptas doloribus sunt. Similique nesciunt eos tenetur sint repellat quos fugit blanditiis. Perferendis velit modi dicta deserunt ullam quidem odio voluptas quis tenetur fugit pariatur obcaecati voluptatibus voluptate, sint tempora maiores. Cumque veniam soluta sit repellat dolorem, quam impedit quidem repellendus atque assumenda excepturi.</p>
-				<p>Beatae accusamus fugiat voluptatibus obcaecati autem vel porro doloribus corrupti quasi, voluptatum veniam nesciunt nemo id aperiam, fugit, laborum nihil officiis enim deleniti eveniet sit aspernatur! Vero impedit in provident culpa tempora. Soluta ducimus earum obcaecati autem porro possimus delectus qui amet at aperiam maiores quaerat, facere sunt esse repellat molestias ullam corrupti? Ducimus non ipsa placeat sit porro mollitia distinctio pariatur quas modi exercitationem a temporibus, optio ab vel dignissimos minus, alias obcaecati omnis commodi libero, labore harum nihil possimus. Culpa voluptatum exercitationem debitis sapiente quaerat recusandae ducimus labore, velit dicta. Alias maiores nihil id ipsum at fuga dolorum.</p>
-				<p>Accusantium, nesciunt quae. Fugit esse maiores voluptates libero sunt, minima dolorem ad omnis ex vitae architecto aperiam maxime et dolorum ipsam laboriosam deserunt. Laboriosam vel provident accusantium cupiditate, tenetur unde in, repellat cum consequatur culpa repudiandae libero non minima? Vitae excepturi, ad nostrum non amet odio esse quis tenetur sint dignissimos? Facilis eligendi cupiditate deleniti voluptatem quaerat asperiores illo ea maiores numquam alias reiciendis dolorem dolore, saepe quod non itaque? Dolor tenetur totam fugiat sequi sed vero, odit nam modi itaque libero eos delectus officia excepturi quod? Velit itaque repudiandae consequatur! Non dolores velit voluptatum dignissimos eum nam, ut accusantium.</p>
-			</div>
 		</div>
 	</div>
 	<div class="section filters__tab-block">
@@ -145,7 +137,7 @@
 </div>
 
 <div class="blind__feed mt1">
-	<div class="blind__inner">
+	<div class="blind__inner mb1">
 		<button class="blind__up"></button>
 		<div class="section blind__tab-block active">
 			<div class="section__layout section__layout_triple-less container">
@@ -159,26 +151,28 @@
 		</div>
 		<div class="section blind__tab-block">
 			<div class="section__layout section__layout_triple container">
-				@@include("_card-j.html", { cls: "section__unit card_own" })
-				@@include("_card-j.html", { cls: "section__unit card_own" })
-				@@include("_card-j.html", { cls: "section__unit" })
-				@@include("_card-j.html", { cls: "section__unit" })
+				@@include("_card-j.html", { cls: "section__unit anim card_own" })
+				@@include("_card-j.html", { cls: "section__unit anim card_own" })
+				@@include("_card-j.html", { cls: "section__unit anim" })
+				@@include("_card-j.html", { cls: "section__unit anim" })
 			</div>
 		</div>
 		<div class="section blind__tab-block">
 			<div class="section__layout section__layout_triple container">
-				@@include("_card-j.html", { cls: "section__unit" })
-				@@include("_card-j.html", { cls: "section__unit" })
-				@@include("_card-j.html", { cls: "section__unit card_own" })
-				@@include("_card-j.html", { cls: "section__unit card_own" })
+				@@include("_card-a.html", { cls: "section__unit anim card_own" })
+				@@include("_card-a.html", { cls: "section__unit anim card_own" })
+				@@include("_card-a.html", { cls: "section__unit anim" })
+				@@include("_card-a.html", { cls: "section__unit anim" })
 			</div>
 		</div>
 		<div class="section blind__tab-block">
 			<div class="section__layout section__layout_triple container">
-				@@include("_card-j.html", { cls: "section__unit card_own" })
-				@@include("_card-j.html", { cls: "section__unit card_own" })
-				@@include("_card-j.html", { cls: "section__unit" })
-				@@include("_card-j.html", { cls: "section__unit" })
+				@@include("_card-c.html", { cls: "section__unit anim" })
+				@@include("_card-c.html", { cls: "section__unit anim card_own" })
+				@@include("_card-c.html", { cls: "section__unit anim card_own" })
+				@@include("_card-c.html", { cls: "section__unit anim" })
+				@@include("_card-c.html", { cls: "section__unit anim" })
+				@@include("_card-c.html", { cls: "section__unit anim" })
 			</div>
 		</div>
 	</div>
