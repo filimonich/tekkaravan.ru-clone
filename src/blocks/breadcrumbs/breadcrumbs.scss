@@ -1,6 +1,10 @@
 .breadcrumbs {
 	$self: &;
 
+	@include media('<=xxs') {
+		display: none;
+	}
+
 	a {
 		color: $text;
 		text-decoration: underline;

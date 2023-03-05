@@ -6,61 +6,60 @@
 	<link rel="shortcut icon" href="images/favicon.ico"> 
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
-</head> 
-<body class=""> 
-
-<header class="header" data-scroll-lock-fill-gap>
-	<div class="header__top container">
-		<a class="header__logo" href="./">
-			<!-- <img src="./images/logo.png" alt=""> -->
-			<img src="./images/logo_.png" alt="">
-		</a>
-		<form action="./" class="header__search search">
-			<input class="search__input" type="text" placeholder="Поиск">
-			<input class="search__submit" type="submit" value="">
-		</form>
-		<div class="header__navi navi" data-scroll-lock-scrollable>
-			<buton class="navi__close"></buton>
-			<form action="./" class="navi__search search">
+</head>
+<body class="blind"> 
+	<header class="header" data-scroll-lock-fill-gap>
+		<div class="header__top container">
+			<a class="header__logo" href="./">
+				<!-- <img src="./images/logo.png" alt=""> -->
+				<img src="./images/logo_.png" alt="">
+			</a>
+			<form action="./" class="header__search search">
 				<input class="search__input" type="text" placeholder="Поиск">
 				<input class="search__submit" type="submit" value="">
 			</form>
-			<nav class="navi__menu">
-				<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
-				<div class="navi__submenu">
-					<a href="./">WhatsApp</a>					
-					<a href="./">История рассылок WhatsApp</a>					
-					<a href="./sending.html">Push рассылка</a>
-					<a href="./">Email рассылка</a>
-					<a href="./control.html">Контроль сотрудников</a>
-					<a href="./">Справочник</a>
-					<a href="./guests.html">Гости</a>
-				</div>
-				<a class="navi__link navi__link_profile" href="./">Профиль</a>
-				<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
-				<a class="navi__link navi__link_drivers" href="./owner_profile.html">Перевозчики</a>
-				<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
-				<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
-				<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
-				<a class="navi__link navi__link_users" href="./">Пользователи</a>
-				<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
-				<a class="navi__link navi__link_payment" href="./">Оплата</a>
-				<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
-				<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
-			</nav>
+			<div class="header__navi navi" data-scroll-lock-scrollable>
+				<buton class="navi__close"></buton>
+				<form action="./" class="navi__search search">
+					<input class="search__input" type="text" placeholder="Поиск">
+					<input class="search__submit" type="submit" value="">
+				</form>
+				<nav class="navi__menu">
+					<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
+					<div class="navi__submenu">
+						<a href="./">WhatsApp</a>					
+						<a href="./">История рассылок WhatsApp</a>					
+						<a href="./sending.html">Push рассылка</a>
+						<a href="./">Email рассылка</a>
+						<a href="./control.html">Контроль сотрудников</a>
+						<a href="./">Справочник</a>
+						<a href="./guests.html">Гости</a>
+					</div>
+					<a class="navi__link navi__link_profile" href="./">Профиль</a>
+					<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
+					<a class="navi__link navi__link_drivers" href="./owner_profile.html">Перевозчики</a>
+					<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
+					<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
+					<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
+					<a class="navi__link navi__link_users" href="./">Пользователи</a>
+					<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
+					<a class="navi__link navi__link_payment" href="./">Оплата</a>
+					<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
+					<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
+				</nav>
+			</div>
+			<div class="header__controls">
+				<a class="header__login" href="./" data-modal="login">Вход</a>
+				<!-- <a class="header__logout" href="./">Выход</a> -->
+				<a class="header__register" href="./">Регистрация</a>
+			</div>
+			<button class="header__toggle"></button>
+			<button class="header__talk"></button>
 		</div>
-		<div class="header__controls">
-			<a class="header__login" href="./" data-modal="login">Вход</a>
-			<!-- <a class="header__logout" href="./">Выход</a> -->
-			<a class="header__register" href="./">Регистрация</a>
+		<div class="header__bottom">
+			<button class="header__tongue blind__toggle"></button>
 		</div>
-		<button class="header__toggle"></button>
-		<button class="header__talk"></button>
-	</div>
-	<div class="header__bottom">
-		<button class="header__tongue"></button>
-	</div>
-</header> 
+	</header> 
 
 
 <div class="top mbt1">
@@ -75,17 +74,17 @@
 	</div>
 </div>
 
-<section class="section mb1 filter">
+<section class="section mb1 filters">
 	<div class="section__layout container">
 		<form class="section__unit section__unit_desktop form filter__form" action="./">
 			<h2 class="title section__toggle section__toggle_desktop">Расширенный поиск</h2>
 			<div class="section__collapse section__collapse_desktop">
 				<div class="form__body form__body_fourfold mbt1">
-					<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
+					<label class="form__field form__field_geo" data-title="Откуда">
 						<input type="text"/><hr>
 						<input type="text" placeholder="км"/>
 					</label>
-					<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Куда">
+					<label class="form__field form__field_geo" data-title="Куда">
 						<input type="text"/><hr>
 						<input type="text" placeholder="км"/>
 					</label>
@@ -129,9 +128,11 @@
 	</div>
 </section>
 
-<section class="section mb1">
-	<div class="section__layout section__layout_triple container">
-		<div class="card anim section__unit" data-animation="0.9">
+<div class="blind__feed">
+	<button class="blind__up"></button>
+	<section class="blind__inner section mb1">
+		<div class="section__layout section__layout_triple container">
+			<div class="card anim section__unit" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -173,7 +174,7 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-		<div class="card anim section__unit" data-animation="0.9">
+			<div class="card anim section__unit" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -215,7 +216,7 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-		<div class="card anim section__unit card_own" data-animation="0.9">
+			<div class="card anim section__unit card_own" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -257,7 +258,7 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-		<div class="card anim section__unit card_own" data-animation="0.9">
+			<div class="card anim section__unit card_own" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -299,7 +300,7 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-		<div class="card anim section__unit" data-animation="0.9">
+			<div class="card anim section__unit" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -341,7 +342,7 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-		<div class="card anim section__unit" data-animation="0.9">
+			<div class="card anim section__unit" data-animation="0.9">
 	<div class="card__top mb1">
 		<h3 class="card__title">ТЭК Караван</h3>
 		<div class="card__top-side">
@@ -383,8 +384,9 @@
 		<a class="card__button button" href="./">Подробнее</a>
 	</div> -->
 </div>
-	</div>
-</section>
+		</div>
+	</section>
+</div>
 
 <div class="panel-bt" data-scroll-lock-fill-gap>
 	<a class="panel-bt__link panel-bt__link_profile" href="./"></a>

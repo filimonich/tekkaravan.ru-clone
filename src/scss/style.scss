@@ -67,14 +67,6 @@ body, html {
 body {
 	padding-top: 95px;
 	
-	&.home {
-		padding-top: 125px;
-		
-		@include media('<=xxs') {
-			padding-top: 100px;
-		}
-	}
-	
 	@include media('<=xs') {
 		padding-top: 80px;
 	}

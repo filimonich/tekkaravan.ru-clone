@@ -13,17 +13,17 @@
 	</div>
 </div>
 
-<section class="section mb1 filter">
+<section class="section mb1 filters">
 	<div class="section__layout container">
 		<form class="section__unit section__unit_desktop form filter__form" action="./">
 			<h2 class="title section__toggle section__toggle_desktop">Расширенный поиск</h2>
 			<div class="section__collapse section__collapse_desktop">
 				<div class="form__body form__body_fourfold mbt1">
-					<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Откуда">
+					<label class="form__field form__field_geo" data-title="Откуда">
 						<input type="text"/><hr>
 						<input type="text" placeholder="км"/>
 					</label>
-					<label class="form__field form__field_geo form-s__item" id="form-s__from" data-title="Куда">
+					<label class="form__field form__field_geo" data-title="Куда">
 						<input type="text"/><hr>
 						<input type="text" placeholder="км"/>
 					</label>
@@ -67,15 +67,18 @@
 	</div>
 </section>
 
-<section class="section mb1">
-	<div class="section__layout section__layout_triple container">
-		@@include("_card-j.html", { cls: "section__unit" })
-		@@include("_card-j.html", { cls: "section__unit" })
-		@@include("_card-j.html", { cls: "section__unit card_own" })
-		@@include("_card-j.html", { cls: "section__unit card_own" })
-		@@include("_card-j.html", { cls: "section__unit" })
-		@@include("_card-j.html", { cls: "section__unit" })
-	</div>
-</section>
+<div class="blind__feed">
+	<button class="blind__up"></button>
+	<section class="blind__inner section mb1">
+		<div class="section__layout section__layout_triple container">
+			@@include("_card-j.html", { cls: "section__unit" })
+			@@include("_card-j.html", { cls: "section__unit" })
+			@@include("_card-j.html", { cls: "section__unit card_own" })
+			@@include("_card-j.html", { cls: "section__unit card_own" })
+			@@include("_card-j.html", { cls: "section__unit" })
+			@@include("_card-j.html", { cls: "section__unit" })
+		</div>
+	</section>
+</div>
 
 @@include("_bottom.html")

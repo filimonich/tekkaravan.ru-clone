@@ -6,72 +6,71 @@
 	<link rel="shortcut icon" href="images/favicon.ico"> 
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
-</head> 
-<body class="home"> 
-
-<header class="header header_home" data-scroll-lock-fill-gap>
-	<div class="header__top container">
-		<a class="header__logo" href="./">
-			<!-- <img src="./images/logo.png" alt=""> -->
-			<img src="./images/logo_.png" alt="">
-		</a>
-		<form action="./" class="header__search search">
-			<input class="search__input" type="text" placeholder="Поиск">
-			<input class="search__submit" type="submit" value="">
-		</form>
-		<div class="header__navi navi" data-scroll-lock-scrollable>
-			<buton class="navi__close"></buton>
-			<form action="./" class="navi__search search">
+</head>
+<body class="blind blind_home">
+	<header class="header header_home" data-scroll-lock-fill-gap>
+		<div class="header__top container">
+			<a class="header__logo" href="./">
+				<!-- <img src="./images/logo.png" alt=""> -->
+				<img src="./images/logo_.png" alt="">
+			</a>
+			<form action="./" class="header__search search">
 				<input class="search__input" type="text" placeholder="Поиск">
 				<input class="search__submit" type="submit" value="">
 			</form>
-			<nav class="navi__menu">
-				<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
-				<div class="navi__submenu">
-					<a href="./">WhatsApp</a>					
-					<a href="./">История рассылок WhatsApp</a>					
-					<a href="./sending.html">Push рассылка</a>
-					<a href="./">Email рассылка</a>
-					<a href="./control.html">Контроль сотрудников</a>
-					<a href="./">Справочник</a>
-					<a href="./guests.html">Гости</a>
-				</div>
-				<a class="navi__link navi__link_profile" href="./">Профиль</a>
-				<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
-				<a class="navi__link navi__link_drivers" href="./owner_profile.html">Перевозчики</a>
-				<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
-				<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
-				<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
-				<a class="navi__link navi__link_users" href="./">Пользователи</a>
-				<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
-				<a class="navi__link navi__link_payment" href="./">Оплата</a>
-				<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
-				<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
-			</nav>
+			<div class="header__navi navi" data-scroll-lock-scrollable>
+				<buton class="navi__close"></buton>
+				<form action="./" class="navi__search search">
+					<input class="search__input" type="text" placeholder="Поиск">
+					<input class="search__submit" type="submit" value="">
+				</form>
+				<nav class="navi__menu">
+					<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
+					<div class="navi__submenu">
+						<a href="./">WhatsApp</a>					
+						<a href="./">История рассылок WhatsApp</a>					
+						<a href="./sending.html">Push рассылка</a>
+						<a href="./">Email рассылка</a>
+						<a href="./control.html">Контроль сотрудников</a>
+						<a href="./">Справочник</a>
+						<a href="./guests.html">Гости</a>
+					</div>
+					<a class="navi__link navi__link_profile" href="./">Профиль</a>
+					<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
+					<a class="navi__link navi__link_drivers" href="./owner_profile.html">Перевозчики</a>
+					<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
+					<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
+					<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
+					<a class="navi__link navi__link_users" href="./">Пользователи</a>
+					<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
+					<a class="navi__link navi__link_payment" href="./">Оплата</a>
+					<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
+					<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
+				</nav>
+			</div>
+			<div class="header__controls">
+				<a class="header__login" href="./" data-modal="login">Вход</a>
+				<!-- <a class="header__logout" href="./">Выход</a> -->
+				<a class="header__register" href="./">Регистрация</a>
+			</div>
+			<button class="header__toggle"></button>
+			<button class="header__talk"></button>
 		</div>
-		<div class="header__controls">
-			<a class="header__login" href="./" data-modal="login">Вход</a>
-			<!-- <a class="header__logout" href="./">Выход</a> -->
-			<a class="header__register" href="./">Регистрация</a>
+		<div class="header__bottom container">
+			<div class="blind__tab">
+				<button class="blind__tab-button blind__tab-button_cargo active">Логистика</button>
+				<button class="blind__tab-button blind__tab-button_tracks">Маркет</button>
+				<button class="blind__tab-button blind__tab-button_parts">Автозапчасти</button>
+				<button class="blind__tab-button blind__tab-button_carrier">Карьера</button>
+			</div>
+			<button class="header__tongue blind__toggle"></button>
 		</div>
-		<button class="header__toggle"></button>
-		<button class="header__talk"></button>
-	</div>
-	<div class="header__bottom container">
-		<div class="blind-tab">
-			<button class="blind-tab__button blind-tab__button_cargo active">Логистика</button>
-			<button class="blind-tab__button blind-tab__button_tracks">Маркет</button>
-			<button class="blind-tab__button blind-tab__button_parts">Автозапчасти</button>
-			<button class="blind-tab__button blind-tab__button_carrier">Карьера</button>
-		</div>
-		<button class="header__tongue"></button>
-	</div>
-</header> 
+	</header> 
 
 
 <div class="filters">
 	<div class="section filters__tab-block active">
-		<div class="section__layout filters__block container">
+		<div class="section__layout filters__block container mb1">
 			<form class="section__unit section__unit_desktop form form-s mt1" action="./">
 				<h2 class="title section__toggle section__toggle_desktop">Поиск грузов</h2>
 				<div class="section__collapse section__collapse_desktop">
@@ -108,7 +107,14 @@
 				</div>
 			</form>
 		</div>
-
+		<div class="section container">
+			<div class="section__unit">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora illum quod saepe omnis soluta eligendi quidem, quo sequi enim recusandae animi commodi eum hic voluptatem accusantium nobis impedit et repudiandae error vero distinctio laudantium laborum! Temporibus commodi quasi est eum harum ullam quibusdam suscipit vitae iusto, perspiciatis expedita fugiat voluptatem facere neque placeat, ea eveniet optio inventore accusantium voluptate reprehenderit possimus sit hic. Sapiente debitis id molestias amet, repellat ut officia pariatur, expedita illum fugiat tenetur eveniet eos deserunt fugit qui velit tempore quibusdam laborum saepe veritatis eligendi, dolorem earum iusto? Iure, magnam laudantium rem officia sint dicta voluptatem blanditiis.</p>
+				<p>Soluta obcaecati tempora quam nobis similique laborum accusantium voluptate! Earum quia aperiam nulla deleniti velit expedita a corrupti suscipit natus quasi dolorem perspiciatis, deserunt animi aspernatur. Magni quae harum non! Facere molestiae, sequi error necessitatibus amet debitis voluptas dolorem doloribus aut autem. Itaque a ipsam asperiores quidem ullam deleniti aperiam non, suscipit sint quia, excepturi odio voluptas doloribus sunt. Similique nesciunt eos tenetur sint repellat quos fugit blanditiis. Perferendis velit modi dicta deserunt ullam quidem odio voluptas quis tenetur fugit pariatur obcaecati voluptatibus voluptate, sint tempora maiores. Cumque veniam soluta sit repellat dolorem, quam impedit quidem repellendus atque assumenda excepturi.</p>
+				<p>Beatae accusamus fugiat voluptatibus obcaecati autem vel porro doloribus corrupti quasi, voluptatum veniam nesciunt nemo id aperiam, fugit, laborum nihil officiis enim deleniti eveniet sit aspernatur! Vero impedit in provident culpa tempora. Soluta ducimus earum obcaecati autem porro possimus delectus qui amet at aperiam maiores quaerat, facere sunt esse repellat molestias ullam corrupti? Ducimus non ipsa placeat sit porro mollitia distinctio pariatur quas modi exercitationem a temporibus, optio ab vel dignissimos minus, alias obcaecati omnis commodi libero, labore harum nihil possimus. Culpa voluptatum exercitationem debitis sapiente quaerat recusandae ducimus labore, velit dicta. Alias maiores nihil id ipsum at fuga dolorum.</p>
+				<p>Accusantium, nesciunt quae. Fugit esse maiores voluptates libero sunt, minima dolorem ad omnis ex vitae architecto aperiam maxime et dolorum ipsam laboriosam deserunt. Laboriosam vel provident accusantium cupiditate, tenetur unde in, repellat cum consequatur culpa repudiandae libero non minima? Vitae excepturi, ad nostrum non amet odio esse quis tenetur sint dignissimos? Facilis eligendi cupiditate deleniti voluptatem quaerat asperiores illo ea maiores numquam alias reiciendis dolorem dolore, saepe quod non itaque? Dolor tenetur totam fugiat sequi sed vero, odit nam modi itaque libero eos delectus officia excepturi quod? Velit itaque repudiandae consequatur! Non dolores velit voluptatum dignissimos eum nam, ut accusantium.</p>
+			</div>
+		</div>
 	</div>
 	<div class="section filters__tab-block">
 		<div class="section__layout filters__block container">
@@ -205,7 +211,7 @@
 	</div>
 </div>
 
-<div class="blind mt1">
+<div class="blind__feed mt1">
 	<div class="blind__inner">
 		<button class="blind__up"></button>
 		<div class="section blind__tab-block active">

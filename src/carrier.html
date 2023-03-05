@@ -13,7 +13,7 @@
 	</div>
 </div>
 
-<section class="section mb1 filter">
+<section class="section mb1 filters">
 	<div class="section__layout container">
 		<form class="section__unit section__unit_desktop form filter__form" action="./">
 			<h2 class="title section__toggle section__toggle_desktop">Расширенный поиск</h2>
@@ -41,21 +41,24 @@
 	</div>
 </section>
 
-<section class="section mb2">
-	<div class="section__layout section__layout_triple container">
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit card_own" })
-		@@include("_card-c.html", { cls: "section__unit card_own" })
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit" })
-		@@include("_card-c.html", { cls: "section__unit" })
-	</div>
-</section>
+<div class="blind__feed">
+	<button class="blind__up"></button>
+	<section class="blind__inner section mb2">
+		<div class="section__layout section__layout_triple container">
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit card_own" })
+			@@include("_card-c.html", { cls: "section__unit card_own" })
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit" })
+			@@include("_card-c.html", { cls: "section__unit" })
+		</div>
+	</section>
+</div>
 
-<div class="pagination mb2">
+<!-- <div class="pagination mb2">
 	<div class="pagination__inner container">
 		<a class="pagination__link pagination__link_start" href="./"></a>
 		<a class="pagination__link pagination__link_prev" href="./"></a>
@@ -67,6 +70,6 @@
 		<a class="pagination__link pagination__link_next" href="./"></a>
 		<a class="pagination__link pagination__link_end" href="./"></a>
 	</div>
-</div>
+</div> -->
 
 @@include("_bottom.html")

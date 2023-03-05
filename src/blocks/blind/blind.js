@@ -2,14 +2,13 @@ import { scrollClassToggle } from "../../js/libs/scroll";
 import { getStepIndex } from "../../js/libs/helpers";
 
 (() => {
-	
-	const panel = document.querySelector('.blind-tab');
-	
-	if(panel) {
-		const buttons = panel.querySelectorAll('.blind-tab__button');
-		const content = document.querySelector('.blind');
+	const panel = document.querySelector('.blind__tab');
 
-		$('.blind-tab').on('click', '.blind-tab__button:not(.active)', function(e) {
+	if(panel) {
+		const buttons = panel.querySelectorAll('.blind__tab-button');
+		const content = document.querySelector('.blind__feed');
+
+		$('.blind__tab').on('click', '.blind__tab-button:not(.active)', function(e) {
 			e.preventDefault();
 			let $self = $(this);
 		
@@ -27,5 +26,11 @@ import { getStepIndex } from "../../js/libs/helpers";
 			buttons[getStepIndex(buttons, -1)].click();
 		});
 	}
-	
+
+	document.querySelectorAll('.blind__toggle, .blind__up').forEach(button => {
+		button.addEventListener('click', (e) => {
+			document.querySelector('.blind').classList.toggle('dropped');
+		});
+	});
+
 })();
