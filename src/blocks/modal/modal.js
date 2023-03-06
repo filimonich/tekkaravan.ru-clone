@@ -1,6 +1,6 @@
 import scrollLock from 'scroll-lock';
 import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
-import { throttle } from "../../js/libs/helpers";
+// import { throttle } from "../../js/libs/helpers";
 
 (() => {
 	addUnderlay('modal');
@@ -8,7 +8,7 @@ import { throttle } from "../../js/libs/helpers";
 		el: '.header__login, .header__logout, .navi__link_login, .form__small a', 
 		scrollLock,
 		open: function(el) {
-			let pendingUpdate = false;
+			// let pendingUpdate = false;
 			
 			Inputmask({
 				"mask": "+7 (999) 999-99-99", 
@@ -38,7 +38,7 @@ import { throttle } from "../../js/libs/helpers";
 				});
 			});
 			
-			window.visualViewport.addEventListener("resize", throttle(() => {
+			/* window.visualViewport.addEventListener("resize", throttle(() => {
 				if (pendingUpdate) return;
 				pendingUpdate = true;
 				
@@ -46,7 +46,7 @@ import { throttle } from "../../js/libs/helpers";
 					pendingUpdate = false;
 					document.documentElement.style.setProperty('--vvph', `${window.visualViewport.height * 0.01}px`);
 				});
-			}, 250));
+			}, 250)); */
 		}
 	});
 

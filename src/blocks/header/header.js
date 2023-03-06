@@ -2,7 +2,7 @@ import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
 
 (() => {
-	const vh = window.innerHeight * 0.01;
+	const vh = window.visualViewport.height * 0.01;
 	const header = document.querySelector('.header');
 	const navi = header.querySelector('.header__navi');
 	const toggles = header.querySelectorAll('.header__toggle, .navi__close');
@@ -19,9 +19,10 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	// решение проблемы 100vh для меню на мобильных устройствах
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	
-	window.addEventListener('resize', () => {
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	window.visualViewport.addEventListener('resize', (e) => {
+		requestAnimationFrame(() => {
+			document.documentElement.style.setProperty('--vh', `${e.target.height * 0.01}px`);
+		});
 	});
 
 	/* const $header = $('.header');
