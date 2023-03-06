@@ -23,6 +23,12 @@
 					display: block;
 				}
 			}
+
+			#{$self}__toggle {
+				&::before, &::after {
+					background-image: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-black');
+				}
+			}
 		}
 	}
 	
@@ -173,6 +179,32 @@
 		}
 	}
 	
+	&__toggle {
+		@extend %reset-button;
+		display: none;
+		padding: 0 20px;
+		align-items: center;
+		justify-content: space-between;
+		
+		@include media('<=xxs') {
+			font-size: 15px;
+			display: flex;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+		
+		&::before, &::after {
+			display: block;
+			content: '';
+			width: 16px;
+			height: 10px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / contain no-repeat transparent;
+			filter: brightness(3.0);
+		}
+	}
+
 	&__inner {
 		box-sizing: border-box;
 		

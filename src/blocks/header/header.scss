@@ -180,8 +180,6 @@
 	}
 
 	&__tongue {
-		@extend %reset-button;
-		display: none;
 		position: absolute;
 		z-index: 1;
 		bottom: 0;
@@ -189,30 +187,5 @@
 		transform: translateY(100%);
 		width: 100%;
 		height: 35px;
-		padding: 0 20px;
-		align-items: center;
-		justify-content: space-between;
-		
-		@include media('<=xxs') {
-			font-size: 15px;
-			display: flex;
-		}
-		
-		@include media('<=xxs') {
-			font-size: 13px;
-		}
-		
-		&::before, &::after {
-			display: block;
-			content: '';
-			width: 16px;
-			height: 10px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / contain no-repeat transparent;
-			filter: brightness(3.0);
-		}
-		
-		&.opened {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-black');
-		}
 	}
 }
