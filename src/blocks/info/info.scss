@@ -1,157 +1,175 @@
 .info {
-	$self: &;
-	box-sizing: border-box;
-	display: flex;
-	flex-flow: column nowrap;
-	flex-grow: 1;
-	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+  $self: &;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
 
-	&__filters {
-		box-sizing: border-box;
-		background-color: rgba(0, 0, 0, 0.05);
-		min-height: 36px;
-		padding: 5px 10px;
-		display: flex;
-		align-items: center;
+  @keyframes show_fade {
+    from {
+      opacity: 0;
+    }
 
-		@include media('<=xs') {
-			flex-flow: column nowrap;
-			align-items: flex-start;
-		}
-	}
+    to {
+      opacity: 1;
+    }
+  }
 
-	&__filter {
-		@extend %reset-button;
-		font-family: "RR", sans-serif;
-		font-size: 14px;
-		display: flex;
-		align-items: center;
-		white-space: nowrap;
+  &__filters {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.05);
+    min-height: 36px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
 
-		@include media('<=xs') {
-			margin: 8px 0;
-		}
+    @include media('<=xs') {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
+  }
 
-		&::before, &::after {
-			display: block;
-			content: '';
-			height: 11px;
-			width: 6px;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-blue');
-			background-color: transparent;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-color: contain;
-			order: 1;
-		}
-		
-		&::before {
-			margin-left: 5px;
-		}
-		
-		&::after {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-dark');
-			opacity: 0.6;
-			transform: rotate(180deg);
-			margin-left: -1px;
-		}
-		
-		&.desk {
-			&::before {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-dark');
-				opacity: 0.6;
-			}
-			
-			&::after {
-				opacity: 1;
-				background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-blue');
-			}
-		}
+  &__filter {
+    @extend %reset-button;
+    font-family: "RR", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 
-		&_ip {
-			width: 140px;
-		}
+    @include media('<=xs') {
+      margin: 8px 0;
+    }
 
-		&_date {
-			width: 167px;
-		}
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      height: 11px;
+      width: 6px;
+      background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-blue');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: contain;
+      order: 1;
+    }
 
-		&_breadcrumbs {
+    &::before {
+      margin-left: 5px;
+    }
 
-		}
-	}
+    &::after {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-dark');
+      opacity: 0.6;
+      transform: rotate(180deg);
+      margin-left: -1px;
+    }
 
-	&__lines {
+    &.desk {
+      &::before {
+        background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-dark');
+        opacity: 0.6;
+      }
 
-		&_less {
-			overflow-y: auto;
-			max-height: 530px;
-	
-			&::-webkit-scrollbar {
-				width: 8px;
-				height: 8px;
-			}
-			
-			&::-webkit-scrollbar-track {
-				background-color: $light;
-			}
-			
-			&::-webkit-scrollbar-thumb {
-				background-color: $placeholder;
-				border-radius: 10px;
-			}
-			
-			&::-webkit-scrollbar-corner {
-				background-color: transparent;
-			}
-		}
-		
-		&_even {
-			#{$self}__line {
-				background-color: transparent !important;
-				
-				&:nth-child(even) {
-					background-color: rgba(0, 0, 0, 0.05) !important;
-				}
-			}
-		}
-	}
+      &::after {
+        opacity: 1;
+        background-image: url('#{$images-path}icons-sprite.svg#icon-sort-view-blue');
+      }
+    }
 
-	&__line {
-		animation: show_fade 0.3s;
+    &_ip {
+      width: 140px;
+    }
 
-		&:nth-child(odd) {
-			background-color: rgba(0, 0, 0, 0.05);
-		}
-	}
+    &_date {
+      width: 167px;
+    }
+
+    &_breadcrumbs {}
+  }
+
+  &__lines {
+
+    &_less {
+      overflow-y: auto;
+      max-height: 530px;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $light;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $placeholder;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+    }
+
+    &_even {
+      #{$self}__line {
+        background-color: transparent !important;
+
+        &:nth-child(even) {
+          background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+      }
+    }
+  }
+
+  &__line {
+    animation: show_fade 0.3s;
+
+    &:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
 
 
-	&__more {
-		color: $accent;
-		font-size: 14px;
-		text-decoration: underline;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		width: 120px;
-		padding-top: 10px;
-		margin: 0 auto;
+  &__more {
+    color: $accent;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    padding-top: 10px;
+    margin: 0 auto;
 
-		&::after {
-			display: block;
-			content: '';
-			width: 11px;
-			height: 7px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / auto no-repeat transparent;
-			margin-left: 8px;
-		}
-	}
+    &::after {
+      display: block;
+      content: '';
+      width: 11px;
+      height: 7px;
+      background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / auto no-repeat transparent;
+      margin-left: 8px;
+    }
+  }
 
-	&__buttons {
-		margin-top: auto;		
-	}
+  // &__buttons {
+  //   margin-top: auto;
+  // }
 
-	&__button {
-		max-width: 290px;
-	}
+  &__buttons {
+    margin-top: auto;
+
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      grid-gap: 24px;
+    }
+  }
+
+  &__button {
+    max-width: 290px;
+  }
 }
