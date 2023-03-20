@@ -13,6 +13,7 @@ ymaps
   .load(yurl)
   .then(map => {
     const range_dom = document.querySelector('.section__map_range');
+    const ugeo_dom = document.querySelector('.section__map_usergeo');
 
     if (range_dom) {
       let range = new map.Map(range_dom, {
@@ -68,6 +69,42 @@ ymaps
       });
 
       maps.push(range);
+    }
+    if (ugeo_dom) {
+      let ugeo = new map.Map(ugeo_dom, {
+        center: [outer_data.lat, outer_data.lon],
+        zoom: 9,
+        controls: [],
+      });
+      let placemark = new map.Placemark(
+        [outer_data.lat, outer_data.lon],
+        {
+          iconContent: '',
+        },
+        {
+          preset: 'islands#redStretchyIcon',
+          draggable: true,
+        }
+      );
+
+      let circle = new map.Circle(
+        [placemark.geometry.getCoordinates(), 100],
+        {},
+        {
+          geodesic: true,
+        }
+      );
+
+      placemark.events.add('drag', function (e) {
+        return circle.geometry.setCoordinates(
+          placemark.geometry.getCoordinates()
+        );
+      });
+
+      ugeo.geoObjects.add(placemark);
+      ugeo.geoObjects.add(circle);
+
+      maps.push(ugeo);
     }
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));
