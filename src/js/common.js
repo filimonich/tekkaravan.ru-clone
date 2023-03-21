@@ -14,6 +14,7 @@ ymaps
   .then(map => {
     const range_dom = document.querySelector('.section__map_range');
     const ugeo_dom = document.querySelector('.section__map_usergeo');
+    const payGeo_dom = document.querySelector('.section__map_pay');
 
     if (range_dom) {
       let range = new map.Map(range_dom, {
@@ -105,6 +106,18 @@ ymaps
       ugeo.geoObjects.add(circle);
 
       maps.push(ugeo);
+    }
+    if (payGeo_dom) {
+      let payGeo = new map.Map(payGeo_dom, {
+        center: [outer_data.lat, outer_data.lon],
+        zoom: 9,
+        controls: [],
+      });
+
+      payGeo.geoObjects.add(placemark);
+      payGeo.geoObjects.add(circle);
+
+      maps.push(payGeo);
     }
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));
