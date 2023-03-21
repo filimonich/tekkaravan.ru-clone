@@ -1,180 +1,182 @@
 .card {
-	$self: &;
+  $self: &;
 
-	&_own {
-		background-color: $own !important;
-	}
+  &_own {
+    background-color: $own !important;
+  }
 
-	&_less {
-		@include media('<=xxs') {
-			#{$self}__top, #{$self}__lines, #{$self}__panel {
-				display: none;
-			}
+  &_less {
+    @include media('<=xxs') {
 
-			#{$self}__hidden {
-				display: block;
-			}
-	
-			&:active {
-				transform: scale(95%);
-				transition: transform 0.1s;
-			}
-		}
-	}
+      #{$self}__top,
+      #{$self}__lines,
+      #{$self}__panel {
+        display: none;
+      }
 
-	&__top {
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	&__title {
-		font-family: "RB", sans-serif;
-		line-height: 24px;
-		
-		a {
-			text-decoration: none;
-			color: inherit;
-		}
+      #{$self}__hidden {
+        display: block;
+      }
 
-		@include media('<=xs') {
-			font-size: 14px;
-			line-height: 20px;			
-		}
-	}
-	
-	&__top-side {
-		font-family: "RM", sans-serif;
-		font-size: 18px;
-		
-		@include media('<=xs') {
-			font-size: 16px;
-		}
+      &:active {
+        transform: scale(95%);
+        transition: transform 0.1s;
+      }
+    }
+  }
 
-		span {
-			color: $accent;
-		}
-	}
-	
-	&__images {
-		height: 240px;
-		
-		@include media('<=xxxs') {
-			height: 200px;
-		}
-	}
-	
-	&__desctiption {
-		font-family: "RL", sans-serif;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
 
-		@include media('<=xs') {
-			font-size: 14px;
-		}
-	}
-	
-	&__lines {
-		font-size: 14px;
-	}
-	
-	&__line {
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		min-height: 36px;
-		padding: 6px 10px;
+  &__title {
+    font-family: "RB", sans-serif;
+    line-height: 24px;
 
-		&:nth-child(odd) {
-			background-color: rgba(0, 0, 0, 0.05);
-		}
-	}
-	
-	&__line-name {
-		font-family: "RM", sans-serif;
-		margin-right: 12px;
-	}
-	
-	&__line-value {
-		text-align: right;
-	}
-	
-	&__panel {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-		margin-top: auto;
-	}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-	&__date {
-		margin: 5px 5px  5px 0;
+    @include media('<=xs') {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
 
-		&.date {
+  &__top-side {
+    font-family: "RM", sans-serif;
+    font-size: 18px;
 
-			@include media('<=xs') {
-				font-size: 13px;
-				line-height: 20px;
-			}
-			
-			@include media('<=xs') {
-				font-size: 12px;
-			}
-	
-			&::before {
-				@include media('<=xs') {
-					width: 16px;
-					height: 16px;
-				}
-			}
-		}
-	}
+    @include media('<=xs') {
+      font-size: 16px;
+    }
 
-	&__contacts {
-		display: grid;
-		grid-template-columns: repeat(3, 24px);
-		grid-gap: 10px;
-		
-		@include media('<=xs') {
-			grid-template-columns: repeat(3, 30px);
-			grid-gap: 16px;
-		}
-		
-		@include media('<=xxxs') {
-			grid-template-columns: repeat(3, 26px);
-			grid-gap: 8px;
-		}
-	}
+    span {
+      color: $accent;
+    }
+  }
 
-	&__buttons {
+  &__images {
+    height: 240px;
 
-	}
+    @include media('<=xxxs') {
+      height: 200px;
+    }
+  }
 
-	&__button {
-		max-width: 180px;
-		margin: 0 auto;
+  &__desctiption {
+    font-family: "RL", sans-serif;
 
-		&_panel {
-			margin: 0;
+    @include media('<=xs') {
+      font-size: 14px;
+    }
+  }
 
-			&.button {
-				border-radius: 7px;
-				padding: 5px 15px;
-				height: 36px;
-				width: 100%;
-				max-width: 150px;
-				font-size: 15px;
-				
-				@include media('<=xs') {
-					font-size: 14px;
-				}
-				
-				@include media('<=xxs') {
-					font-size: 13px;
-				}
-			}
-		}
-	}
+  &__lines {
+    font-size: 14px;
+  }
 
-	&__hidden {
-		display: none;
-	}
+  &__line {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: 6px 10px;
+
+    &:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__line-name {
+    font-family: "RM", sans-serif;
+    margin-right: 12px;
+  }
+
+  &__line-value {
+    text-align: right;
+  }
+
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__date {
+    margin: 5px 5px 5px 0;
+
+    &.date {
+
+      @include media('<=xs') {
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      @include media('<=xs') {
+        font-size: 12px;
+      }
+
+      &::before {
+        @include media('<=xs') {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    grid-gap: 10px;
+
+    @include media('<=xs') {
+      grid-template-columns: repeat(3, 30px);
+      grid-gap: 16px;
+    }
+
+    @include media('<=xxxs') {
+      grid-template-columns: repeat(3, 26px);
+      grid-gap: 8px;
+    }
+  }
+
+  &__buttons {}
+
+  &__button {
+    max-width: 180px;
+    margin: 0 auto;
+
+    &_panel {
+      margin: 0;
+
+      &.button {
+        border-radius: 7px;
+        padding: 5px 15px;
+        height: 36px;
+        width: 100%;
+        max-width: 48%;
+        // max-width: 150px;
+        font-size: 15px;
+
+        @include media('<=xs') {
+          font-size: 14px;
+        }
+
+        @include media('<=xxs') {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
 }
