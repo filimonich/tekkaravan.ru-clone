@@ -162,7 +162,7 @@
         height: 36px;
         width: 100%;
         max-width: 48%;
-        // max-width: 150px;
+        // max-width: 150px; // поставил проценты что бы кнопки не перескакивали и были резиновые
         font-size: 15px;
 
         @include media('<=xs') {
