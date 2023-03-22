@@ -157,4 +157,24 @@
       background-size: 18px 16px;
     }
   }
+
+  &_microphone::after {
+    display: block;
+    background-image: url('#{$images-path}icons-sprite.svg#icon-microphone-view-black');
+    background-size: 16px 18px;
+
+    @include media('<=xs') {
+      background-size: 14px 16px;
+    }
+  }
+
+  &_paperclip::after {
+    display: block;
+    background-image: url('#{$images-path}icons-sprite.svg#icon-paperclip-view-black');
+    background-size: 16px 18px;
+
+    @include media('<=xs') {
+      background-size: 14px 16px;
+    }
+  }
 }
