@@ -50,14 +50,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    display: flex;
+    // display: flex;
+    display: block; // что бы появились три точки и текст сокращался
     align-items: center;
     // font-family: "RL", sans-serif;
     font-size: 15px;
     line-height: 24px;
 
     &::before {
-      display: block;
+      // display: block;
+      display: inline-flex;
       content: '';
       // width: 15px;
       min-width: 15px; // что бы картинка не уменьшалась
