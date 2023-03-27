@@ -102,6 +102,11 @@
       background: url('#{$images-path}icons-sprite.svg#icon-paperclip-view-black') center left / 22px 22px no-repeat transparent;
       filter: hue-rotate(155deg) brightness(50%) saturate(200%);
     }
+
+    &_env {
+      background: url('#{$images-path}icons-sprite.svg#icon-env-view-black') center left / 22px 18px no-repeat transparent;
+      filter: hue-rotate(155deg) brightness(50%) saturate(200%);
+    }
   }
 
   &__breadcrumbs {

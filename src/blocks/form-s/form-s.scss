@@ -18,6 +18,10 @@
 			margin-bottom: 20px;
 		}
 
+		@include media('<=xxxs') {
+			margin-bottom: 8px;
+		}
+
 		&:nth-child(1) {
 			grid-column: span 5;
 			
@@ -43,8 +47,9 @@
 			}
 			
 			@include media('<=xxxs') {
-				top: 32px;
-				height: 35px;
+				max-width: 50px;
+				top: 28px;
+				height: 28px;
 			}
 		}
 

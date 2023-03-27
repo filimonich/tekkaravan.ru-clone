@@ -249,4 +249,11 @@
 			display: block;
 		}
 	}
+
+	&__mobile-only {
+		display: none;
+		@include media('<=xxs') {
+			display: block;
+		}
+	}
 }

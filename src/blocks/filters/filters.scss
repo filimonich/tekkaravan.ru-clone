@@ -2,6 +2,12 @@
 	$self: &;
 	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
 
+	@include media('<=xxxs') {
+    overflow: hidden; // это под вопросом
+    overflow-y: hidden; // это под вопросом
+    max-height: 50vh;
+  }
+
 	&__tab-block {
 		display: none;
 
@@ -19,3 +25,4 @@
 		} */
 	}
 }
+ 

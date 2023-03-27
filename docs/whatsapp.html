@@ -1,11 +1,12 @@
-<!DOCTYPE html> 
-<html lang="ru"> 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no"> 
-	<link rel="shortcut icon" href="images/favicon.ico"> 
-	<link rel="stylesheet" href="style.css"> 
-	<title></title> 
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<title></title>
 </head>
 <body class="blind"> 
 	<header class="header" data-scroll-lock-fill-gap>
@@ -69,7 +70,7 @@
       <span class="breadcrumbs__item breadcrumbs__item_current">Whatsapp</span>
     </div>
     <!-- <div class="top__buttons">
-			<button class="top__button top__button_filter filter__toggle">Фильтр</button>
+      <button class="top__button top__button_filter filter__toggle">Фильтр</button>
 		</div> -->
   </div>
 </div>
@@ -80,7 +81,6 @@
       <h2 class="title">Рассылки на WhatsApp</h2>
       <div class="section__collapse section__collapse_desktop">
         <div class="form__body form__body_double mbt1">
-
         </div>
         <div class="form__buttons form__buttons_grid">
           <button class="form__button button form__button" href="./" type="button">Разлогинить
@@ -114,7 +114,7 @@
             </ul>
           </div>
         </div>
-        <div class="form__body card mbt1">
+        <!-- <div class="form__body card mbt1">
           <label class="form__field form__field_txt" id="text" data-title="Текст Сообщения">
             <input name="volume" type="text">
             <button class="line__button line__button_microphone"></button>
@@ -125,15 +125,146 @@
             <span class="card__line-name"></span>
             <span class="card__line-value">Максимальный размер файла WhatsApp 37 мбайт</span>
           </div>
-        </div>
+        </div> -->
+
+
+        <label class="form__field form__field_txt form__whatsapp-textarea" data-title="Текст сообщения">
+          <textarea class="form-control mt-3 bellatrix-whatsapp-textarea form__field form__field_txt" name="text"
+            id="text" cols="30" rows="1">
+          </textarea>
+          <a href="#" data-modal="send_voice_message" id="send_voice_message"
+            class="line__button line__button_microphone fa fa-microphone send_voice_message header__login">
+          </a>
+          <label class="bellatrix-whatsapp-file">
+            <i class="fa fa-paperclip line__button line__button_paperclip" aria-hidden="true"></i>
+            <input type="file" name="image" id="whatsapp_img" style="display: none;">
+            <input type="hidden" name="url" id="url">
+            <input type="hidden" name="fname" id="fname">
+            <input type="hidden" name="uid" id="uid" value="<?php echo $_SESSION['id']; ?>">
+          </label>
+        </label>
+        <small style="float: right">Максимальный размер файла WhatsApp 37 мбайт
+          <br>
+          <span style="color: #16cd63;" id="fupload">
+          </span>
+        </small>
+
         <div class="form__buttons form__buttons_grid">
-          <button type="submit" class="form__button button button_send form__button" name="submit">Отправить</button>
+          <a class="form__button button button_send form__button submit-order-btn" name="submit">Отправить</a>
         </div>
       </div>
     </form>
   </div>
 </div>
 
+
+<!-- <div class="modal" id="modal__underlay" data-scroll-lock-scrollable="">
+  <div class="modal__body">
+    <span class="modal__close"></span>
+    <div class="modal__content"></div>
+  </div>
+</div> -->
+
+<div class="modal voice-message-modal preview" id="modal__underlay" data-scroll-lock-scrollable=""
+  style="display: none;">
+  <div class="voice-wrapper modal__body">
+    <div class="modal__close cancel-rec"><i class="fa fa-paper-plane cancel-rec"></i></div>
+    <div class="voice-preview">
+      <div class="preview-header">Идет запись</div>
+      <audio controls="" src="#"></audio>
+    </div>
+    <div class="send-rec line__buttons"><i class="fa fa-paper-plane  line__button line__button_env"></i></div>
+    <div class="stop-rec line__buttons"><i class="fa fa-stop line__button line__button_microphone"></i></div>
+    <div class="controls">
+    </div>
+  </div>
+</div>
+
+
+<!--<script>
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    "chatId": "7'.$string.'@c.us",
+    "urlFile": "'.$_POST['url'].'",
+    "fileName": "'.$_POST['fname'].'",
+    "caption": "text.replace(/(\r\n|\r|\n)/g, '\r\n')"
+  });
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+  fetch("https://api.green-api.com/waInstance{{ UserinstanceId }}/SendFileByUrl/{{ UserToken }}", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+</script> -->
+
+<!-- <script>
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    "chatId": "7" + string + "@c.us",
+    "message": "text.replace(/(\r\n|\r|\n)/g, '\r\n')"
+  });
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+  fetch("https://api.green-api.com/waInstance{{ UserinstanceId }}/sendMessage/{{ UserToken }}", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+</script> -->
+
+<!-- <script>
+  const wi = document.querySelector('#whatsapp_img');
+  const fu = document.querySelector('#fupload');
+  const url = document.querySelector('#url');
+  const name = document.querySelector('#fname');
+
+  wi.addEventListener('change', (e) => {
+    upload();
+  });
+  function upload() {
+    let data = new FormData();
+    let upload = document.getElementById('whatsapp_img');
+    let user_id = $_SESSION['id'];
+    data.append('image', upload.files[0]);
+    data.append('id', user_id);
+    data.append('submit', "1");
+    fetch('/ajax/file_upload.php', {
+      method: 'POST',
+      body: data
+    }).then(
+      success => success.text().then(
+        function (text) {
+          console.log(text);
+          fu.innerHTML = text;
+          let fname = text.replace("Файл ", "").replace(" успешно загружен", "").trim();
+          console.log(fname);
+          name.value = fname;
+          // let furl = './' + user_id + '/' + fname;
+          let furl = URL.createObjectURL(recorder.getBlob()) + '/' + user_id + '/' + fname;
+          console.log(furl);
+          url.value = furl;
+        }) // Handle the success response object
+    ).catch(
+      error => console.log(error) // Handle the error response object
+    );
+  }
+</script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
 <div class="panel-bt" data-scroll-lock-fill-gap>
 	<a class="panel-bt__link panel-bt__link_profile" href="./"></a>
 	<a class="panel-bt__link panel-bt__link_calc" href="./"></a>
@@ -196,3 +327,5 @@
 </body>
 
 </html>
+
+<!-- <script src="/style/js/recorder.js"></script> -->

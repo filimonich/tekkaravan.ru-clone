@@ -84,6 +84,11 @@
 			font-size: 13px;
 			height: 40px;
 		}
+		
+		@include media('<=xxxs') {
+			font-size: 12px;
+			height: 38px;
+		}
 
 		&[data-title]::before {
 			display: none;
@@ -103,6 +108,10 @@
 				padding: 1px 5px;
 				font-size: 10px;
 				left: 15px;
+			}
+
+			@include media('<=xxxs') {
+				padding: 0px 3px;
 			}
 		}
 
@@ -264,6 +273,11 @@
 			@include media('<=xxs') {
 				grid-gap: 20px;
 				grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+			}
+
+			@include media('<=xxxs') {
+				grid-gap: 20px;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 			}
 		}
 	}

@@ -80,6 +80,13 @@
 				}
 			}
 		}
+
+		&_mobile-only {
+			display: grid;
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
 	}
 
 	&__unit {
@@ -128,6 +135,9 @@
 		&_desktop {
 			@include media('<=xxs') {
 				background: none !important;
+			}
+			@include media('<=xxxs') {
+				display: none;
 			}
 		}
 

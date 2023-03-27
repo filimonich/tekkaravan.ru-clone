@@ -1,5 +1,5 @@
 @import "lib/additional.scss"; 
-@include reset(); 
+@include reset();  
 
 // Include breakpoints badge
 // body { @include screen-media(); }
@@ -118,4 +118,15 @@ em { font-style: italic; }
 	
 	.mbt1 { margin-top: 15px; margin-bottom: 15px; }
 	.mbt2 { margin-top: 30px; margin-bottom: 30px; }
+}
+
+@include media('<=xxxs') {
+	.mt1 { margin-top: 10px; }
+	.mt2 { margin-top: 20px; }
+	
+	.mb1 { margin-bottom: 10px; }
+	.mb2 { margin-bottom: 20px; }
+	
+	.mbt1 { margin-top: 4px; margin-bottom: 4px; }
+	.mbt2 { margin-top: 10px; margin-bottom: 10px; }
 }
