@@ -1,3 +1,4 @@
+/* 
 let getElement = (target, group = 0) => {
   try {
     if (group) {
@@ -85,11 +86,13 @@ let voiceCancel = getElement('.voice-message-modal .cancel-rec');
 let mainContainer = getElement('body');
 
 document.addEventListener('DOMContentLoaded', () => {
-  sendVoiceButton.addEventListener('click', voiceMessageRec);
+  if (sendVoiceButton) {
+    sendVoiceButton.addEventListener('click', voiceMessageRec);
 
-  voiceStop.addEventListener('click', voiceMessageRec);
-  voiceSend.addEventListener('click', voiceMessageSend);
-  voiceCancel.addEventListener('click', voiceMessageCancel);
+    voiceStop.addEventListener('click', voiceMessageRec);
+    voiceSend.addEventListener('click', voiceMessageSend);
+    voiceCancel.addEventListener('click', voiceMessageCancel);
+  }
 });
 
 const voiceMessageRec = () => {
@@ -184,3 +187,4 @@ $('form.checkout-form button').click(function (eventObj) {
   });
   return true;
 });
+*/

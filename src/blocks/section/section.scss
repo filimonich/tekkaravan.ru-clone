@@ -114,6 +114,7 @@
 		
 		&_desktop {
 			@include media('<=xxs') {
+				margin-top: 0 !important;
 				padding: 24px 0 !important;
 				background: none;
 				box-shadow: none;

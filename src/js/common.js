@@ -14,6 +14,7 @@ ymaps
   .then(map => {
     const range_dom = document.querySelector('.section__map_range');
     const ugeo_dom = document.querySelector('.section__map_usergeo');
+    const drivers_dom = document.querySelector('.section__map_driversall');
 
     if (range_dom) {
       let range = new map.Map(range_dom, {
@@ -70,6 +71,7 @@ ymaps
 
       maps.push(range);
     }
+
     if (ugeo_dom) {
       let ugeo = new map.Map(ugeo_dom, {
         center: [outer_data.lat, outer_data.lon],
@@ -105,6 +107,96 @@ ymaps
       ugeo.geoObjects.add(circle);
 
       maps.push(ugeo);
+    }
+
+    if (drivers_dom) {
+      let lat = outer_data.lat;
+      let lon = outer_data.lon;
+      let drivers = [
+        {
+          type: 'Point',
+          coordinates: [47.287446, 39.747379],
+        },
+        {
+          type: 'Point',
+          coordinates: [47.285819, 39.751381],
+        },
+        {
+          type: 'Point',
+          coordinates: [47.285819, 39.748381],
+        },
+      ];
+
+      let distanse = outer_data.distanse;
+
+      let driversI = new map.Map(
+          drivers_dom,
+          {
+            center: [lat, lon],
+            zoom: 13,
+            controls: [],
+          },
+          {
+            searchControlProvider: 'yandex#search',
+          }
+        ),
+        driversObjects = new map.geoQuery(drivers).addToMap(driversI);
+
+      let placemark = new map.Placemark(
+        [lat, lon],
+        {
+          iconContent: '',
+        },
+        {
+          preset: 'islands#redStretchyIcon',
+        }
+      );
+
+      let circle = new map.Circle(
+        [placemark.geometry.getCoordinates(), distanse * 1000],
+        {
+          geodesic: true,
+        },
+        {
+          fillColor: '#DB353266',
+          strokeColor: '#990066',
+          fillOpacity: 0.2,
+          strokeOpacity: 0.5,
+          strokeWidth: 2,
+        }
+      );
+
+      placemark.events.add('drag', function (e) {
+        return circle.geometry.setCoordinates(
+          placemark.geometry.getCoordinates()
+        );
+      });
+
+      driversI.geoObjects.add(placemark);
+      driversI.geoObjects.add(circle);
+
+      // Объекты, попадающие в круг, будут остоваться.
+      let objectsInsideCircle = driversObjects.searchInside(circle);
+      // Оставшиеся объекты за радиусом - удаляются.
+      driversObjects.remove(objectsInsideCircle).removeFromMap(driversI);
+
+      document
+        .querySelector('#form_driversall')
+        .addEventListener('click', function (e) {
+          if (e.target.classList.contains('form__button')) {
+            // console.log(this);
+
+            let input1 = this.querySelector('[name = "inpusergeo"]').value;
+            distanse = this.querySelector('[name = "distance"]').value;
+            // console.log(input1, distanse);
+
+            driversI.container.fitToViewport();
+            console.log(distanse);
+            // console.log(driversI);
+          }
+        });
+
+      maps.push(driversI);
     }
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));
