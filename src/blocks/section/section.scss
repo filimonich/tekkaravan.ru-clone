@@ -124,7 +124,7 @@
 		}
 
 		&_mobile-only {
-			display: grid;
+			display: flex;
 			@include media('<=xxs') {
 				display: none;
 			}
