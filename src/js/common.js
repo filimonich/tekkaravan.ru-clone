@@ -110,22 +110,12 @@ ymaps
     }
 
     if (drivers_dom) {
+      // Подключаем поисковые подсказки к полю ввода.
+      var suggestView = new map.SuggestView('suggest');
+
       let lat = outer_data.lat;
       let lon = outer_data.lon;
-      let drivers = [
-        {
-          type: 'Point',
-          coordinates: [47.287446, 39.747379],
-        },
-        {
-          type: 'Point',
-          coordinates: [47.285819, 39.751381],
-        },
-        {
-          type: 'Point',
-          coordinates: [47.285819, 39.748381],
-        },
-      ];
+      let drivers = outer_data.drivers;
 
       let distanse = outer_data.distanse;
 
@@ -135,12 +125,40 @@ ymaps
             center: [lat, lon],
             zoom: 13,
             controls: [],
-          },
-          {
-            searchControlProvider: 'yandex#search',
           }
+          // {
+          //   searchControlProvider: 'yandex#search',
+          // }
         ),
         driversObjects = new map.geoQuery(drivers).addToMap(driversI);
+
+      var searchControl = new map.control.SearchControl({
+        options: {
+          provider: 'yandex#search',
+          position: {
+            top: -40, // уберём поисковую панель за край карты
+            left: -390, // уберём поисковую панель за край карты
+          },
+        },
+      });
+      driversI.controls.add(searchControl);
+
+      suggestView.events.add('select', function () {
+        // поиск по выбору саджеста
+        Search();
+      });
+
+      $('#suggest').keyup(function (event) {
+        // поиск по Enter
+        if (event.keyCode == 13) {
+          Search();
+        }
+      });
+
+      $('#button').bind('click', function () {
+        // поиск по кнопке
+        Search();
+      });
 
       let placemark = new map.Placemark(
         [lat, lon],
@@ -192,7 +210,7 @@ ymaps
 
             driversI.container.fitToViewport();
             console.log(distanse);
-            // console.log(driversI);
+            console.log(driversI);
           }
         });
 
