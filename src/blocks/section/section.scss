@@ -122,6 +122,13 @@
 				border: none;
 			}
 		}
+
+		&_mobile-only {
+			display: grid;
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
 	}
 
 	&__gallery {
