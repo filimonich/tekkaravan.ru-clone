@@ -1,0 +1,30 @@
+.card-mfn {
+$self: &;
+text-decoration: none;
+color: $text;
+
+  &__display {
+    display: flex;
+  }
+  
+  &__images {
+    align-items: center;
+    display: grid;
+    margin: 2px;
+    min-width: 20%;
+  }
+  
+  &__image {
+  }
+  
+  &__img {
+    width: 80px;
+    border-radius: 50%;
+    height: auto;
+  }
+
+  &__line {
+    display: inline-grid;
+    align-items: center;
+  }
+}
