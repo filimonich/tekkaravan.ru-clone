@@ -168,6 +168,13 @@
 		&_range {
 
 		}
+
+		&_mobile-only {
+			display: none;
+			@include media('<=xxs') {
+				display: block;
+			}
+		}
 	}
 
 	&__collapse {

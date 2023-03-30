@@ -143,10 +143,10 @@ ymaps
       });
       driversI.controls.add(searchControl);
 
-      suggestView.events.add('select', function () {
-        // поиск по выбору саджеста
-        Search();
-      });
+      // suggestView.events.add('select', function () {
+      //   // поиск по выбору саджеста
+      //   Search();
+      // });
 
       $('#suggest').keyup(function (event) {
         // поиск по Enter
@@ -158,6 +158,22 @@ ymaps
       $('#button').bind('click', function () {
         // поиск по кнопке
         Search();
+      });
+
+      function Search() {
+        // Непосредственно поиск в панели
+        var request = $('#suggest').val();
+        searchControl.search(request);
+      }
+
+      outer_data.drivers.forEach(driver => {
+        let placemark = new map.Placemark(driver.coordinates, {
+          balloonContentHeader: driver.balloonContentHeader,
+          balloonContentBody: driver.balloonContentBody,
+          balloonContentFooter: driver.balloonContentFooter,
+          hintContent: driver.hintContent,
+        });
+        driversI.geoObjects.add(placemark);
       });
 
       let placemark = new map.Placemark(
