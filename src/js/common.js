@@ -111,7 +111,7 @@ ymaps
 
     if (drivers_dom) {
       // Подключаем поисковые подсказки к полю ввода.
-      var suggestView = new map.SuggestView('suggest');
+      let suggestView = new map.SuggestView('suggest');
 
       let lat = outer_data.lat;
       let lon = outer_data.lon;
@@ -130,9 +130,10 @@ ymaps
           //   searchControlProvider: 'yandex#search',
           // }
         ),
+        // );
         driversObjects = new map.geoQuery(drivers).addToMap(driversI);
 
-      var searchControl = new map.control.SearchControl({
+      let searchControl = new map.control.SearchControl({
         options: {
           provider: 'yandex#search',
           position: {
@@ -143,10 +144,10 @@ ymaps
       });
       driversI.controls.add(searchControl);
 
-      // suggestView.events.add('select', function () {
-      //   // поиск по выбору саджеста
-      //   Search();
-      // });
+      suggestView.events.add('select', function () {
+        // поиск по выбору саджеста
+        Search();
+      });
 
       $('#suggest').keyup(function (event) {
         // поиск по Enter
@@ -155,15 +156,18 @@ ymaps
         }
       });
 
-      $('#button').bind('click', function () {
+      $('#button').bind('click', function (e) {
+        e.preventDefault();
         // поиск по кнопке
         Search();
       });
 
       function Search() {
         // Непосредственно поиск в панели
-        var request = $('#suggest').val();
-        searchControl.search(request);
+        let request = $('#suggest').val();
+        let distanse = $('#distanceDrivers').val();
+        searchControl.search(request, distanse);
+        driversI.container.fitToViewport();
       }
 
       outer_data.drivers.forEach(driver => {
@@ -176,6 +180,7 @@ ymaps
         driversI.geoObjects.add(placemark);
       });
 
+      // Метка где я сейчас нахажусь
       let placemark = new map.Placemark(
         [lat, lon],
         {
@@ -214,21 +219,22 @@ ymaps
       // Оставшиеся объекты за радиусом - удаляются.
       driversObjects.remove(objectsInsideCircle).removeFromMap(driversI);
 
-      document
-        .querySelector('#form_driversall')
-        .addEventListener('click', function (e) {
-          if (e.target.classList.contains('form__button')) {
-            // console.log(this);
+      // document
+      //   .querySelector('#form_driversall')
+      //   .addEventListener('click', function (e) {
+      //     if (e.target.classList.contains('form__button')) {
+      //       // console.log(this);
 
-            let input1 = this.querySelector('[name = "inpusergeo"]').value;
-            distanse = this.querySelector('[name = "distance"]').value;
-            // console.log(input1, distanse);
+      //       let input1 = this.querySelector('[name = "inpusergeo"]').value;
+      //       distanse = this.querySelector('[name = "distance"]').value;
+      //       // console.log(input1, distanse);
 
-            driversI.container.fitToViewport();
-            console.log(distanse);
-            console.log(driversI);
-          }
-        });
+      //       driversI.container.fitToViewport();
+      //       console.log(distanse);
+      //       console.log(input1);
+      //       console.log(driversI);
+      //     }
+      //   });
 
       maps.push(driversI);
     }

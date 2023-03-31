@@ -253,7 +253,7 @@
 	&__mobile-only {
 		display: none;
 		@include media('<=xxs') {
-			display: block;
+			display: flex;
 		}
 	}
 }

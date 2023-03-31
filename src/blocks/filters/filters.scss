@@ -17,6 +17,13 @@
 		}
 	}
 
+	&__mobile-only {
+		display: none;
+		@include media('<=xxs') {
+			display: block;
+		}
+	}
+
 	&__block {
 		// display: none;
 		
