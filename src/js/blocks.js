@@ -15,4 +15,5 @@ import '../blocks/slider-fd/slider-fd.js';
 import '../blocks/filters/filters.js';
 import '../blocks/blind/blind.js';
 // ниже переделать
-import '../js/libs/recorder.js';
+// import '../js/libs/recorder.js';
+import '../blocks/card-hvr/card-hvr.js';

@@ -15,6 +15,11 @@
 				height: calc(50vh - 175px);
 				height: calc((var(--vh, 1vh) * 50) - 175px);
 			}
+
+			#{$self}__driversall.blind__feed {								
+					height: calc(50vh - 155px);
+					height: calc((var(--vh, 1vh) * 50) - 155px);
+			}
 			
 			#{$self}__up {
 				background-color: transparent;
@@ -42,7 +47,7 @@
 				height: calc(100vh - 175px);
 				height: calc((var(--vh, 1vh) * 100) - 175px);
 			}
-		}		
+		}
 	}
 
 	&__tab {
@@ -169,7 +174,7 @@
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 			background-color: #fff;
 			position: fixed;
-			z-index: 2;
+			z-index: 4;
 			bottom: 50px;
 			width: 100%;
 			padding-top: 25px;
@@ -241,6 +246,7 @@
 		}
 	}
 
+
 	&__tab-block {
 		animation: show_fade 0.4s;
 		display: none;
@@ -252,6 +258,52 @@
 
 	&__mobile-only {
 		display: none;
+		@include media('<=xxs') {
+			display: flex;
+		}
+	}
+
+	&__tab-mob.blind__tab {
+		padding: 0 40px;
+    position: fixed;
+    top: 68px;
+    left: 8%;
+    width: 84%;
+    height: 30px;
+    z-index: 3;
+    border-radius: 20px;
+		justify-content: space-between;
+	}
+
+	&__driversall.blind__feed {
+
+		@include media('<=xxs') {
+			height: calc(100vh - 135px);
+			height: calc((var(--vh, 1vh) * 100) - 135px);
+		}
+	}
+
+	&__up-line.blind__up {
+		@extend %reset-button;
+		display: block;
+		height: 35px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+
+		&::before {
+			display: block;
+			content: '';
+			width: 50px;
+			height: 3px;
+			background-color: $label;
+			animation: show_fade 0.4s;
+		}
+
 		@include media('<=xxs') {
 			display: flex;
 		}

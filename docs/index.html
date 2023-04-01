@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/web-projects-lab/hover-slider@1.0.3/hover-slider-indicator.css">
 	<title></title>
 </head>
 <body class="blind blind_home">
@@ -217,22 +219,33 @@
 		<button class="blind__up"></button>
 		<div class="section blind__tab-block active">
 			<div class="section__layout section__layout_triple-less container">
-				<div class="card card_less section__unit anim" data-animation="0.9">
-  <a class="card__hidden card-mfn" href="./">
-    <div class="card-mfn__display">
-      <div class="card-mfn__images">
-        <div class="card-mfn__image">
-          <img class="card-mfn__img" src="./images/card-image-4.png" alt="">
-        </div>
-      </div>
-      <div class="card-m card-mfn__line">
-        <div class="card-m__line card-m__line_one">Лунгу Артём Геннадьевич Лунгу Артём Геннадьевич Лунгу Артём
-          Геннадьевич</div>
-        <div class="card-m__line card-m__line_two">г Таганрог, ул Ростовская Ростовская Ростовская </div>
-        <div class="card-m__date">17.12.2022</div>
+
+				<!-- карточка водителя с фото -->
+				
+
+				<!-- карточка с гаммы -->
+				<div class="card section__unit anim" data-animation="0.9">
+
+  <div class="card__top mb1">
+    <h3 class="card__title">Название запчасти</h3>
+    <div class="card__top-side">
+      <span>15000</span> ₽
+    </div>
+  </div>
+  <div class="card__images gallery-c card-hvr mb1">
+    <div class="gallery-c__images card-hvr__hover-slider-images-toggler">
+      <div class="card-hvr__product-card">
+        <img class="card__product-card-image" src="./images/card-image-1.png"
+          data-hover-slides="./images/card-image-2.png, ./images/card-image-3.png, ./images/card-image-4.png" alt="">
       </div>
     </div>
-  </a>
+  </div>
+  <div class="card__desctiption mb1">Длинное и очень подробное описание этой, конкретной запчасти</div>
+  <div class="card__panel">
+    <div class="card__date date">17.12.2022</div>
+    <a class="card__button card__button_panel button" href="./">Подробнее</a>
+  </div>
+
 </div>
 				<div class="card card_less section__unit anim" data-animation="0.9">
 	<a class="card__hidden card-m" href="./">

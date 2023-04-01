@@ -1,17 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/web-projects-lab/hover-slider@1.0.3/hover-slider-indicator.css">
+	<title></title>
+</head>
+<body class="blind">
+	<header class="header" data-scroll-lock-fill-gap>
+		<div class="header__top container">
+			<a class="header__logo" href="./">
+				<!-- <img src="./images/logo.png" alt=""> -->
+				<img src="./images/logo_.png" alt="">
+			</a>
+			<form action="./" class="header__search search">
+				<input class="search__input" type="text" placeholder="Поиск">
+				<input class="search__submit" type="submit" value="">
+			</form>
+			<div class="header__navi navi" data-scroll-lock-scrollable>
+				<buton class="navi__close"></buton>
+				<form action="./" class="navi__search search">
+					<input class="search__input" type="text" placeholder="Поиск">
+					<input class="search__submit" type="submit" value="">
+				</form>
+				<nav class="navi__menu">
+					<a class="navi__link navi__link_services navi__link_dropdown" href="#">Сервисы Bellatrix</a>
+					<div class="navi__submenu">
+						<a href="./">WhatsApp</a>
+						<a href="./">История рассылок WhatsApp</a>
+						<a href="./sending.html">Push рассылка</a>
+						<a href="./">Email рассылка</a>
+						<a href="./control.html">Контроль сотрудников</a>
+						<a href="./">Справочник</a>
+						<a href="./guests.html">Гости</a>
+					</div>
+					<a class="navi__link navi__link_profile" href="./">Профиль</a>
+					<a class="navi__link navi__link_cargo" href="./job.html">Грузы</a>
+					<a class="navi__link navi__link_drivers" href="./owner_profile.html">Перевозчики</a>
+					<a class="navi__link navi__link_tracks" href="./tech_details.html">Track-маркет</a>
+					<a class="navi__link navi__link_parts" href="./autoparts.html">Автозапчасти</a>
+					<a class="navi__link navi__link_carrier" href="./carrier.html">Карьера</a>
+					<a class="navi__link navi__link_users" href="./">Пользователи</a>
+					<a class="navi__link navi__link_tracking" href="./">Отслеживание ТС</a>
+					<a class="navi__link navi__link_payment" href="./">Оплата</a>
+					<a class="navi__link navi__link_login" href="./" data-modal="login">Вход</a>
+					<!-- <a class="navi__link navi__link_logout" href="./">Выход</a> -->
+				</nav>
+			</div>
+			<div class="header__controls">
+				<a class="header__login" href="./" data-modal="login">Вход</a>
+				<!-- <a class="header__logout" href="./">Выход</a> -->
+				<a class="header__register" href="./">Регистрация</a>
+			</div>
+			<button class="header__toggle"></button>
+			<button class="header__talk"></button>
+		</div>
+		<div class="header__bottom">
+			<button class="header__tongue blind__toggle"></button>
+		</div>
+	</header>
 
-<!-- <div class="section__layout section__layout_double container">
+<div class="top mbt1">
+  <div class="top__inner container">
+    <div class="top__side breadcrumbs">
+      <a class="breadcrumbs__item" href="./">Главная</a>
+      <span class="breadcrumbs__item breadcrumbs__item_current">карты</span>
+    </div>
+  </div>
+</div>
+
+<div class="header__bottom header__bottom_mobile-only blind">
+  <div class="blind__tab blind__tab-mob">
+    <button class="blind__tab-button blind__tab-button_cargo active">Логистика</button>
+    <button class="blind__tab-button blind__tab-button_carrier">Карьера</button>
+  </div>
+</div>
+
+<section class="section mb1">
+  <div class="section__collapse section__map section__map_driversall section__map_mobile-only"></div>
+  <div class="filters">
+    <div class="section filters__tab-block active">
+      <div class="section__layout filters__block container">
+        <form class="section__unit section__unit_desktop form-s mb1" action="./maps.html" id="form_driversall">
+          <div class="section__collapse section__collapse_desktop form">
+            <div class="form__body form__body_double mbt1">
+              <label class="form__field form__field_txt" data-title="Место локации">
+                <input type="text" value="" name="inpusergeo" id="suggest">
+              </label>
+              <label class="form__field form__field_txt" data-title="Радиус км">
+                <input type="text" value="" name="distance" id="distanceDrivers">
+              </label>
+            </div>
+            <div class="form__buttons form__buttons_grid">
+              <button class="form__button button button_find form-ct__button" type="submit" id="button">Найти</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="section__layout section__layout_double container">
     <div class="section__unit section__unit_shrink section__unit_mobile-only">
       <h2 class="title section__toggle">На карте</h2>
       <div class="section__collapse section__map section__map_driversall mt1"></div>
     </div>
-  </div> -->
-<!-- </section> -->
+  </div>
+</section>
 
-<!-- 
-<div class="blind__feed mt1">
+
+<div class="blind__feed blind__driversall blind__mobile-only mt1">
   <div class="blind__inner mb1">
-    <button class="blind__up"></button>
+    <button class="blind__up blind__up-line"></button>
     <div class="section blind__tab-block active">
       <div class="section__layout section__layout_triple-less container">
         <div class="card card_less section__unit anim" data-animation="0.9">
@@ -423,4 +527,4 @@
 <script src="common.js"></script>
 </body>
 
-</html> -->
+</html>

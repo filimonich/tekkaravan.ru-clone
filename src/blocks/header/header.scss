@@ -177,12 +177,12 @@
 
 	&__bottom {
 
-		// &_mobile-only {
-		// 	display: none;
-		// 	@include media('<=xxs') {
-		// 		display: block;
-		// 	}
-		// }
+		&_mobile-only {
+			display: none;
+			@include media('<=xxs') {
+				display: block;
+			}
+		}
 
 	}
 

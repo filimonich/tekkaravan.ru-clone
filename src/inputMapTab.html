@@ -1,6 +1,5 @@
-<!-- @@include("_head.html", {class:"home"})
+@@include("_head.html")
 @@include("_header.html")
-
 
 <div class="top mbt1">
   <div class="top__inner container">
@@ -11,16 +10,15 @@
   </div>
 </div>
 
-<div class="header__bottom container">
-  <div class="blind__tab">
+<div class="header__bottom header__bottom_mobile-only blind">
+  <div class="blind__tab blind__tab-mob">
     <button class="blind__tab-button blind__tab-button_cargo active">Логистика</button>
     <button class="blind__tab-button blind__tab-button_carrier">Карьера</button>
   </div>
 </div>
+
 <section class="section mb1">
-
   <div class="section__collapse section__map section__map_driversall section__map_mobile-only"></div>
-
   <div class="filters">
     <div class="section filters__tab-block active">
       <div class="section__layout filters__block container">
@@ -41,20 +39,20 @@
         </form>
       </div>
     </div>
-  </div> -->
+  </div>
 
-<!-- <div class="section__layout section__layout_double container">
+  <div class="section__layout section__layout_double container">
     <div class="section__unit section__unit_shrink section__unit_mobile-only">
       <h2 class="title section__toggle">На карте</h2>
       <div class="section__collapse section__map section__map_driversall mt1"></div>
     </div>
-  </div> -->
-<!-- </section> -->
+  </div>
+</section>
 
-<!-- 
-<div class="blind__feed mt1">
+
+<div class="blind__feed blind__driversall blind__mobile-only mt1">
   <div class="blind__inner mb1">
-    <button class="blind__up"></button>
+    <button class="blind__up blind__up-line"></button>
     <div class="section blind__tab-block active">
       <div class="section__layout section__layout_triple-less container">
         @@include("_card-mfn.html", { cls: "section__unit anim" })
@@ -69,4 +67,4 @@
   </div>
 </div>
 
-@@include("_bottom.html") -->
+@@include("_bottom.html")
