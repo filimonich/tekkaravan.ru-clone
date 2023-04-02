@@ -14,6 +14,6 @@ import '../blocks/slider-f/slider-f.js';
 import '../blocks/slider-fd/slider-fd.js';
 import '../blocks/filters/filters.js';
 import '../blocks/blind/blind.js';
+import '../blocks/card-hvr/card-hvr.js';
 // ниже переделать
 // import '../js/libs/recorder.js';
-import '../blocks/card-hvr/card-hvr.js';

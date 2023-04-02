@@ -17,8 +17,8 @@
 			}
 
 			#{$self}__driversall.blind__feed {								
-					height: calc(50vh - 155px);
-					height: calc((var(--vh, 1vh) * 50) - 155px);
+					height: calc(50vh - 140px);
+					height: calc((var(--vh, 1vh) * 50) - 140px);
 			}
 			
 			#{$self}__up {
@@ -36,7 +36,22 @@
 			}
 		}
 	}
-	
+
+	@include media('<=xxxs') {
+		overflow: hidden;
+
+		&.dropped {
+			overflow: visible;
+			padding-bottom: calc(50vh - 100px);
+			padding-bottom: calc((var(--vh, 1vh) * 50) - 100px);
+
+			#{$self}__driversall.blind__feed {								
+				height: calc(50vh - 210px);
+				height: calc((var(--vh, 1vh) * 50) - 210px);
+			}
+		}
+	}
+
 	&_home {
 		padding-top: 125px;
 		
@@ -264,15 +279,25 @@
 	}
 
 	&__tab-mob.blind__tab {
-		padding: 0 40px;
+		padding: 0 24px;
     position: fixed;
-    top: 68px;
-    left: 8%;
-    width: 84%;
-    height: 30px;
+    top: 70px;
+    left: 32%;
+    width: 36.5%;
+    height: 28px;
     z-index: 3;
-    border-radius: 20px;
+    border-radius: 3px;
+    // border-radius: 20px;
 		justify-content: space-between;
+		box-shadow: 0.01em 0.1em 5px rgba(122,122,122,0.5);
+
+		@include media('<=xxxs'){
+		padding: 0 16px;
+    top: 70px;
+    left: 26%;
+		width: 49.5%;
+    border-radius: 3px;
+		}
 	}
 
 	&__driversall.blind__feed {

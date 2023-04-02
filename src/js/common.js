@@ -133,6 +133,15 @@ ymaps
         // );
         driversObjects = new map.geoQuery(drivers).addToMap(driversI);
 
+      // ползунок масштаба
+      driversI.controls.add('zoomControl', {
+        size: 'small',
+      });
+      // элемент управления «полноэкранным режимом»
+      driversI.controls.add('fullscreenControl');
+      // элемент управления "геолокация"
+      driversI.controls.add('geolocationControl');
+
       let searchControl = new map.control.SearchControl({
         options: {
           provider: 'yandex#search',

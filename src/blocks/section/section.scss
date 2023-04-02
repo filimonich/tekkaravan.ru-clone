@@ -160,6 +160,14 @@
 		transform: translate3d(0, 0, 0);
 		height: 400px;
 		background: url('#{$images-path}map-yandex-bg.svg') center / 80% auto no-repeat transparent;
+
+		&-mobile {
+			// position: relative;
+			position:absolute;
+			top: 60px;
+			right: 0%;
+			width: 100%;
+		}
 		
 		[class*="copyrights-pane"] {
 			display: none;

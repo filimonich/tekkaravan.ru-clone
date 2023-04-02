@@ -15,10 +15,18 @@
 			display: block;
 			animation: show_fade 0.4s;
 		}
+		
+		@include media('<=xxs') {
+
+			&.section__map_mobile-only {
+				display: none;
+			}
+		}
 	}
 
-	&__mobile-only {
+	&_mobile-only {
 		display: none;
+
 		@include media('<=xxs') {
 			display: block;
 		}
