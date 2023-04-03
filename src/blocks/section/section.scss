@@ -87,9 +87,10 @@
 			grid-gap: 24px;
 			
 			@include media('<=xs') {
-				display: block;
+				// display: block;
+				grid-column: span 4;
 			}
-
+			
 			#{$self}__unit {
 				grid-column: span 3;
 				padding: 0;

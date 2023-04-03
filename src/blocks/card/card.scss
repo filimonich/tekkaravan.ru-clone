@@ -43,6 +43,14 @@
       font-size: 14px;
       line-height: 20px;
     }
+
+    &_color.card__title {
+      font-family: "RL", sans-serif;
+      font-weight: 400;
+      padding-top: 5px;
+      font-size: 14px;
+      color: $label;
+    }
   }
 
   &__top-side {
@@ -55,6 +63,23 @@
 
     span {
       color: $accent;
+    }
+  }
+
+  &__top-caption {
+    font-family: "RM", sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 14px !important;
+    line-height: 24px;
+    color: $text;
+
+    @include media('<=xs') {
+      font-size: 16px;
+    }
+
+    span {
+      color: $text;
     }
   }
 
@@ -71,6 +96,13 @@
 
     @include media('<=xs') {
       font-size: 14px;
+    }
+    
+    &_color.card__desctiption {
+      font-weight: lighter;
+      padding-top: 5px;
+      font-size: 14px;
+      color: $label;
     }
   }
 

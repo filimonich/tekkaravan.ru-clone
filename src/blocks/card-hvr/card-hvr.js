@@ -34,7 +34,7 @@
         const imgEl = baseImgWrapper.querySelector('img.hover-slider-init');
 
         const currentSliderIndicator = baseImgWrapper.querySelector(
-          '.hover-slider-indicator'
+          '.card-hvr__hover-slider-indicator'
         );
         const activeDot = currentSliderIndicator.querySelector('.active');
         let nextDot = null;
@@ -45,7 +45,7 @@
           if (!nextDot && hs.getOption(imgEl, 'infinite')) {
             // if no previous slide - get last
             nextDot = currentSliderIndicator.querySelector(
-              'div.hover-slider-indicator-dot:last-of-type'
+              'div.card-hvr__hover-slider-indicator-dot:last-of-type'
             );
           }
         } else {
@@ -53,7 +53,7 @@
           if (!nextDot && hs.getOption(imgEl, 'infinite')) {
             // if no next slide - get first
             nextDot = currentSliderIndicator.querySelector(
-              'div.hover-slider-indicator-dot:first-of-type'
+              'div.card-hvr__hover-slider-indicator-dot:first-of-type'
             );
           }
         }
@@ -104,13 +104,13 @@
 
       const currentSliderIndicator =
         togglePane.parentElement.parentElement.querySelector(
-          '.hover-slider-indicator'
+          '.card-hvr__hover-slider-indicator'
         );
       const activeDot = currentSliderIndicator.querySelector('.active');
       activeDot.classList.remove('active');
 
       const nextDot = currentSliderIndicator.querySelector(
-        `.hover-slider-indicator-dot[data-hover-slider-i="${i}"]`
+        `.card-hvr__hover-slider-indicator-dot[data-hover-slider-i="${i}"]`
       );
       nextDot.classList.add('active');
     },
@@ -143,12 +143,12 @@
           break;
         case 'sliderIndicator':
           element = document.createElement('div');
-          element.classList.add('hover-slider-indicator');
+          element.classList.add('card-hvr__hover-slider-indicator');
           break;
         case 'indicatorDot':
           element = document.createElement('div');
           element.dataset.hoverSliderI = hs.i;
-          element.classList.add('hover-slider-indicator-dot');
+          element.classList.add('card-hvr__hover-slider-indicator-dot');
           if (params.active) {
             element.classList.add('active');
           }
