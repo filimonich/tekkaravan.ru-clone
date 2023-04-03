@@ -12,4 +12,89 @@
     height: 240px;
     object-fit: cover;
   }
+
+  &__buttons {
+    position: absolute;
+    top: 82%;
+    right: 4%;
+
+    @include media('<=xs') {
+      top: 80%;
+    }
+  }
+
+  &__button.card-hvr__button{
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 82%;
+    right: 4%;
+    border-radius: 50%;
+    border: 2px solid #bec3c8;
+    width: 2.3rem; 
+    height: 2.3rem;
+    background: rgb(11, 172, 240, 0.5);;
+    
+
+    &_phone {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-phone-view-white') center / 16px 17px no-repeat $accent;
+        
+        @include media('<=xs') {
+          top: 8%;
+          background-size: 20px 22px;
+        }
+
+        @include media('<=xxxs') {
+          right: 9%;
+          background-size: 18px 20px;
+        }        
+      }
+    }
+
+    &_wapp {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 18px 18px no-repeat #00D33B;
+
+        @include media('<=xs') {
+          top: 8%;
+          background-size: 22px 22px;
+        }
+  
+        @include media('<=xxxs') {
+          background-size: 20px 20px;
+        }
+      }
+    }
+  }
+
+  &__images {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__unit {
+    padding: 0 1rem;
+  }
 }

@@ -1,23 +1,32 @@
-<div class="card @@if(this.cls){@@cls}" data-animation="0.9">
+<div class="card card-hvr @@if(this.cls){@@cls}" data-animation="0.9">
 
-  <div class="card__top mb1">
-    <h3 class="card__title">Название запчасти</h3>
-    <div class="card__top-side">
-      <span>15000</span> ₽
-    </div>
-  </div>
-  <div class="card__images gallery-c card-hvr mb1">
-    <div class="gallery-c__images card-hvr__hover-slider-images-toggler">
+  <div class="card__images gallery-c mb1">
+    <div class="card-hvr__images card-hvr__hover-slider-images-toggler">
       <div class="card-hvr__product-card">
         <img class="card__product-card-image" src="./images/card-image-1.png"
-          data-hover-slides="./images/card-image-2.png, ./images/card-image-3.png, ./images/card-image-4.png" alt="">
+          data-hover-slides="./images/card-image-2.png, ./images/card-image-3.png, ./images/card-image-4.png, ./images/card-image-2.png"
+          alt="">
       </div>
     </div>
+    <div class="line">
+      <div class="line__buttons card-hvr__buttons social">
+        <button class="line__button card-hvr__button_wapp card-hvr__button"></button>
+        <button class="line__button card-hvr__button_phone card-hvr__button"></button>
+      </div>
+    </div>
+
   </div>
-  <div class="card__desctiption mb1">Длинное и очень подробное описание этой, конкретной запчасти</div>
-  <div class="card__panel">
-    <div class="card__date date">17.12.2022</div>
-    <a class="card__button card__button_panel button" href="./">Подробнее</a>
+
+  <div class="card-hvr__unit">
+
+    <div class="card__top mb1">
+      <div class="card__top-side">
+        <span>15000</span> ₽
+      </div>
+    </div>
+    <h3 class="card__title">Название запчасти</h3>
+    <div class="card__desctiption mb1">Длинное и очень подробное описание этой, конкретной запчасти</div>
+
   </div>
 
 </div>

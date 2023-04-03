@@ -11,7 +11,7 @@ $breakpoints: (
 	'xxxs': 360px,
 	'xxs': 480px,
 	'xs': 640px,
-	'sm': 780px,
+	'sm': 780px, 
 	'md': 960px,
 	'lg': 1100px,
 	'xlg': 1280px,
@@ -130,3 +130,5 @@ em { font-style: italic; }
 	.mbt1 { margin-top: 4px; margin-bottom: 4px; }
 	.mbt2 { margin-top: 10px; margin-bottom: 10px; }
 }
+
+.plr { margin-top: 0 10px; }
