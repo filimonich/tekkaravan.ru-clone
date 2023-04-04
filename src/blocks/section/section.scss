@@ -87,8 +87,11 @@
 			grid-gap: 24px;
 			
 			@include media('<=xs') {
-				// display: block;
 				grid-column: span 4;
+			}
+			
+			@include media('<=xxs') {
+				grid-gap: 14px;
 			}
 			
 			#{$self}__unit {
@@ -104,7 +107,7 @@
 				}
 				
 				@include media('<=xxs') {
-					margin-bottom: 15px;
+					margin-bottom: 2px;
 				}
 			}
 		}
