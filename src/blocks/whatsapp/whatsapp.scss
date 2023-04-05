@@ -1,0 +1,214 @@
+.whatsapp {
+	$self: &;
+
+  &__small {
+    float: right;
+    max-width: 34%;
+    padding: 2px;
+    line-height: 1.2;
+    font-size: 12px;
+  }
+  
+  &__modal-body {
+    max-width: 350px;
+  }
+}
+
+.whatsapp__voice-message-modal .whatsapp__voice-preview .whatsapp__preview-header {
+  font-size: 20px;
+}
+
+.whatsapp__voice-message-modal .whatsapp__voice-preview audio {
+  width: 280px;
+  height: 60px;
+
+  display: none;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview {
+  background: transparent !important;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview .whatsapp__preview-header {
+  display: none !important;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview audio {
+  display: block !important;
+  max-width: 70%;
+  position: absolute;
+  left: 14%;
+}
+
+.video-message-modal,
+.whatsapp__voice-message-modal {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.video-message-modal.active,
+.whatsapp__voice-message-modal.active {
+  display: flex;
+}
+
+.video-message-modal,
+.whatsapp__voice-message-modal {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  z-index: 1000;
+}
+
+.video-message-modal.active,
+.whatsapp__voice-message-modal.active {
+  display: flex;
+}
+
+.video-message-modal .video-preview {
+  width: 250px;
+  height: 250px;
+
+  background: $field;
+  border-radius: 300px;
+}
+
+.video-message-modal .video-preview video {
+  width: 100%;
+  height: 100%;
+  border-radius: 300px;
+}
+
+.whatsapp__voice-message-modal .whatsapp__voice-preview {
+  max-width: 300px;
+  height: 60px;
+  background: $field;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.whatsapp__voice-message-modal .whatsapp__voice-preview .preview-header {
+  font-size: 20px;
+}
+
+.whatsapp__voice-message-modal .whatsapp__voice-preview audio {
+  width: 280px;
+  height: 60px;
+
+  display: none;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview {
+  background: transparent !important;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview .preview-header {
+  display: none !important;
+}
+
+.whatsapp__voice-message-modal.preview .whatsapp__voice-preview audio {
+  display: block !important;
+}
+
+.video-message-modal .whatsapp__controls,
+.whatsapp__voice-message-modal .whatsapp__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 0px;
+}
+
+.video-message-modal .whatsapp__controls div,
+.whatsapp__voice-message-modal .whatsapp__controls div {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.4s;
+
+  margin: 0px 10px;
+}
+
+.video-message-modal .whatsapp__stop-rec,
+.whatsapp__voice-message-modal .whatsapp__stop-rec {
+  background: $warn;
+}
+
+.video-message-modal .whatsapp__stop-rec i,
+.whatsapp__voice-message-modal .whatsapp__stop-rec i {
+  color: $field;
+}
+
+.video-message-modal .whatsapp__stop-rec:hover,
+.whatsapp__voice-message-modal .whatsapp__stop-rec:hover {
+  background: $warn;
+}
+
+.video-message-modal .whatsapp__cancel-rec,
+.whatsapp__voice-message-modal .whatsapp__cancel-rec {
+  display: none !important;
+  background: $warn;
+}
+
+.video-message-modal .whatsapp__cancel-rec i,
+.whatsapp__voice-message-modal .whatsapp__cancel-rec i {
+  color: $field;
+}
+
+.video-message-modal .whatsapp__cancel-rec:hover,
+.whatsapp__voice-message-modal .whatsapp__cancel-rec:hover {
+  background: $warn;
+}
+
+.video-message-modal .whatsapp__send-rec,
+.whatsapp__voice-message-modal .whatsapp__send-rec {
+  display: none !important;
+  background: #00ac48;
+}
+
+.video-message-modal .whatsapp__send-rec i,
+.whatsapp__voice-message-modal .whatsapp__send-rec i {
+  color: $field;
+}
+
+.video-message-modal .whatsapp__send-rec:hover,
+.whatsapp__voice-message-modal .whatsapp__send-rec:hover {
+  background: #009940;
+}
+
+.video-message-modal.preview .whatsapp__stop-rec,
+.whatsapp__voice-message-modal.preview .whatsapp__stop-rec {
+  display: none !important;
+}
+
+.video-message-modal.preview .whatsapp__send-rec,
+.video-message-modal.preview .whatsapp__cancel-rec,
+.whatsapp__voice-message-modal.preview .whatsapp__send-rec,
+.whatsapp__voice-message-modal.preview .whatsapp__cancel-rec {
+  display: flex !important;
+}
+
+
+

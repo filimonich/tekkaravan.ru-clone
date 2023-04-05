@@ -18,25 +18,25 @@ addUnderlay('modal');
 */
 
 export const addUnderlay = (cls = 'modal') => {
-	if(! document.querySelector(`#${cls}__underlay`)) {
-		const _underlay = document.createElement('div');
-		const _body = document.createElement('div');
-		const _close = document.createElement('span');
-		const _content = document.createElement('div');
-		
-		_underlay.className = `${cls}`;
-		_underlay.id = `${cls}__underlay`;
-		_underlay.setAttribute('data-scroll-lock-scrollable', '');
-		_body.className = `${cls}__body`;
-		_close.className = `${cls}__close`;
-		_content.className = `${cls}__content`;
+  if (!document.querySelector(`#${cls}__underlay`)) {
+    const _underlay = document.createElement('div');
+    const _body = document.createElement('div');
+    const _close = document.createElement('span');
+    const _content = document.createElement('div');
 
-		_body.append(_close);
-		_body.append(_content);
-		_underlay.append(_body);
-		document.body.append(_underlay);
-	}
-}
+    _underlay.className = `${cls}`;
+    _underlay.id = `${cls}__underlay`;
+    _underlay.setAttribute('data-scroll-lock-scrollable', '');
+    _body.className = `${cls}__body`;
+    _close.className = `${cls}__close`;
+    _content.className = `${cls}__content`;
+
+    _body.append(_close);
+    _body.append(_content);
+    _underlay.append(_body);
+    document.body.append(_underlay);
+  }
+};
 
 /* 
 * Простое модальное окно. Слушает элементы имеющие data-атрибут с 
@@ -78,70 +78,66 @@ makeModalFrame({
 });
 */
 
-export const makeModalFrame = function(props = {}) {
-	const { scrollLock } = props;
-	const cls = props.cls || 'modal';
-	const select = props.el || `[data-${cls}]`;
+export const makeModalFrame = function (props = {}) {
+  const { scrollLock } = props;
+  const cls = props.cls || 'modal';
+  const select = props.el || `[data-${cls}]`;
 
-	const modal = document.querySelector(`#${cls}__underlay`);
-	const body = modal.querySelector(`.${cls}__content`);
-	
-	if (modal) {
+  const modal = document.querySelector(`#${cls}__underlay`);
+  const body = modal.querySelector(`.${cls}__content`);
 
-		const close = function() {
-			if(typeof scrollLock !== 'undefined') {
-				scrollLock.clearQueueScrollLocks();
-				scrollLock.enablePageScroll();
-			}
-			
-			modal.className = `${cls}`;
-			modal.style.display = "none";
-			
-			body.className = `${cls}__content`;
-			body.innerHTML = '';
+  if (modal) {
+    const close = function () {
+      if (typeof scrollLock !== 'undefined') {
+        scrollLock.clearQueueScrollLocks();
+        scrollLock.enablePageScroll();
+      }
 
-			if (typeof props.close === 'function') 
-				return props.close.call(body);
-		}
-		
-		const open = function(el) {
-			const id = el.dataset[`${cls}`] || 'error';
-			const content = (id == '#') ? el.innerHTML : document.querySelector('#' + id).innerHTML;
-			
-			modal.className = `${cls}`;
-			modal.classList.add(id != '#' ? `${cls}_${id}`:`${cls}_self`);
-			modal.style.display = "block";
+      modal.className = `${cls}`;
+      modal.style.display = 'none';
 
-			body.innerHTML = '';
-			body.className = `${cls}__content`;
-			body.insertAdjacentHTML('beforeend', content);
+      body.className = `${cls}__content`;
+      body.innerHTML = '';
 
-			if(typeof scrollLock !== 'undefined')
-				scrollLock.disablePageScroll();
+      if (typeof props.close === 'function') return props.close.call(body);
+    };
 
-			if (typeof props.open === 'function') 
-				return props.open.call(body, el);
-		}
+    const open = function (el) {
+      const id = el.dataset[`${cls}`] || 'error';
+      const content =
+        id == '#' ? el.innerHTML : document.querySelector('#' + id).innerHTML;
 
-		if(this) {
-			open(this);
+      modal.className = `${cls}`;
+      modal.classList.add(id != '#' ? `${cls}_${id}` : `${cls}_self`);
+      modal.style.display = 'block';
 
-		} else {
-			document.addEventListener('click', (e) => {
-				let el = e.target.closest(select);
-				
-				if (el && el.dataset[`${cls}`]) {
-					e.preventDefault();
-					open(el);
-				}
-			});
-		}
+      body.innerHTML = '';
+      body.className = `${cls}__content`;
+      body.insertAdjacentHTML('beforeend', content);
 
-		document.addEventListener('click', (e) => {
-			if (e.target == modal || e.target.classList.contains(`${cls}__close`)) {
-				e.preventDefault();
-				close();
-			}
-		});
-	}
-}
+      if (typeof scrollLock !== 'undefined') scrollLock.disablePageScroll();
+
+      if (typeof props.open === 'function') return props.open.call(body, el);
+    };
+
+    if (this) {
+      open(this);
+    } else {
+      document.addEventListener('click', e => {
+        let el = e.target.closest(select);
+
+        if (el && el.dataset[`${cls}`]) {
+          e.preventDefault();
+          open(el);
+        }
+      });
+    }
+
+    document.addEventListener('click', e => {
+      if (e.target == modal || e.target.classList.contains(`${cls}__close`)) {
+        e.preventDefault();
+        close();
+      }
+    });
+  }
+};

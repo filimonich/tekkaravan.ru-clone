@@ -1,4 +1,4 @@
-(function () {
+(() => {
   const hs = {
     options: {
       touch: 'move',

@@ -56,14 +56,15 @@
     "enquire.js": "^2.1.6",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
-    "jsdelivr": "^0.1.2",
+    "recordrtc": "^5.6.2",
     "scroll-lock": "^2.1.5",
     "swiped-events": "^1.1.7",
     "swiper": "^8.4.6",
     "ymaps": "^0.2.1"
   },
   "externalJs": {
-    "jquery": "dist/jquery.min.js"
+    "jquery": "dist/jquery.min.js",
+    "recordrtc": "RecordRTC.min.js"
   },
   "ftp": {
     "host": "95.216.77.150",

@@ -139,6 +139,54 @@
 		}
 	}
 
+	 &__microphone {
+		margin-right: 2px;
+		margin-top: 10px;
+		text-decoration: none;
+		color: #{$text};
+		display: inline-flex;
+		align-items: center;
+
+		&:hover {
+			fill: red;
+			stroke: aqua;
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			background-position: center;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-left: 5px;
+		}
+	}
+
+	 &__paperclip {
+		margin-right: 20px;
+		margin-top: 8px;
+		text-decoration: none;
+		color: #{$text};
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 22px;
+			height: 22px;
+			background-position: center;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-left: 5px;
+		}
+	}
+
 	&__login::after {
 		background-image: url('#{$images-path}icons-sprite.svg#icon-login-view-blue');
 	}
@@ -149,6 +197,14 @@
 	
 	&__register::after {
 		background-image: url('#{$images-path}icons-sprite.svg#icon-register-view-blue');
+	}
+	
+	&__microphone::after {
+		background-image: url('#{$images-path}icons-sprite.svg#icon-microphone-view-black');
+	}
+
+	&__paperclip::after {
+		background-image: url('#{$images-path}icons-sprite.svg#icon-paperclip-view-black');
 	}
 
 	&__toggle {

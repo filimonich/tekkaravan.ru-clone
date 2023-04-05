@@ -1,0 +1,122 @@
+@@include("_head.html")
+@@include("_header.html")
+
+<div class="top mbt1">
+  <div class="top__inner container">
+    <div class="top__side breadcrumbs">
+      <a class="breadcrumbs__item" href="./">Главная</a>
+      <span class="breadcrumbs__item breadcrumbs__item_current">Whatsapp</span>
+    </div>
+    <!-- <div class="top__buttons">
+      <button class="top__button top__button_filter filter__toggle">Фильтр</button>
+		</div> -->
+  </div>
+</div>
+
+<div class="section filters whatsapp">
+  <div class="section__layout container">
+    <form class="form section__unit section__unit_desktop filter__form" action="./">
+      <h2 class="title mb1">Рассылки на WhatsApp</h2>
+      <div class="form__buttons form__buttons_grid">
+        <button class="form__button button" href="./" type="button">Разлогинить
+          WhatsApp</button>
+        <button class="form__button button" href="./" type="button">Очистить
+          WhatsApp</button>
+      </div>
+      <div class="section__collapse section__collapse_desktop">
+        <div class="select form__body mbt1">
+          <div data-title="База" class="form__field form__field_sel">
+            <select data-title="База" style="display: none;">
+              <option value="1">Новый</option>
+              <option value="2">БУ</option>
+            </select>
+            <div class="select__head">Новый</div>
+            <ul class="select__list" data-scroll-lock-scrollable="">
+              <li class="select__item" data-value="1">Новый</li>
+              <li class="select__item" data-value="2">БУ</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form__body mbt1">
+          <div data-title="Выберите блок" class="select form__field form__field_sel">
+            <select data-title="Выберите блок" style="display: none;">
+              <option value="1">Новый</option>
+              <option value="2">БУ</option>
+            </select>
+            <div class="select__head">Новый</div>
+            <ul class="select__list" data-scroll-lock-scrollable="">
+              <li class="select__item" data-value="1">Новый</li>
+              <li class="select__item" data-value="2">БУ</li>
+            </ul>
+          </div>
+        </div>
+
+        <label class="form__field form__whatsapp-textarea mb1" data-title="Текст сообщения">
+          <textarea class="form__field_txt" name="text" id="text" cols="30" rows="1"></textarea>
+          <a href="#" data-modal="someblock" id="send_voice_message">
+            <i class="header__microphone"></i>
+          </a>
+          <label class="whatsapp__file">
+            <i href="#" class="header__paperclip" aria-hidden="true"></i>
+            <input type="file" name="image" id="whatsapp_img" style="display: none;">
+            <input type="hidden" name="url" id="url">
+            <input type="hidden" name="fname" id="fname">
+            <input type="hidden" name="uid" id="uid" value="<?php echo $_SESSION['id']; ?>">
+          </label>
+        </label>
+        <small style="float: right">Максимальный размер файла WhatsApp 37 мбайт
+          <br>
+          <span style="color: #16cd63;" id="fupload">
+          </span>
+        </small>
+
+        <div class="form__buttons form__buttons_grid">
+          <a class="form__button button button_send" name="submit">Отправить</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="whatsapp">
+  <div class="modal whatsapp__voice-message-modal">
+    <div class="modal__body whatsapp__modal-body">
+      <div class="whatsapp__voice-preview">
+        <div class="whatsapp__preview-header">Идет запись</div>
+        <audio controls="" src="#"></audio>
+      </div>
+      <div class="whatsapp__controls">
+        <div class="whatsapp__send-rec">
+          <i class="button_send">отправить</i>
+        </div>
+        <div class="whatsapp__cancel-rec">
+          <i class="button_send">отмена</i>
+        </div>
+        <div class="whatsapp__stop-rec">
+          <i class="button_send">стоп</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="modal whatsapp__voice-message-modal">
+  <div class="modal__body">
+    <div class="modal__close whatsapp__cancel-rec">
+      <i class="whatsapp__cancel-rec"></i>
+    </div>
+    <div class="whatsapp__voice-preview">
+      <div class="whatsapp__preview-header">Идет запись</div>
+      <audio controls="" src="#"></audio>
+    </div>
+    <div class="whatsapp__send-rec line__buttons form__buttons form__buttons_grid">
+      <a class="form__button button button_send form__button">отправить</a>
+    </div>
+    <div class="whatsapp__stop-rec line__buttons form__buttons form__buttons_grid">
+      <a class="form__button button button_send form__button">остановить запись</a>
+    </div>
+    <div class="controls">
+    </div>
+  </div>
+</div> -->
+
+@@include("_bottom.html")
