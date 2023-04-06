@@ -87,6 +87,10 @@
     }
 
     &_breadcrumbs {}
+
+    &_driversall {
+      justify-content: space-around;
+    }
   }
 
   &__lines {
@@ -130,6 +134,10 @@
 
     &:nth-child(odd) {
       background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &_driversall {
+      justify-content: space-between;
     }
   }
 
