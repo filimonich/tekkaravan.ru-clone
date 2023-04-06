@@ -280,6 +280,27 @@
 				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 			}
 		}
+		
+		&_grid_whatsapp {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+			grid-gap: 24px;
+			
+			@include media('<=xs') {
+				grid-gap: 24px;
+			}
+			
+			@include media('<=xxs') {
+				grid-gap: 12px;
+				grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+				margin-bottom: 8px;
+			}
+
+			@include media('<=xxxs') {
+				grid-gap: 8px;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			}
+		}
 	}
 
 	&__button {
