@@ -5,7 +5,6 @@
     max-width: 350px;
   }
 
-
   &__voice-message-modal .whatsapp__voice-preview .whatsapp__preview-header {
     font-size: 20px;
   }
@@ -128,7 +127,9 @@
   }
 
   &__voice-message-modal .whatsapp__stop-rec i {
-    color: $field;
+    width: 14px;
+    height: 14px;
+    background: white;
   }
 
   &__voice-message-modal .whatsapp__stop-rec:hover {
@@ -140,8 +141,10 @@
     background: $warn;
   }
 
-  &__voice-message-modal .whatsapp__cancel-rec i {
-    color: $field;
+  &__voice-message-modal .whatsapp__cancel-rec i { 
+    background: url('#{$images-path}icons-sprite.svg#icon-close-view-white');
+    width: 16px;
+    height: 16px;
   }
 
   &__voice-message-modal .whatsapp__cancel-rec:hover {
@@ -154,7 +157,9 @@
   }
 
   &__voice-message-modal .whatsapp__send-rec i {
-    color: $field;
+    background: url('#{$images-path}icons-sprite.svg#icon-env-view-white');
+    width: 16px;
+    height: 14px;
   }
 
   &__voice-message-modal .whatsapp__send-rec:hover {
@@ -172,33 +177,35 @@
 
   &__button {
     max-width: 200px;
+    
+    @include media('<=xxs') {
+      max-width: 150px;
+    }
   }
 
   &__button-shadow {
-
     :hover {
-      // filter: drop-shadow(0px 2px 2px $warn);
       filter: opacity(0.5);
     }
     :active {
-      // filter: drop-shadow(0px 2px 6px $warn);
       filter: opacity(0.5);
     }
   }
 
   &__info {
-      float: right;
-      max-width: 34%;
-      padding: 2px;
-      line-height: 1.2;
-      font-size: 14px;
-      
-      @include media('<=xxs') {
-        font-size: 12px;        
-      }
+    float: right;
+    max-width: 45%;
+    padding: 2px;
+    line-height: 1.2;
+    font-size: 14px;      
+    
+    @include media('<=xxxs') {
+      max-width: 40%;
+      font-size: 12px;        
+    }
 
-      @include media('<=xxxs') {
-        font-size: 10px;        
-      }
-  }
+    @include media('<=xxs') {
+      font-size: 10px;        
+    }
+  } 
 }
