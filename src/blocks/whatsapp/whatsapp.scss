@@ -170,6 +170,10 @@
     display: flex !important;
   }
 
+  &__button {
+    max-width: 200px;
+  }
+
   &__button-shadow {
 
     :hover {
@@ -187,6 +191,14 @@
       max-width: 34%;
       padding: 2px;
       line-height: 1.2;
-      font-size: 12px;
+      font-size: 14px;
+      
+      @include media('<=xxs') {
+        font-size: 12px;        
+      }
+
+      @include media('<=xxxs') {
+        font-size: 10px;        
+      }
   }
 }
