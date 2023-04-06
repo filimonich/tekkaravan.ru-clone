@@ -113,23 +113,23 @@
 
         <label class="form__field form__whatsapp-textarea mb1" data-title="Текст сообщения">
           <textarea class="form__field_txt" name="text" id="text" cols="30" rows="1"></textarea>
-          <a href="#" data-modal="someblock" id="send_voice_message">
+          <a class="whatsapp__button-shadow" href="#" data-modal="someblock" id="send_voice_message">
             <i class="header__microphone"></i>
           </a>
           <label class="whatsapp__file">
-            <i href="#" class="header__paperclip" aria-hidden="true"></i>
+            <a class="whatsapp__button-shadow">
+              <i href="#" class="header__paperclip" aria-hidden="true"></i>
+            </a>
             <input type="file" name="image" id="whatsapp_img" style="display: none;">
             <input type="hidden" name="url" id="url">
             <input type="hidden" name="fname" id="fname">
             <input type="hidden" name="uid" id="uid" value="<?php echo $_SESSION['id']; ?>">
           </label>
         </label>
-        <small style="float: right">Максимальный размер файла WhatsApp 37 мбайт
+        <small class="whatsapp__info">Максимальный размер файла WhatsApp 37 мбайт
           <br>
-          <span style="color: #16cd63;" id="fupload">
-          </span>
+          <span style="color: #16cd63;" id="fupload"></span>
         </small>
-
         <div class="form__buttons form__buttons_grid">
           <a class="form__button button button_send" name="submit">Отправить</a>
         </div>

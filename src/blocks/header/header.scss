@@ -146,11 +146,6 @@
 		color: #{$text};
 		display: inline-flex;
 		align-items: center;
-
-		&:hover {
-			fill: red;
-			stroke: aqua;
-		}
 		
 		&::after {
 			display: block;
@@ -184,6 +179,7 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin-left: 5px;
+
 		}
 	}
 
