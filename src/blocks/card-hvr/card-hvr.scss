@@ -23,7 +23,7 @@
     }
   }
 
-  &__button.card-hvr__button{
+  &__button.card-hvr__button {
     content: '';
     position: relative;
     display: inline-block;
@@ -31,10 +31,10 @@
     right: 4%;
     border-radius: 50%;
     border: 2px solid #bec3c8;
-    width: 2.3rem; 
+    width: 2.3rem;
     height: 2.3rem;
-    background: rgb(11, 172, 240, 0.5);;
-    
+    background: rgb(11, 172, 240, 0.5);
+
 
     &_phone {
       &::after {
@@ -47,16 +47,16 @@
         height: 1.8rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-phone-view-white') center / 16px 17px no-repeat $accent;
-        
+
         @include media('<=xs') {
           top: 8%;
-          background-size: 20px 22px;
+          background-size: 14px 16px;
         }
 
         @include media('<=xxxs') {
           right: 9%;
-          background-size: 18px 20px;
-        }        
+          background-size: 16px 18px;
+        }
       }
     }
 
@@ -70,13 +70,68 @@
         width: 1.8rem;
         height: 1.8rem;
         border-radius: 50%;
-        background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 18px 18px no-repeat #00D33B;
+        background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 20px 20px no-repeat #00D33B;
 
         @include media('<=xs') {
           top: 8%;
           background-size: 22px 22px;
         }
-  
+
+        @include media('<=xxxs') {
+          background-size: 20px 20px;
+        }
+      }
+    }
+  }
+
+  &__button-map.card-hvr__button-map {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 82%;
+    right: 4%;
+
+    &_phone {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-phone-view-white') center / 16px 17px no-repeat $accent;
+
+        @include media('<=xs') {
+          top: 8%;
+          background-size: 14px 16px;
+        }
+
+        @include media('<=xxxs') {
+          right: 9%;
+          background-size: 16px 18px;
+        }
+      }
+    }
+
+    &_wapp {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 20px 20px no-repeat #00D33B;
+
+        @include media('<=xs') {
+          top: 8%;
+          background-size: 22px 22px;
+        }
+
         @include media('<=xxxs') {
           background-size: 20px 20px;
         }
@@ -91,7 +146,7 @@
     height: 100%;
     border: 1px solid #e1e1e1;
     border-radius: 8px 8px 0 0;
-    
+
     @include media('<=xs') {
       border-radius: 6px 6px 0 0;
     }
@@ -104,8 +159,8 @@
   &__hover-slider-indicator {
     position: absolute;
     top: auto;
-    right: 0; 
-    bottom: -1rem; 
+    right: 0;
+    bottom: -1rem;
     left: 0;
     display: flex;
     align-items: center;

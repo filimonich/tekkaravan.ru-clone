@@ -14,7 +14,7 @@
   }
 
   a {
-    color: $accent; 
+    color: $accent;
   }
 
   p {
@@ -84,6 +84,13 @@
       margin-right: 10px;
     }
 
+    &-map {
+      &:not(:last-child) {
+        margin-left: 32px;
+      }
+    }
+
+
     &_edit {
       background: url('#{$images-path}icons-sprite.svg#icon-edit-view-blue') center left / 21px 18px no-repeat transparent;
     }
@@ -139,10 +146,9 @@
 
   &__ip {
     width: 140px;
-    
+
     &_driversall {
-      width: 200px;        
+      width: 200px;
     }
   }
-
 }
