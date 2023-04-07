@@ -37,8 +37,8 @@
 
   &__thumb {
     @include aspect-ratio(1, 1);
-    position: relative;
-    flex-grow: 1;
+    // position: relative;
+    // flex-grow: 1;
     outline: 4px solid transparent;
     outline-offset: -4px;
     transition: outline-color 0.3s;

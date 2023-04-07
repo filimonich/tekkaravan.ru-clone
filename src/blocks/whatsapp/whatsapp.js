@@ -1,5 +1,3 @@
-// import '../../node_modules/recordrtc/RecordRTC.min.js';
-
 (() => {
   let getElement = (target, group = 0) => {
     try {
@@ -203,9 +201,16 @@
   const url = document.querySelector('#url');
   const name = document.querySelector('#fname');
 
-  wi.addEventListener('change', e => {
-    upload();
-  });
+  // wi.addEventListener('change', e => {
+  //   upload();
+  // });
+
+  // if (wi) {
+  //   wi.addEventListener('change', e => {
+  //     upload();
+  //   });
+  // }
+
   function upload() {
     let data = new FormData();
     let upload = document.getElementById('whatsapp_img');
