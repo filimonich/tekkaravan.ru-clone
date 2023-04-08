@@ -9,7 +9,11 @@
     font-family: "RB", sans-serif;
     font-size: 17px;
     line-height: 20px;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
+
+    &_date.card-m__top {
+      justify-content: center;
+    }
 
     hr {
       border: none;
@@ -70,6 +74,11 @@
       background-position: center left;
       background-size: contain;
       filter: brightness(1.5);
+
+    }
+
+    &-padding {
+      padding-left: 10px;
     }
 
     &_one::before {
@@ -86,6 +95,12 @@
     font-size: 15px;
     line-height: 24px;
     padding-left: 22px;
+    color: $placeholder;
+  }
+
+  &__date-p {
+    font-size: 15px;
+    line-height: 24px;
     color: $placeholder;
   }
 }

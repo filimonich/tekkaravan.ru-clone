@@ -1,30 +1,47 @@
 .card-mfn {
-$self: &;
-text-decoration: none;
-color: $text;
+  $self: &;
+  text-decoration: none;
+  color: $text;
 
   &__display {
     display: flex;
   }
-  
+
   &__images {
-    align-items: center;
-    display: grid;
-    margin: 2px;
-    min-width: 20%;
+    // width: 80px;
   }
-  
-  &__image {
-  }
-  
+
+  &__image {}
+
   &__img {
-    width: 80px;
+    width: 40px;
     border-radius: 50%;
     height: auto;
+    margin-top: 2px;
+  }
+
+  &__lines {
+    display: inline-grid;
+    align-content: center;
+    margin-left: 30px;
   }
 
   &__line {
-    display: inline-grid;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; // что бы появились три точки и текст сокращался
     align-items: center;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__contact {
+    color: $label;
   }
 }

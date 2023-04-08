@@ -205,11 +205,11 @@
   //   upload();
   // });
 
-  // if (wi) {
-  //   wi.addEventListener('change', e => {
-  //     upload();
-  //   });
-  // }
+  if (wi) {
+    wi.addEventListener('change', e => {
+      upload();
+    });
+  }
 
   function upload() {
     let data = new FormData();

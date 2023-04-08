@@ -109,144 +109,144 @@ ymaps
       maps.push(ugeo);
     }
 
-    if (drivers_dom) {
-      // Подключаем поисковые подсказки к полю ввода.
-      let suggestView = new map.SuggestView('suggest');
+    // if (drivers_dom) {
+    //   // Подключаем поисковые подсказки к полю ввода.
+    //   let suggestView = new map.SuggestView('suggest');
 
-      let lat = outer_data.lat;
-      let lon = outer_data.lon;
-      let drivers = outer_data.drivers;
+    //   let lat = outer_data.lat;
+    //   let lon = outer_data.lon;
+    //   let drivers = outer_data.drivers;
 
-      let distanse = outer_data.distanse;
+    //   let distanse = outer_data.distanse;
 
-      let driversI = new map.Map(
-          drivers_dom,
-          {
-            center: [lat, lon],
-            zoom: 13,
-            controls: [],
-          }
-          // {
-          //   searchControlProvider: 'yandex#search',
-          // }
-        ),
-        // );
-        driversObjects = new map.geoQuery(drivers).addToMap(driversI);
+    //   let driversI = new map.Map(
+    //       drivers_dom,
+    //       {
+    //         center: [lat, lon],
+    //         zoom: 13,
+    //         controls: [],
+    //       }
+    //       // {
+    //       //   searchControlProvider: 'yandex#search',
+    //       // }
+    //     ),
+    //     // );
+    //     driversObjects = new map.geoQuery(drivers).addToMap(driversI);
 
-      // ползунок масштаба
-      driversI.controls.add('zoomControl', {
-        size: 'small',
-      });
-      // элемент управления «полноэкранным режимом»
-      driversI.controls.add('fullscreenControl');
-      // элемент управления "геолокация"
-      driversI.controls.add('geolocationControl');
+    //   // ползунок масштаба
+    //   driversI.controls.add('zoomControl', {
+    //     size: 'small',
+    //   });
+    //   // элемент управления «полноэкранным режимом»
+    //   driversI.controls.add('fullscreenControl');
+    //   // элемент управления "геолокация"
+    //   driversI.controls.add('geolocationControl');
 
-      let searchControl = new map.control.SearchControl({
-        options: {
-          provider: 'yandex#search',
-          position: {
-            top: -40, // уберём поисковую панель за край карты
-            left: -390, // уберём поисковую панель за край карты
-          },
-        },
-      });
-      driversI.controls.add(searchControl);
+    //   let searchControl = new map.control.SearchControl({
+    //     options: {
+    //       provider: 'yandex#search',
+    //       position: {
+    //         top: -40, // уберём поисковую панель за край карты
+    //         left: -390, // уберём поисковую панель за край карты
+    //       },
+    //     },
+    //   });
+    //   driversI.controls.add(searchControl);
 
-      suggestView.events.add('select', function () {
-        // поиск по выбору саджеста
-        Search();
-      });
+    //   suggestView.events.add('select', function () {
+    //     // поиск по выбору саджеста
+    //     Search();
+    //   });
 
-      $('#suggest').keyup(function (event) {
-        // поиск по Enter
-        if (event.keyCode == 13) {
-          Search();
-        }
-      });
+    //   $('#suggest').keyup(function (event) {
+    //     // поиск по Enter
+    //     if (event.keyCode == 13) {
+    //       Search();
+    //     }
+    //   });
 
-      $('#button').bind('click', function (e) {
-        e.preventDefault();
-        // поиск по кнопке
-        Search();
-      });
+    //   $('#button').bind('click', function (e) {
+    //     e.preventDefault();
+    //     // поиск по кнопке
+    //     Search();
+    //   });
 
-      function Search() {
-        // Непосредственно поиск в панели
-        let request = $('#suggest').val();
-        let distanse = $('#distanceDrivers').val();
-        searchControl.search(request, distanse);
-        driversI.container.fitToViewport();
-      }
+    //   function Search() {
+    //     // Непосредственно поиск в панели
+    //     let request = $('#suggest').val();
+    //     let distanse = $('#distanceDrivers').val();
+    //     searchControl.search(request, distanse);
+    //     driversI.container.fitToViewport();
+    //   }
 
-      outer_data.drivers.forEach(driver => {
-        let placemark = new map.Placemark(driver.coordinates, {
-          balloonContentHeader: driver.balloonContentHeader,
-          balloonContentBody: driver.balloonContentBody,
-          balloonContentFooter: driver.balloonContentFooter,
-          hintContent: driver.hintContent,
-        });
-        driversI.geoObjects.add(placemark);
-      });
+    //   outer_data.drivers.forEach(driver => {
+    //     let placemark = new map.Placemark(driver.coordinates, {
+    //       balloonContentHeader: driver.balloonContentHeader,
+    //       balloonContentBody: driver.balloonContentBody,
+    //       balloonContentFooter: driver.balloonContentFooter,
+    //       hintContent: driver.hintContent,
+    //     });
+    //     driversI.geoObjects.add(placemark);
+    //   });
 
-      // Метка где я сейчас нахажусь
-      let placemark = new map.Placemark(
-        [lat, lon],
-        {
-          iconContent: '',
-        },
-        {
-          preset: 'islands#redStretchyIcon',
-        }
-      );
+    //   // Метка где я сейчас нахажусь
+    //   let placemark = new map.Placemark(
+    //     [lat, lon],
+    //     {
+    //       iconContent: '',
+    //     },
+    //     {
+    //       preset: 'islands#redStretchyIcon',
+    //     }
+    //   );
 
-      let circle = new map.Circle(
-        [placemark.geometry.getCoordinates(), distanse * 1000],
-        {
-          geodesic: true,
-        },
-        {
-          fillColor: '#DB353266',
-          strokeColor: '#990066',
-          fillOpacity: 0.2,
-          strokeOpacity: 0.5,
-          strokeWidth: 2,
-        }
-      );
+    //   let circle = new map.Circle(
+    //     [placemark.geometry.getCoordinates(), distanse * 1000],
+    //     {
+    //       geodesic: true,
+    //     },
+    //     {
+    //       fillColor: '#DB353266',
+    //       strokeColor: '#990066',
+    //       fillOpacity: 0.2,
+    //       strokeOpacity: 0.5,
+    //       strokeWidth: 2,
+    //     }
+    //   );
 
-      placemark.events.add('drag', function (e) {
-        return circle.geometry.setCoordinates(
-          placemark.geometry.getCoordinates()
-        );
-      });
+    //   placemark.events.add('drag', function (e) {
+    //     return circle.geometry.setCoordinates(
+    //       placemark.geometry.getCoordinates()
+    //     );
+    //   });
 
-      driversI.geoObjects.add(placemark);
-      driversI.geoObjects.add(circle);
+    //   driversI.geoObjects.add(placemark);
+    //   driversI.geoObjects.add(circle);
 
-      // Объекты, попадающие в круг, будут остоваться.
-      let objectsInsideCircle = driversObjects.searchInside(circle);
-      // Оставшиеся объекты за радиусом - удаляются.
-      driversObjects.remove(objectsInsideCircle).removeFromMap(driversI);
+    //   // Объекты, попадающие в круг, будут остоваться.
+    //   let objectsInsideCircle = driversObjects.searchInside(circle);
+    //   // Оставшиеся объекты за радиусом - удаляются.
+    //   driversObjects.remove(objectsInsideCircle).removeFromMap(driversI);
 
-      // document
-      //   .querySelector('#form_driversall')
-      //   .addEventListener('click', function (e) {
-      //     if (e.target.classList.contains('form__button')) {
-      //       // console.log(this);
+    //   // document
+    //   //   .querySelector('#form_driversall')
+    //   //   .addEventListener('click', function (e) {
+    //   //     if (e.target.classList.contains('form__button')) {
+    //   //       // console.log(this);
 
-      //       let input1 = this.querySelector('[name = "inpusergeo"]').value;
-      //       distanse = this.querySelector('[name = "distance"]').value;
-      //       // console.log(input1, distanse);
+    //   //       let input1 = this.querySelector('[name = "inpusergeo"]').value;
+    //   //       distanse = this.querySelector('[name = "distance"]').value;
+    //   //       // console.log(input1, distanse);
 
-      //       driversI.container.fitToViewport();
-      //       console.log(distanse);
-      //       console.log(input1);
-      //       console.log(driversI);
-      //     }
-      //   });
+    //   //       driversI.container.fitToViewport();
+    //   //       console.log(distanse);
+    //   //       console.log(input1);
+    //   //       console.log(driversI);
+    //   //     }
+    //   //   });
 
-      maps.push(driversI);
-    }
+    //   maps.push(driversI);
+    // }
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));
 

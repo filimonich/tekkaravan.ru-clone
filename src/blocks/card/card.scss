@@ -23,7 +23,15 @@
         transition: transform 0.1s;
       }
     }
+
+    &-padding.section__unit {
+
+      @include media('<=xxs') {
+        padding: 0 10px;
+      }
+    }
   }
+
 
   &__top {
     display: flex;
@@ -97,7 +105,7 @@
     @include media('<=xs') {
       font-size: 14px;
     }
-    
+
     &_color.card__desctiption {
       font-weight: lighter;
       padding-top: 5px;
@@ -138,6 +146,16 @@
     align-items: center;
     justify-content: space-between;
     margin-top: auto;
+
+    &_date.card__panel {
+      flex-wrap: nowrap;
+    }
+
+    &_font {
+      justify-content: center;
+    }
+
+
   }
 
   &__date {
@@ -210,5 +228,44 @@
 
   &__hidden {
     display: none;
+  }
+
+  &__date_font {
+    font-size: 14px;
+    line-height: 24px;
+    color: $placeholder;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    // margin: 5px 0 0 8px;
+  }
+
+  &__date_font p {
+    // margin-bottom: 0;
+
+    //   @include media('<=lg') {
+    //     font-size: 12px;
+    //   }
+
+    //   @include media('<=md') {
+    //     font-size: 14px;
+    //   }
+
+    //   @include media('<=sm') {
+    //     font-size: 12px;
+    //   }
+
+    //   @include media('<=xs') {
+    //     font-size: 14px;
+    //   }
+
+    //   @include media('<=xxs') {
+    //     font-size: 14px;
+    //   }
+
+    @include media('<=xxxs') {
+      font-size: 12px;
+    }
   }
 }
