@@ -85,7 +85,7 @@
   }
 
   &__button-map.card-hvr__button-map {
-    content: '';
+    // content: '';
     position: relative;
     display: inline-block;
     top: 82%;
@@ -137,6 +137,10 @@
         }
       }
     }
+  }
+
+  &__fym {
+    
   }
 
   &__images {
