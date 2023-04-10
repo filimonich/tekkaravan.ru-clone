@@ -84,6 +84,79 @@
     }
   }
 
+  &__button-bg.card-hvr__button {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 82%;
+    right: 4%;
+    border-radius: 50%;
+    border: 2px solid $label;
+    width: 2.3rem;
+    height: 2.3rem;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:active {
+      background: rgba(0, 170, 255, 0.7);
+      top: 0.1em;
+      left: 0.1em;
+    }
+
+
+    &_cart {
+      &::after {
+        // content: "\f101";
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6%;
+        right: 7%;
+        width: 1.9rem;
+        height: 1.9rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-cart-view-black') center / 20px 20px no-repeat;
+
+        @include media('<=xs') {
+          top: -1%;
+          right: 3.5%;
+          background-size: 22px 22px;
+        }
+
+        @include media('<=xxxs') {
+          background-size: 20px 20px;
+        }
+      }
+    }
+
+    &_favorite {
+      &::after {
+        // content: "\f121";
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 1.8rem;
+        height: 1.9rem;
+        border-radius: 50%;
+        background: url('#{$images-path}icons-sprite.svg#icon-heart-view-black') center / 22px 20px no-repeat;
+
+        @include media('<=xs') {
+          // top: 8%;
+          background-size: 22px 22px;
+        }
+
+        @include media('<=xxxs') {
+          background-size: 20px 20px;
+        }
+      }
+    }
+  }
+
+
+
   &__button-map.card-hvr__button-map {
     // content: '';
     position: relative;
@@ -139,9 +212,7 @@
     }
   }
 
-  &__fym {
-    
-  }
+  &__fym {}
 
   &__images {
     box-sizing: border-box;
@@ -191,4 +262,9 @@
     font-size: 14px;
     color: $label;
   }
+}
+
+.active-hvr.card-hvr__button-bg {
+  background: rgba(0, 170, 255, 0.7);
+  transform: translateY(0.1em);
 }

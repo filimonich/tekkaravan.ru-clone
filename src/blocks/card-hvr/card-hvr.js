@@ -317,4 +317,11 @@
     },
   };
   window.hoverSlider = hs.init();
+
+  let buttons = document.querySelectorAll('.card-hvr__button-bg');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      this.classList.toggle('active-hvr');
+    });
+  });
 })();
