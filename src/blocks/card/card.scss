@@ -27,7 +27,7 @@
     &-padding.section__unit {
 
       @include media('<=xxs') {
-        padding: 0 10px;
+        padding: 2px 10px;
       }
     }
   }

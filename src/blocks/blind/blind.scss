@@ -1,285 +1,311 @@
 .blind {
-	$self: &;
-	box-sizing: border-box;
-	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+  $self: &;
+  box-sizing: border-box;
 
-	@include media('<=xxs') {
-		overflow: hidden;
+  @keyframes show_fade {
+    from {
+      opacity: 0;
+    }
 
-		&.dropped {
-			overflow: visible;
-			padding-bottom: calc(50vh - 100px);
-			padding-bottom: calc((var(--vh, 1vh) * 50) - 100px);
+    to {
+      opacity: 1;
+    }
+  }
 
-			#{$self}__feed {
-				height: calc(50vh - 175px);
-				height: calc((var(--vh, 1vh) * 50) - 175px);
-			}
+  @include media('<=xxs') {
+    overflow: hidden;
 
-			#{$self}__driversall.blind__feed {								
-					height: calc(50vh - 140px);
-					height: calc((var(--vh, 1vh) * 50) - 140px);
-			}
-			
-			#{$self}__up {
-				background-color: transparent;
-				
-				&::before {
-					display: block;
-				}
-			}
+    &.dropped {
+      overflow: visible;
+      padding-bottom: calc(50vh - 100px);
+      padding-bottom: calc((var(--vh, 1vh) * 50) - 100px);
 
-			#{$self}__toggle {
-				&::before, &::after {
-					background-image: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-black');
-				}
-			}
-		}
-	}
+      #{$self}__feed {
+        height: calc(50vh - 175px);
+        height: calc((var(--vh, 1vh) * 50) - 175px);
+      }
 
-	@include media('<=xxxs') {
-		overflow: hidden;
+      #{$self}__driversall.blind__feed {
+        height: calc(50vh - 140px);
+        height: calc((var(--vh, 1vh) * 50) - 140px);
+      }
 
-		&.dropped {
-			overflow: visible;
-			padding-bottom: calc(50vh - 100px);
-			padding-bottom: calc((var(--vh, 1vh) * 50) - 100px);
+      #{$self}__up {
+        background-color: transparent;
 
-			#{$self}__driversall.blind__feed {								
-				height: calc(50vh - 210px);
-				height: calc((var(--vh, 1vh) * 50) - 210px);
-			}
-		}
-	}
+        &::before {
+          display: block;
+        }
+      }
 
-	&_home {
-		padding-top: 125px;
-		
-		@include media('<=xxs') {
-			padding-top: 100px;
+      #{$self}__toggle {
 
-			#{$self}__feed {
-				height: calc(100vh - 175px);
-				height: calc((var(--vh, 1vh) * 100) - 175px);
-			}
-		}
-	}
+        &::before,
+        &::after {
+          background-image: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-black');
+        }
+      }
+    }
+  }
 
-	&__tab {
-		box-sizing: border-box;
-		background-color: #fff;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-		border-radius: 10px;
-		padding: 0 24px;
-		height: 36px;
-		// border: 1px solid lighten($accent, 30%);
-		display: flex;
-		justify-content: space-around;
-		margin-bottom: -18px;
-		@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
-		
-		@include media('<=sm') {
-			justify-content: space-between;
-		}
-		
-		@include media('<=xs') {
-			height: 45px;
-			margin: 0;
-			padding: 0 10px;
-			box-shadow: none;
-			border-radius: 0;
-		}
-		
-		@include media('<=xxs') {
-			height: 40px;
-			padding: 0 5px;
-		}
-	}
+  @include media('<=xxxs') {
+    overflow: hidden;
 
-	&__tab-button {
-		@extend %reset-button;
-		font-family: "RB", sans-serif;
-		font-size: 16px;
-		display: flex;
-		align-items: center;
-		transition: color 0.4s;
-		position: relative;
-		color: $text;
-		
-		@include media('<=xs') {
-			font-size: 15px;
-			color: #7b7a78;
-		}
-		
-		@include media('<=xxs') {
-			font-size: 13px;
-		}
+    &.dropped {
+      overflow: visible;
+      padding-bottom: calc(50vh - 100px);
+      padding-bottom: calc((var(--vh, 1vh) * 50) - 100px);
 
-		&::after {
-			display: none;
-			animation: show_fade 0.4s;
-			content: '';
-			height: 4px;
-			width: 100%;
-			background-color: $accent;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-		}
-	
-		&::before {
-			display: block;
-			content: '';
-			width: 25px;
-			height: 25px;
-			background-color: transparent;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-			filter: saturate(0) brightness(1.2);
-			margin-right: 12px;
+      #{$self}__driversall.blind__feed {
+        height: calc(50vh - 210px);
+        height: calc((var(--vh, 1vh) * 50) - 210px);
+      }
+    }
+  }
 
-			@include media('<=xs') {
-				display: none;
-			}
-		}
-		
-		&.active {
-			color: $accent;
+  &_home {
+    padding-top: 125px; //вернуть если нужна нижняя панель
 
-			&::before {
-				filter: none;
-			}
+    @include media('<=xxs') {
+      padding-top: 100px; //вернуть если нужна нижняя панель
 
-			&::after {
-				@include media('<=xs') {
-					display: block;
-				}
-			}
-		}
+      #{$self}__feed {
+        // height: calc(100vh - 175px);
+        // height: calc((var(--vh, 1vh) * 100) - 175px);
+        height: calc(100vh - 125px);
+        height: calc((var(--vh, 1vh) * 100) - 125px);
+      }
+    }
+  }
 
-		&_tracks::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-tracks-view-blue');
-			background-size: 25px 20px;
-		}
-		
-		&_cargo::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-cargo-view-blue');
-			background-size: 25px 20px;
-		}
-		
-		&_drivers::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-drivers-view-blue');
-			background-size: 25px 20px;
-		}
-		
-		&_parts::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-parts-view-blue');
-			background-size: 20px 20px;
-		}
-		
-		&_carrier::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
-			background-size: 25px 20px;
-		}
-	}
+  &__tab {
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0 24px;
+    height: 36px;
+    // border: 1px solid lighten($accent, 30%);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -18px;
 
-	&__feed {
-		@include media('<=xxs') {
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-			background-color: #fff;
-			position: fixed;
-			z-index: 4;
-			bottom: 50px;
-			width: 100%;
-			padding-top: 25px;
-			transition: height 0.4s;
-			height: calc(100vh - 135px);
-			height: calc((var(--vh, 1vh) * 100) - 135px);
-		}
-	}
-	
-	&__toggle {
-		@extend %reset-button;
-		display: none;
-		padding: 0 20px;
-		align-items: center;
-		justify-content: space-between;
-		
-		@include media('<=xxs') {
-			font-size: 15px;
-			display: flex;
-		}
-		
-		@include media('<=xxs') {
-			font-size: 13px;
-		}
-		
-		&::before, &::after {
-			display: block;
-			content: '';
-			width: 16px;
-			height: 10px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / contain no-repeat transparent;
-			filter: brightness(3.0);
-		}
-	}
+    @keyframes show_fade {
+      from {
+        opacity: 0;
+      }
 
-	&__inner {
-		box-sizing: border-box;
-		
-		@include media('<=xxs') {
-			overflow: auto;
-			padding-top: 10px;
-			height: 100%;
-		}
-	}
+      to {
+        opacity: 1;
+      }
+    }
 
-	&__up {
-		@extend %reset-button;
-		display: none;
-		height: 35px;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+    @include media('<=sm') {
+      justify-content: space-between;
+    }
 
-		&::before {
-			display: none;
-			content: '';
-			width: 50px;
-			height: 2px;
-			background-color: $label;
-			animation: show_fade 0.4s;
-		}
+    @include media('<=xs') {
+      height: 45px;
+      margin: 0;
+      padding: 0 10px;
+      box-shadow: none;
+      border-radius: 0;
+    }
 
-		@include media('<=xxs') {
-			display: flex;
-		}
-	}
+    @include media('<=xxs') {
+      height: 40px;
+      padding: 0 5px;
+    }
+  }
+
+  &__tab-button {
+    @extend %reset-button;
+    font-family: "RB", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.4s;
+    position: relative;
+    color: $text;
+
+    @include media('<=xs') {
+      font-size: 15px;
+      color: #7b7a78;
+    }
+
+    @include media('<=xxs') {
+      font-size: 13px;
+    }
+
+    &::after {
+      display: none;
+      animation: show_fade 0.4s;
+      content: '';
+      height: 4px;
+      width: 100%;
+      background-color: $accent;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      filter: saturate(0) brightness(1.2);
+      margin-right: 12px;
+
+      @include media('<=xs') {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: $accent;
+
+      &::before {
+        filter: none;
+      }
+
+      &::after {
+        @include media('<=xs') {
+          display: block;
+        }
+      }
+    }
+
+    &_tracks::before {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-tracks-view-blue');
+      background-size: 25px 20px;
+    }
+
+    &_cargo::before {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-cargo-view-blue');
+      background-size: 25px 20px;
+    }
+
+    &_drivers::before {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-drivers-view-blue');
+      background-size: 25px 20px;
+    }
+
+    &_parts::before {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-parts-view-blue');
+      background-size: 20px 20px;
+    }
+
+    &_carrier::before {
+      background-image: url('#{$images-path}icons-sprite.svg#icon-carrier-view-blue');
+      background-size: 25px 20px;
+    }
+  }
+
+  &__feed {
+    @include media('<=xxs') {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      position: fixed;
+      z-index: 4;
+      // bottom: 50px; // вернуть если нужна нижняя панель
+      bottom: 1px;
+      width: 100%;
+      padding-top: 25px; // вернуть если нужна нижняя панель
+      // padding-top: 75px; // удалить если нужна нижняя панель
+      transition: height 0.4s;
+      height: calc(100vh - 135px);
+      height: calc((var(--vh, 1vh) * 100) - 135px);
+    }
+  }
+
+  &__toggle {
+    @extend %reset-button;
+    display: none;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<=xxs') {
+      font-size: 15px;
+      display: flex;
+    }
+
+    @include media('<=xxs') {
+      font-size: 13px;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 10px;
+      background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / contain no-repeat transparent;
+      filter: brightness(3.0);
+    }
+  }
+
+  &__inner {
+    box-sizing: border-box;
+
+    @include media('<=xxs') {
+      overflow: auto;
+      padding-top: 10px;
+      // height: 100%; - добовляет белый блок в ботоме на мобильной версии
+    }
+  }
+
+  &__up {
+    @extend %reset-button;
+    display: none;
+    height: 35px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+
+    &::before {
+      display: none;
+      content: '';
+      width: 50px;
+      height: 2px;
+      background-color: $label;
+      animation: show_fade 0.4s;
+    }
+
+    @include media('<=xxs') {
+      display: flex;
+    }
+  }
 
 
-	&__tab-block {
-		animation: show_fade 0.4s;
-		display: none;
+  &__tab-block {
+    animation: show_fade 0.4s;
+    display: none;
 
-		&.active {
-			display: block;
-		}
-	}
+    &.active {
+      display: block;
+    }
+  }
 
-	&__mobile-only {
-		display: none;
-		@include media('<=xxs') {
-			display: flex;
-		}
-	}
+  &__mobile-only {
+    display: none;
 
-	&__tab-mob.blind__tab {
-		padding: 0 24px;
+    @include media('<=xxs') {
+      display: flex;
+    }
+  }
+
+  &__tab-mob.blind__tab {
+    padding: 0 24px;
     position: fixed;
     top: 70px;
     left: 32%;
@@ -288,49 +314,49 @@
     z-index: 3;
     border-radius: 3px;
     // border-radius: 20px;
-		justify-content: space-between;
-		box-shadow: 0.01em 0.1em 5px rgba(122,122,122,0.5);
+    justify-content: space-between;
+    box-shadow: 0.01em 0.1em 5px rgba(122, 122, 122, 0.5);
 
-		@include media('<=xxxs'){
-		padding: 0 16px;
-    top: 70px;
-    left: 26%;
-		width: 49.5%;
-    border-radius: 3px;
-		}
-	}
+    @include media('<=xxxs') {
+      padding: 0 16px;
+      top: 70px;
+      left: 26%;
+      width: 49.5%;
+      border-radius: 3px;
+    }
+  }
 
-	&__driversall.blind__feed {
+  &__driversall.blind__feed {
 
-		@include media('<=xxs') {
-			height: calc(100vh - 135px);
-			height: calc((var(--vh, 1vh) * 100) - 135px);
-		}
-	}
+    @include media('<=xxs') {
+      height: calc(100vh - 135px);
+      height: calc((var(--vh, 1vh) * 100) - 135px);
+    }
+  }
 
-	&__up-line.blind__up {
-		@extend %reset-button;
-		display: block;
-		height: 35px;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+  &__up-line.blind__up {
+    @extend %reset-button;
+    display: block;
+    height: 35px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0));
 
-		&::before {
-			display: block;
-			content: '';
-			width: 50px;
-			height: 3px;
-			background-color: $label;
-			animation: show_fade 0.4s;
-		}
+    &::before {
+      display: block;
+      content: '';
+      width: 50px;
+      height: 3px;
+      background-color: $label;
+      animation: show_fade 0.4s;
+    }
 
-		@include media('<=xxs') {
-			display: flex;
-		}
-	}
+    @include media('<=xxs') {
+      display: flex;
+    }
+  }
 }

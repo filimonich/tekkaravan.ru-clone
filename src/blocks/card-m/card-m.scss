@@ -9,10 +9,15 @@
     font-family: "RB", sans-serif;
     font-size: 17px;
     line-height: 20px;
+    align-items: center;
     // margin-bottom: 5px;
 
+    @include media('<=xxs') {
+      line-height: 1;
+    }
+
     &_date.card-m__top {
-      justify-content: center;
+      justify-content: start;
     }
 
     hr {
@@ -20,6 +25,7 @@
       padding: 0;
       margin: 0;
       width: 1px;
+      // height: 20px;
       border-left: 1px dotted $label;
     }
 
@@ -60,6 +66,10 @@
     // font-family: "RL", sans-serif;
     font-size: 15px;
     line-height: 24px;
+
+    @include media('<=xxs') {
+      line-height: 1;
+    }
 
     &::before {
       // display: block;
