@@ -98,6 +98,26 @@
     cursor: pointer;
     transition: all 0.4s ease;
 
+    @include media('<=sm') {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    @include media('<=xs') {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    @include media('<=xxs') {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    @include media('<=xxxs') {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
     &:active {
       background: rgba(0, 170, 255, 0.7);
       top: 0.1em;
@@ -111,21 +131,35 @@
         content: '';
         display: block;
         position: absolute;
-        top: 6%;
-        right: 7%;
+        top: 3%;
+        right: 6%;
         width: 1.9rem;
         height: 1.9rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-cart-view-black') center / 20px 20px no-repeat;
 
+        @include media('<=sm') {
+          top: -26%;
+          right: -16%;
+          background-size: 18px 18px;
+        }
+
         @include media('<=xs') {
-          top: -1%;
-          right: 3.5%;
-          background-size: 22px 22px;
+          top: -18%;
+          right: -10%;
+          background-size: 20px 20px;
+        }
+
+        @include media('<=xxs') {
+          top: -24%;
+          right: -18%;
+          background-size: 18px 18px;
         }
 
         @include media('<=xxxs') {
-          background-size: 20px 20px;
+          top: -38%;
+          right: -30%;
+          background-size: 16px 16px;
         }
       }
     }
@@ -141,15 +175,30 @@
         width: 1.8rem;
         height: 1.9rem;
         border-radius: 50%;
-        background: url('#{$images-path}icons-sprite.svg#icon-heart-view-black') center / 22px 20px no-repeat;
+        background: url('#{$images-path}icons-sprite.svg#icon-heart-view-black') center / 20px 20px no-repeat;
+
+        @include media('<=sm') {
+          top: -16%;
+          right: -14%;
+          background-size: 18px 18px;
+        }
 
         @include media('<=xs') {
-          // top: 8%;
-          background-size: 22px 22px;
+          top: -10%;
+          right: -8%;
+          background-size: 20px 20px;
+        }
+
+        @include media('<=xxs') {
+          top: -16%;
+          right: -16%;
+          background-size: 18px 18px;
         }
 
         @include media('<=xxxs') {
-          background-size: 20px 20px;
+          top: -28%;
+          right: -30%;
+          background-size: 16px 16px;
         }
       }
     }
