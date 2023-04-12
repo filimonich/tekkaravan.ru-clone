@@ -27,7 +27,7 @@
     &-padding.section__unit {
 
       @include media('<=xxs') {
-        padding: 2px 10px;
+        padding: 4px 10px;
       }
     }
   }
@@ -55,9 +55,10 @@
     &_color.card__title {
       font-family: "RL", sans-serif;
       font-weight: 400;
-      padding-top: 5px;
+      // padding-top: 5px;
       font-size: 14px;
       color: $label;
+      text-overflow: ellipsis; // удалить есле нужно будет, что бы слова не переносились
     }
   }
 

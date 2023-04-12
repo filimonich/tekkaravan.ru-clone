@@ -124,7 +124,7 @@
 
         @include media('<=xs') {
           grid-column: span 6;
-          margin-bottom: 20px;
+          margin-bottom: 0;
         }
 
         @include media('<=xxxs') {

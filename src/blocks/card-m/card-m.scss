@@ -13,7 +13,8 @@
     // margin-bottom: 5px;
 
     @include media('<=xxs') {
-      line-height: 1;
+      font-size: 15px;
+      line-height: 1.1;
     }
 
     &_date.card-m__top {
@@ -25,7 +26,7 @@
       padding: 0;
       margin: 0;
       width: 1px;
-      // height: 20px;
+      height: 25px;
       border-left: 1px dotted $label;
     }
 
@@ -91,13 +92,47 @@
       padding-left: 10px;
     }
 
-    &_one::before {
-      background-image: url('#{$images-path}icons-sprite.svg#icon-start-view-dark');
+    &_one {
+      @include media('<=xxs') {
+        margin-top: 2px;
+      }
+
+
+      &::before {
+        background-image: url('#{$images-path}icons-sprite.svg#icon-start-view-dark');
+      }
     }
 
-    &_two::before {
-      background-image: url('#{$images-path}icons-sprite.svg#icon-finished-view-dark');
-      // background-size: 12px 15px;
+
+    &_two {
+
+      @include media('<=xxs') {
+        margin-bottom: 2px;
+      }
+
+      &::before {
+        background-image: url('#{$images-path}icons-sprite.svg#icon-finished-view-dark');
+        // background-size: 12px 15px;
+      }
+    }
+
+
+    &-ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 1.2;
+      // color: rgb(108, 111, 136);
+      // color: $label;
+      color: $text;
+      opacity: 0.6;
+    }
+
+
+    &.card-m__line::before {
+      min-width: 12px;
+      height: 12px;
     }
   }
 
@@ -109,9 +144,17 @@
   }
 
   &__date-p {
-    font-size: 15px;
-    line-height: 24px;
+    // font-size: 15px;
+    // line-height: 24px;
+    // color: $placeholder;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 1.2;
+    // color: rgb(108, 111, 136);
     color: $placeholder;
+    // opacity: 0.8;
 
     &:first-child {
       padding-left: 20px;
