@@ -55,32 +55,6 @@
       }
     }
 
-    &_triple-less {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-gap: 24px;
-
-      @include media('<=xs') {
-        display: block;
-      }
-
-      #{$self}__unit {
-        grid-column: span 4;
-
-        @include media('<=md') {
-          grid-column: span 6;
-        }
-
-        @include media('<=xs') {
-          margin-bottom: 20px;
-        }
-
-        @include media('<=xxs') {
-          margin-bottom: 10px;
-        }
-      }
-    }
-
     &_quadro {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
