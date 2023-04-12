@@ -311,6 +311,28 @@
     font-size: 14px;
     color: $label;
   }
+
+  &__top-caption {
+    font-family: "RM", sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+    // font-size: 14px !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: $accent;
+
+    @include media('<=xs') {
+      font-size: 14px;
+    }
+
+    @include media('<=xxs') {
+      font-size: 12px;
+    }
+
+    span {
+      color: $accent;
+    }
+  }
 }
 
 .active-hvr.card-hvr__button-bg {
