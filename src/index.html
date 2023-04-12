@@ -149,15 +149,16 @@
 		<button class="blind__up"></button>
 		<div class="section blind__tab-block active">
 			<!-- <div class="section__layout section__layout_triple-less container"> -->
-			<!-- <div class="section__layout section__layout_quadro container"> -->
 
 			<!-- карточка водителя с фото -->
 			<!-- @@include("_card-mfn.html", { cls: "section__unit anim" }) -->
 
 			<!-- карточка с гаммы -->
-			<!-- @@include("_card-hvr.html", { cls: "section__unit anim" })
+			<div class="section__layout section__layout_quadro container">
+				@@include("_card-hvr.html", { cls: "section__unit anim" })
 				@@include("_card-hvr.html", { cls: "section__unit anim card_own" })
-				@@include("_card-hvr.html", { cls: "section__unit anim card_own" }) -->
+				@@include("_card-hvr.html", { cls: "section__unit anim card_own" })
+			</div>
 
 			<!-- старый вариант -->
 			<!-- <div class="section__layout section__layout_triple container"> -->
@@ -167,14 +168,15 @@
 			<!-- </div> -->
 
 			<!-- новый вариант, с главной логистиги -->
-			<div class="section__layout section__layout_triple container">
-				@@include("_card-l.html", { cls: "section__unit anim" })
-				@@include("_card-l.html", { cls: "section__unit anim card_own" })
-			</div>
 			<!-- <div class="section__layout section__layout_triple container"> -->
-			<!-- @@include("_card-j.html", { cls: "section__unit anim card_own" }) -->
-			<!-- @@include("_card-j.html", { cls: "section__unit anim card_own" }) -->
-			<!-- @@include("_card-j.html", { cls: "section__unit anim" }) -->
+			<!-- @@include("_card-l.html", { cls: "section__unit anim" }) -->
+			<!-- @@include("_card-l.html", { cls: "section__unit anim card_own" }) -->
+			<!-- </div> -->
+
+			<!-- <div class="section__layout section__layout_triple container"> -->
+			<!-- @@include("_card-j.html", { cls: "section__unit anim card_own" })
+				@@include("_card-j.html", { cls: "section__unit anim card_own" })
+				@@include("_card-j.html", { cls: "section__unit anim" }) -->
 			<!-- </div> -->
 		</div>
 		<div class="section blind__tab-block">

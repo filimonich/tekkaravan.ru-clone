@@ -78,12 +78,17 @@
     font-family: "RM", sans-serif;
     overflow: hidden;
     font-weight: bold;
-    font-size: 14px !important;
+    // font-size: 14px !important;
+    font-size: 16px;
     line-height: 24px;
     color: $text;
 
     @include media('<=xs') {
-      font-size: 16px;
+      font-size: 14px;
+    }
+
+    @include media('<=xxs') {
+      font-size: 12px;
     }
 
     span {
@@ -92,10 +97,14 @@
   }
 
   &__images {
-    height: 240px;
+    height: 230px;
+
+    @include media('<=xxs') {
+      height: 230px;
+    }
 
     @include media('<=xxxs') {
-      height: 200px;
+      height: 170px;
     }
   }
 
