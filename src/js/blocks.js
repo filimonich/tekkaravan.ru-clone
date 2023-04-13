@@ -18,4 +18,4 @@ import '../blocks/card-hvr/card-hvr.js';
 import '../blocks/whatsapp/whatsapp.js';
 import '../blocks/slider-fd/slider-fd.js';
 
-import "../blocks/slider-fd/slider-fd.js";
+import '../blocks/slider-fd/slider-fd.js';

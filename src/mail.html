@@ -90,7 +90,8 @@
             </div>
           </div>
 
-          <!-- <script type="text/javascript" charset="utf-8" src="ckeditor.js"></script>
+          <!-- <script type="text/javascript" charset="utf-8" src="ckeditor.js"></script> -->
+          <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
 
           <script type="text/javascript">
             CKEDITOR.replace('editor', {
@@ -100,7 +101,7 @@
               fullPage: true,
               basicEntities: false
             });
-          </script> -->
+          </script>
 
         </div>
         <div class="form__buttons form__buttons_grid col-12">
@@ -115,22 +116,23 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="email-templates" tabindex="-1" role="dialog" aria-labelledby="Шаблоны писем"
-  aria-hidden="true">
+<div class="modal fade show" id="modal__underlay" tabindex="-1" role="dialog" aria-labelledby="Шаблоны писем"
+  style="display: block;" aria-modal="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Шаблоны писем</h5>
-        <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
         </button>
       </div>
       <div class="modal-body row">
         <div class="col-lg-4 col-sm-6 col-12">
-          <!--<button type="button" loadhtml="mail-supplier" onclick="loadTemplate(this)">
-				<div class="image"><img class="w-100" src="{{ url }}/bellatrix/email-templates/images/mail-supplier.png" alt=""></div>
-				<div class="subtitle">Предложение поставщикам</div>
-			</button>-->
+          <button type="button" loadhtml="mail-supplier" onclick="loadTemplate(this)">
+            <div class="image"><img class="w-100"
+                src="https://gamma24.su/bellatrix/email-templates/images/mail-supplier.png" alt=""></div>
+            <div class="subtitle">Предложение поставщикам</div>
+          </button>
         </div>
       </div>
       <div class="modal-footer">
@@ -167,6 +169,25 @@
   }
 </style>
 
+<!-- Modal -->
+<!-- <div class="modal modal2 fade" id="modal__underlay" tabindex="-1" role="dialog" aria-labelledby="Текст письма"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal__body" role="document">
+    <div class="modal-content">
+      <div class="modal-body row align-items-center">
+        <div class="col-md-8 col-12">
+          <h3>E-mail рассылка в процессе</h3>
+          <p>Не закрывайте эту вкладку пока идет рассылка.</p>
+          <p>По заверешию рассылки это окно закроется автоматически.</p>
+        </div>
+        <div class="col-md-4 col-12">
+          <img src="/images/mail-download.gif" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -197,7 +218,7 @@
     $.get(`/bellatrix/email-templates/files/${$(item).attr('loadhtml')}.html`).done(response => {
       CKEDITOR.instances['editor'].setData(response);
     }).fail();
-    $('.modal').modal('hide')
+    $('.modal1').modal('hide')
   }
 
   let pageId;
