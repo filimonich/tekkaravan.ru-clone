@@ -88,13 +88,13 @@
     content: '';
     position: relative;
     display: inline-block;
-    top: 82%;
-    right: 4%;
+    top: 2px;
+    right: 2px;
     border-radius: 50%;
     border: 2px solid $label;
     width: 2.3rem;
     height: 2.3rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: all 0.4s ease;
 
@@ -120,8 +120,8 @@
 
     &:active {
       background: rgba(0, 170, 255, 0.7);
-      top: 0.1em;
-      left: 0.1em;
+      top: 0.1px;
+      left: 0.1px;
     }
 
 
@@ -131,34 +131,34 @@
         content: '';
         display: block;
         position: absolute;
-        top: 3%;
-        right: 6%;
+        top: 0;
+        right: 2px;
         width: 1.9rem;
         height: 1.9rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-cart-view-black') center / 20px 20px no-repeat;
 
         @include media('<=sm') {
-          top: -26%;
-          right: -16%;
+          top: -6px;
+          right: -3.5px;
           background-size: 18px 18px;
         }
 
         @include media('<=xs') {
-          top: -18%;
-          right: -10%;
+          top: -4.5px;
+          right: -2.5px;
           background-size: 20px 20px;
         }
 
         @include media('<=xxs') {
-          top: -24%;
-          right: -18%;
+          top: -5.6px;
+          right: -3.8px;
           background-size: 18px 18px;
         }
 
         @include media('<=xxxs') {
-          top: -38%;
-          right: -30%;
+          top: -6.6px;
+          right: -5.6px;
           background-size: 16px 16px;
         }
       }
@@ -170,34 +170,34 @@
         content: '';
         display: block;
         position: absolute;
-        top: 7%;
-        right: 7%;
+        top: 2px;
+        right: 3px;
         width: 1.8rem;
         height: 1.9rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-heart-view-black') center / 20px 20px no-repeat;
 
         @include media('<=sm') {
-          top: -16%;
-          right: -14%;
+          top: -3.8px;
+          right: -3.8px;
           background-size: 18px 18px;
         }
 
         @include media('<=xs') {
-          top: -10%;
-          right: -8%;
+          top: -2px;
+          right: -2px;
           background-size: 20px 20px;
         }
 
         @include media('<=xxs') {
-          top: -16%;
-          right: -16%;
+          top: -3.2px;
+          right: -3.6px;
           background-size: 18px 18px;
         }
 
         @include media('<=xxxs') {
-          top: -28%;
-          right: -30%;
+          top: -5.6px;
+          right: -5.2px;
           background-size: 16px 16px;
         }
       }
