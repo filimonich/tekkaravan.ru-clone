@@ -17,6 +17,10 @@
       min-height: 180px;
     }
 
+    @include media('<=xxs') {
+      min-height: 190px;
+    }
+
     @include media('<=xxxs') {
       min-height: 170px;
     }
@@ -161,7 +165,7 @@
 
         @include media('<=xxs') {
           top: -5.6px;
-          right: -3.8px;
+          right: -4.2px;
           background-size: 18px 18px;
         }
 
@@ -200,7 +204,7 @@
 
         @include media('<=xxs') {
           top: -3.2px;
-          right: -3.6px;
+          right: -3.9px;
           background-size: 18px 18px;
         }
 
@@ -298,6 +302,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include media('<=xxxs') {
+      bottom: -1.1rem;
+    }
   }
 
   &__hover-slider-indicator-dot {
@@ -316,9 +324,66 @@
   }
 
   &__title {
-    padding-top: 5px;
-    font-size: 14px;
-    color: $label;
+    font-family: "RB", sans-serif;
+    line-height: 24px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @include media('<=xs') {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_color.card-hvr__title {
+      font-family: "RL", sans-serif;
+      font-size: 14px;
+      color: $label;
+      text-overflow: ellipsis; // удалить если нужно будет, что бы слова не переносились
+      white-space: nowrap; // удалить если нужно будет, что бы слова не переносились
+      overflow: hidden; // удалить если нужно будет, что бы слова не переносились
+
+      @include media('<=xxxs') {
+        font-size: 14px;
+        line-height: 16px;
+        max-height: 32px;
+      }
+    }
+  }
+
+  &__top {}
+
+  &__line {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text;
+    opacity: 0.8;
+
+
+    @include media('<=xs') {
+      font-size: 14px;
+    }
+
+    @include media('<=xxs') {
+      font-size: 11px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    @include media('<=xxxs') {
+      font-size: 11px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: $label;
+    }
   }
 
   &__top-caption {
@@ -334,7 +399,17 @@
     }
 
     @include media('<=xxs') {
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    @include media('<=xxxs') {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 12px;
+      margin-bottom: 12px;
     }
 
     span {
