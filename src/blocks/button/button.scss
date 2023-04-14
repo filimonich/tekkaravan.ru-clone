@@ -182,4 +182,14 @@
       background-size: 14px 16px;
     }
   }
+
+  &_phone::after {
+    display: block;
+    background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-white');
+    background-size: 16px 18px;
+
+    @include media('<=xs') {
+      background-size: 14px 16px;
+    }
+  }
 }
