@@ -324,4 +324,28 @@
       this.classList.toggle('active-hvr');
     });
   });
+
+  const heartButtons = document.querySelectorAll('.card-hvr__heart-button');
+
+  heartButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const heartOutlines = button.querySelectorAll('.card-hvr__heart-outline');
+      const heartFills = button.querySelectorAll('.card-hvr__heart-fill');
+
+      heartOutlines.forEach(function (outline) {
+        const fillVisible =
+          outline.nextElementSibling.style.display === 'block';
+        outline.style.display = fillVisible ? 'block' : 'none';
+      });
+
+      heartFills.forEach(function (fill) {
+        const fillVisible = fill.style.display === 'block';
+        fill.style.display = fillVisible ? 'none' : 'block';
+      });
+    });
+  });
+
+  // const heartButtons = document.querySelectorAll('.card-hvr__heart-button');
+
+  // heartButtons.forEach(function (butt))
 })();

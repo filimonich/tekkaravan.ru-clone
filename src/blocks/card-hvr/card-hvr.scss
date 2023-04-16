@@ -28,12 +28,8 @@
 
   &__buttons {
     position: absolute;
-    top: 82%;
-    right: 4%;
-
-    @include media('<=xs') {
-      top: 80%;
-    }
+    top: 102%;
+    right: 2%;
   }
 
   &__button.card-hvr__button {
@@ -101,8 +97,8 @@
     content: '';
     position: relative;
     display: inline-block;
-    top: 2px;
-    right: 2px;
+    // top: -9px;
+    // right: -2px;
     border-radius: 50%;
     border: 2px solid $label;
     width: 2.3rem;
@@ -110,6 +106,11 @@
     background: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: all 0.4s ease;
+
+    @include media('<=md') {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
 
     @include media('<=sm') {
       width: 1.6rem;
@@ -129,12 +130,13 @@
     @include media('<=xxxs') {
       width: 1.4rem;
       height: 1.4rem;
+      // top: 38px;
     }
 
     &:active {
       background: rgba(0, 170, 255, 0.7);
-      top: 0.1px;
-      left: 0.1px;
+      top: 36px;
+      left: 4px;
     }
 
 
@@ -145,15 +147,21 @@
         display: block;
         position: absolute;
         top: 0;
-        right: 2px;
+        right: 1.6px;
         width: 1.9rem;
         height: 1.9rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-cart-view-black') center / 20px 20px no-repeat;
 
+        @include media('<=md') {
+          top: -5.6px;
+          right: -3.8px;
+          background-size: 18px 18px;
+        }
+
         @include media('<=sm') {
           top: -6px;
-          right: -3.5px;
+          right: -4.5px;
           background-size: 18px 18px;
         }
 
@@ -184,15 +192,21 @@
         display: block;
         position: absolute;
         top: 2px;
-        right: 3px;
+        right: 2.2px;
         width: 1.8rem;
         height: 1.9rem;
         border-radius: 50%;
         background: url('#{$images-path}icons-sprite.svg#icon-heart-view-black') center / 20px 20px no-repeat;
 
+        @include media('<=md') {
+          top: -3.2px;
+          right: -3.3px;
+          background-size: 18px 18px;
+        }
+
         @include media('<=sm') {
           top: -3.8px;
-          right: -3.8px;
+          right: -3px;
           background-size: 18px 18px;
         }
 
@@ -203,14 +217,14 @@
         }
 
         @include media('<=xxs') {
-          top: -3.2px;
-          right: -3.9px;
+          top: -3.8px;
+          right: -3.8px;
           background-size: 18px 18px;
         }
 
         @include media('<=xxxs') {
-          top: -5.6px;
-          right: -5.2px;
+          top: -5.4px;
+          right: -5.4px;
           background-size: 16px 16px;
         }
       }
@@ -291,21 +305,38 @@
 
   &__unit {
     padding: 0 0.5rem;
+    margin-top: -10px;
+
+    @include media('<=md') {
+      margin-top: -14px;
+    }
+
+    // @include media('<=sm') {
+    //   margin-top: -14px;
+    // }
+
+    @include media('<=xs') {
+      margin-top: -8px;
+    }
+
+    @include media('<=xxs') {
+      margin-top: -4px;
+    }
+
+    @include media('<=xxxs') {
+      margin-top: 0;
+    }
   }
 
   &__hover-slider-indicator {
     position: absolute;
     top: auto;
     right: 0;
-    bottom: -1rem;
+    bottom: 0.4rem;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @include media('<=xxxs') {
-      bottom: -1.1rem;
-    }
   }
 
   &__hover-slider-indicator-dot {
@@ -340,15 +371,37 @@
     &_color.card-hvr__title {
       font-family: "RL", sans-serif;
       font-size: 14px;
+      line-height: 18px;
       color: $label;
       text-overflow: ellipsis; // удалить если нужно будет, что бы слова не переносились
       white-space: nowrap; // удалить если нужно будет, что бы слова не переносились
       overflow: hidden; // удалить если нужно будет, что бы слова не переносились
+      margin-right: 36px;
+
+      @include media('<=md') {
+        font-size: 100%;
+      }
+
+      @include media('<=sm') {
+        font-size: 16px;
+        line-height: 20px;
+        margin-right: 21px;
+      }
+
+      @include media('<=xs') {
+        margin-right: 26px;
+      }
+
+      @include media('<=xxs') {
+        margin-right: 22px;
+      }
 
       @include media('<=xxxs') {
         font-size: 14px;
         line-height: 16px;
         max-height: 32px;
+        // width: 135px;
+        margin-right: 20px;
       }
     }
   }
@@ -359,14 +412,23 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     color: $text;
     opacity: 0.8;
+    margin-top: 6px;
+    margin-bottom: 6px;
 
+    @include media('<=sm') {
+      font-size: 12px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
 
     @include media('<=xs') {
-      font-size: 14px;
+      font-size: 12px;
+      margin-top: 8px;
+      margin-bottom: 10px;
     }
 
     @include media('<=xxs') {
@@ -377,8 +439,8 @@
 
     @include media('<=xxxs') {
       font-size: 11px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 8px;
+      margin-bottom: 6px;
     }
 
     span {
@@ -390,35 +452,68 @@
     font-family: "RM", sans-serif;
     overflow: hidden;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     color: $accent;
+    margin-top: 4px;
+    // margin-bottom: 4px;
+
+    @include media('<=md') {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    @include media('<=sm') {
+      margin-top: 6px;
+      font-size: 14px;
+      // margin-bottom: 6px;
+    }
 
     @include media('<=xs') {
-      font-size: 14px;
+      font-size: 16px;
+      margin-top: 6px;
+      // margin-bottom: 8px;
     }
 
     @include media('<=xxs') {
       font-size: 14px;
       line-height: 16px;
       margin-top: 8px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     @include media('<=xxxs') {
       font-size: 14px;
       line-height: 16px;
-      margin-top: 12px;
-      margin-bottom: 12px;
+      // margin-top: 8px;
+      // margin-bottom: 12px;
     }
 
     span {
       color: $accent;
     }
   }
+
+  &__heart-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__heart-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease-in-out;
+    stroke-width: 4;
+
+    &:hover {
+      stroke-width: 6;
+      transform: scale(1.1);
+    }
+  }
 }
 
 .active-hvr.card-hvr__button-bg {
-  background: rgba(0, 170, 255, 0.7);
-  transform: translateY(0.1em);
+  // background: rgba(0, 170, 255, 0.7);
+  transform: translateY(-0.1em);
 }
