@@ -1,0 +1,163 @@
+.card-m {
+  $self: &;
+  text-decoration: none;
+  color: $text;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    font-family: "RB", sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    align-items: center;
+    // margin-bottom: 5px;
+
+    @include media('<=xxs') {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    &_date.card-m__top {
+      justify-content: start;
+    }
+
+    hr {
+      border: none;
+      padding: 0;
+      margin: 0;
+      width: 1px;
+      height: 25px;
+      border-left: 1px dotted $label;
+    }
+
+    span {
+      display: block;
+      color: $label;
+      font-size: 11px;
+      font-family: "RR", sans-serif;
+      line-height: auto;
+    }
+  }
+
+  &__name {
+    flex-grow: 1;
+    text-align: center;
+    color: $accent;
+  }
+
+  &__distance {
+    flex-grow: 1;
+    text-align: center;
+
+  }
+
+  &__price {
+    flex-grow: 1;
+    text-align: center;
+
+  }
+
+  &__line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // display: flex;
+    display: block; // что бы появились три точки и текст сокращался
+    align-items: center;
+    // font-family: "RL", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+
+    @include media('<=xxs') {
+      line-height: 1;
+    }
+
+    &::before {
+      // display: block;
+      display: inline-flex;
+      content: '';
+      // width: 15px;
+      min-width: 15px; // что бы картинка не уменьшалась
+      height: 15px;
+      margin-right: 8px;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: center left;
+      background-size: contain;
+      filter: brightness(1.5);
+
+    }
+
+    &-padding {
+      padding-left: 10px;
+    }
+
+    &_one {
+      @include media('<=xxs') {
+        margin-top: 2px;
+      }
+
+
+      &::before {
+        background-image: url('#{$images-path}icons-sprite.svg#icon-start-view-dark');
+      }
+    }
+
+
+    &_two {
+
+      @include media('<=xxs') {
+        margin-bottom: 2px;
+      }
+
+      &::before {
+        background-image: url('#{$images-path}icons-sprite.svg#icon-finished-view-dark');
+        // background-size: 12px 15px;
+      }
+    }
+
+
+    &-ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 1.2;
+      // color: rgb(108, 111, 136);
+      // color: $label;
+      color: $text;
+      opacity: 0.6;
+    }
+
+
+    &.card-m__line::before {
+      min-width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__date {
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 22px;
+    color: $placeholder;
+  }
+
+  &__date-p {
+    // font-size: 15px;
+    // line-height: 24px;
+    // color: $placeholder;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 1.2;
+    // color: rgb(108, 111, 136);
+    color: $placeholder;
+    // opacity: 0.8;
+
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+}

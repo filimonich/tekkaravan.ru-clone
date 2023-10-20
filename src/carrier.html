@@ -1,0 +1,75 @@
+@@include("_head.html")
+@@include("_header.html")
+
+<div class="top mbt1">
+	<div class="top__inner container">
+		<div class="top__side breadcrumbs">
+			<a class="breadcrumbs__item" href="./">Главная</a>
+			<span class="breadcrumbs__item breadcrumbs__item_current">карьера</span>
+		</div>
+		<!-- <div class="top__buttons">
+			<button class="top__button top__button_filter filter__toggle">Фильтр</button>
+		</div> -->
+	</div>
+</div>
+
+<section class="section mb1 filters">
+	<div class="section__layout container">
+		<form class="section__unit section__unit_desktop form filter__form" action="./">
+			<h2 class="title section__toggle section__toggle_desktop">Расширенный поиск</h2>
+			<div class="section__collapse section__collapse_desktop">
+				<div class="form__body form__body_fourfold mbt1">
+					<label class="form__field form__field_txt" data-title="Наименование">
+						<input type="text" />
+					</label>
+					<label class="form__field form__field_txt" data-title="Сфера деятельности">
+						<input type="text" />
+					</label>
+					<label class="form__field form__field_txt" data-title="График">
+						<input type="text" />
+					</label>
+					<label class="form__field form__field_txt" data-title="Опыт работы">
+						<input type="text" />
+					</label>
+				</div>
+				<div class="form__buttons form__buttons_grid">
+					<button class="form__button button button_find" type="button">Найти</button>
+					<button class="form__button button button_reset" type="button">Сбросить</button>
+				</div>
+		</form>
+	</div>
+	</div>
+</section>
+
+<div class="blind__feed">
+	<button class="blind__up"></button>
+	<section class="blind__inner section mb2">
+		<div class="section__layout section__layout_triple container">
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim card_own" })
+			@@include("_card-c.html", { cls: "section__unit anim card_own" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+			@@include("_card-c.html", { cls: "section__unit anim" })
+		</div>
+	</section>
+</div>
+
+<!-- <div class="pagination mb2">
+	<div class="pagination__inner container">
+		<a class="pagination__link pagination__link_start" href="./"></a>
+		<a class="pagination__link pagination__link_prev" href="./"></a>
+		<a class="pagination__link" href="./">1</a>
+		<a class="pagination__link pagination__link_current" href="./">2</a>
+		<a class="pagination__link" href="./">3</a>
+		<a class="pagination__link" href="./">4</a>
+		<a class="pagination__link" href="./">5</a>
+		<a class="pagination__link pagination__link_next" href="./"></a>
+		<a class="pagination__link pagination__link_end" href="./"></a>
+	</div>
+</div> -->
+
+@@include("_bottom.html")

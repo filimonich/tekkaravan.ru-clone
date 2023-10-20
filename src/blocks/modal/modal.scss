@@ -1,0 +1,138 @@
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(8px);	
+	padding: 30px;
+	overflow-y: auto;
+	@keyframes show_fade_first { from { opacity: 0; } to { opacity: 1; }}
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+	
+	@include media('<=xxs') {
+		padding: 15px;
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&_error {
+		#{$self}__content {
+			&::after {
+				content: 'Задайте id целевого блока в атрибуте data-modal';
+			}
+		}
+	}
+
+	&_self {
+		#{$self}__body {
+			max-width: none;
+			width: auto;
+			padding: 0;
+			background-color: #1C2938;
+		}
+	}
+	
+	&_login {
+
+		#{$self}__body {
+			max-width: 450px;
+			
+			@include media('<=xxs') {
+				&.focused {
+					margin-top: 0;
+				}
+			}
+		}
+		
+		#{$self}__content {
+			animation: show_fade_first 0.3s;
+		}
+	}
+
+	&_restore {
+		
+		#{$self}__body {
+			max-width: 450px;
+			
+			@include media('<=xxs') {
+				&.focused {
+					margin-top: 0;
+				}
+			}
+		}
+		
+		#{$self}__content {
+			animation: show_fade 0.3s;
+		}
+	}
+
+	&__hidden {
+		display: none;
+	}
+	
+	&__close {
+		position: absolute;
+		top: 15px; right: 15px;
+		cursor: pointer;
+		width: 25px;
+		height: 25px;
+		z-index: 2;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 19px 19px no-repeat transparent;
+		transition: background-color 0.2s;
+	}
+
+	&__body {
+		@include slideInDown(
+			$duration: 0.7s,
+			$delay: 0s,
+			$function: ease, 
+			$fill: both			
+		);
+		box-sizing: border-box;
+		position: relative;
+		background-color: #fff;
+		border-radius: 16px;
+		// overflow: hidden;
+		margin: auto;
+		padding: 24px;
+		width: 100%;
+		max-width: 1000px;
+		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+	
+		@include media('<=xxs') {
+			padding: 20px;
+		}
+	}
+	
+	&__content {
+		min-height: 200px;
+		
+		@include media('<=xxs') {
+			min-height: 140px;
+		}
+		
+		@include media('<=xxxs') {
+
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		video {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,211 @@
+.whatsapp {
+	$self: &;
+  
+  &__modal-body {
+    max-width: 350px;
+  }
+
+  &__voice-message-modal .whatsapp__voice-preview .whatsapp__preview-header {
+    font-size: 20px;
+  }
+
+  &__voice-message-modal .whatsapp__voice-preview audio {
+    width: 280px;
+    height: 60px;
+
+    display: none;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview {
+    background: transparent !important;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview .whatsapp__preview-header {
+    display: none !important;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview audio {
+    display: block !important;
+    max-width: 70%;
+    position: absolute;
+    left: 14%;
+  }
+
+  &__voice-message-modal {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  &__voice-message-modal.active {
+    display: flex;
+  }
+
+  &__voice-message-modal {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    z-index: 1000;
+  }
+
+  &__voice-message-modal.active {
+    display: flex;
+  }
+
+  &__voice-message-modal .whatsapp__voice-preview {
+    max-width: 300px;
+    height: 60px;
+    background: $field;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  &__voice-message-modal .whatsapp__voice-preview .preview-header {
+    font-size: 20px;
+  }
+
+  &__voice-message-modal .whatsapp__voice-preview audio {
+    width: 280px;
+    height: 60px;
+
+    display: none;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview {
+    background: transparent !important;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview .preview-header {
+    display: none !important;
+  }
+
+  &__voice-message-modal.preview .whatsapp__voice-preview audio {
+    display: block !important;
+  }
+
+  &__voice-message-modal .whatsapp__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0px;
+  }
+
+  &__voice-message-modal .whatsapp__controls div {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.4s;
+
+    margin: 0px 10px;
+  }
+
+  &__voice-message-modal .whatsapp__stop-rec {
+    background: $warn;
+  }
+
+  &__voice-message-modal .whatsapp__stop-rec i {
+    width: 14px;
+    height: 14px;
+    background: white;
+  }
+
+  &__voice-message-modal .whatsapp__stop-rec:hover {
+    background: $warn;
+  }
+
+  &__voice-message-modal .whatsapp__cancel-rec {
+    display: none !important;
+    background: $warn;
+  }
+
+  &__voice-message-modal .whatsapp__cancel-rec i { 
+    background: url('#{$images-path}icons-sprite.svg#icon-close-view-white');
+    width: 16px;
+    height: 16px;
+  }
+
+  &__voice-message-modal .whatsapp__cancel-rec:hover {
+    background: $warn;
+  }
+
+  &__voice-message-modal .whatsapp__send-rec {
+    display: none !important;
+    background: #00ac48;
+  }
+
+  &__voice-message-modal .whatsapp__send-rec i {
+    background: url('#{$images-path}icons-sprite.svg#icon-env-view-white');
+    width: 16px;
+    height: 14px;
+  }
+
+  &__voice-message-modal .whatsapp__send-rec:hover {
+    background: #009940;
+  }
+
+  &__voice-message-modal.preview .whatsapp__stop-rec {
+    display: none !important;
+  }
+
+  &__voice-message-modal.preview .whatsapp__send-rec,
+  &__voice-message-modal.preview .whatsapp__cancel-rec {
+    display: flex !important;
+  }
+
+  &__button {
+    max-width: 200px;
+    
+    @include media('<=xxs') {
+      max-width: 150px;
+    }
+  }
+
+  &__button-shadow {
+    :hover {
+      filter: opacity(0.5);
+    }
+    :active {
+      filter: opacity(0.5);
+    }
+  }
+
+  &__info {
+    float: right;
+    max-width: 45%;
+    padding: 2px;
+    line-height: 1.2;
+    font-size: 14px;      
+    
+    @include media('<=xxxs') {
+      max-width: 40%;
+      font-size: 12px;        
+    }
+
+    @include media('<=xxs') {
+      font-size: 10px;        
+    }
+  } 
+}

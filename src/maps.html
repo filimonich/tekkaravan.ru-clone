@@ -1,0 +1,60 @@
+@@include("_head.html")
+@@include("_header.html")
+
+<div class="top mbt1">
+  <div class="top__inner container">
+    <div class="top__side breadcrumbs">
+      <a class="breadcrumbs__item" href="./">Главная</a>
+      <span class="breadcrumbs__item breadcrumbs__item_current">карты</span>
+    </div>
+    <!-- <div class="top__buttons">
+			<button class="top__button top__button_filter filter__toggle">Фильтр</button>
+		</div> -->
+  </div>
+</div>
+
+<section class="section mb1">
+
+  <!-- <div class="section__collapse section__map section__map_driversall section__map_mobile-only"></div> -->
+
+  <div class="filters">
+    <div class="section filters__tab-block active">
+      <div class="section__layout filters__block container">
+        <form class="section__unit section__unit_desktop form-s mb1" action="./maps.html" id="form_driversall">
+          <div class="section__collapse section__collapse_desktop form">
+            <div class="form__body form__body_double mbt1">
+              <label class="form__field form__field_txt" data-title="Место локации">
+                <input type="text" value="" name="inpusergeo" id="suggest">
+              </label>
+              <label class="form__field form__field_txt" data-title="Радиус км">
+                <input type="text" value="" name="distance" id="distanceDrivers">
+              </label>
+            </div>
+            <div class="form__buttons form__buttons_grid">
+              <button class="form__button button button_find form-ct__button" type="submit" id="button">Найти</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="section__layout section__layout_double container">
+    <div class="section__unit section__unit_shrink section__unit_mobile-only">
+      <h2 class="title section__toggle">На карте</h2>
+      <div class="section__collapse section__map section__map_driversall mt1"></div>
+    </div>
+
+    <!-- <div class="section__unit section__unit_shrink">
+      <h2 class="title section__toggle">На карте</h2>
+      <div class="section__collapse section__map section__map_range mt1"></div>
+    </div>
+
+    <div class="section__unit section__unit_shrink">
+      <h2 class="title section__toggle">На карте</h2>
+      <div class="section__collapse section__map section__map_usergeo mt1"></div>
+    </div> -->
+  </div>
+</section>
+
+@@include("_bottom.html")

@@ -1,0 +1,26 @@
+.form-ln {
+	$self: &;
+
+	&__layout {
+
+	}
+
+	&__item {
+		margin-bottom: 24px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		
+		&_grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+			grid-gap: 24px;
+		}
+	}
+
+	&__button {
+		min-width: 175px;
+	}
+}

@@ -1,0 +1,284 @@
+.card {
+  $self: &;
+
+  &_own {
+    background-color: $own !important;
+  }
+
+  &_less {
+    @include media('<=xxs') {
+
+      #{$self}__top,
+      #{$self}__lines,
+      #{$self}__panel {
+        display: none;
+      }
+
+      #{$self}__hidden {
+        display: block;
+      }
+
+      &:active {
+        transform: scale(95%);
+        transition: transform 0.1s;
+      }
+    }
+
+    &-padding.section__unit {
+
+      @include media('<=xxs') {
+        padding: 4px 10px;
+      }
+    }
+  }
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "RB", sans-serif;
+    line-height: 24px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @include media('<=xs') {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_color.card__title {
+      font-family: "RL", sans-serif;
+      font-weight: 400;
+      // padding-top: 5px;
+      font-size: 14px;
+      color: $label;
+      text-overflow: ellipsis; // удалить если нужно будет, что бы слова не переносились
+      white-space: nowrap; // удалить если нужно будет, что бы слова не переносились
+      overflow: hidden; // удалить если нужно будет, что бы слова не переносились
+    }
+  }
+
+  &__top-side {
+    font-family: "RM", sans-serif;
+    font-size: 18px;
+
+    @include media('<=xs') {
+      font-size: 16px;
+    }
+
+    span {
+      color: $accent;
+    }
+  }
+
+  &__top-caption {
+    font-family: "RM", sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+    // font-size: 14px !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text;
+
+    @include media('<=xs') {
+      font-size: 14px;
+    }
+
+    @include media('<=xxs') {
+      font-size: 12px;
+    }
+
+    span {
+      color: $text;
+    }
+  }
+
+  &__images {
+    // min-height: 60px;
+    min-height: 50%;
+    max-height: 210px;
+    // height: 100%;
+
+    // @include media('<=xxs') {
+    //   height: 100%;
+    // }
+
+    @include media('<=xxxs') {
+      max-height: 160px;
+    }
+  }
+
+  &__desctiption {
+    font-family: "RL", sans-serif;
+
+    @include media('<=xs') {
+      font-size: 14px;
+    }
+
+    &_color.card__desctiption {
+      font-weight: lighter;
+      padding-top: 5px;
+      font-size: 14px;
+      color: $label;
+    }
+  }
+
+  &__lines {
+    font-size: 14px;
+  }
+
+  &__line {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: 6px 10px;
+
+    &:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__line-name {
+    font-family: "RM", sans-serif;
+    margin-right: 12px;
+  }
+
+  &__line-value {
+    text-align: right;
+  }
+
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+
+    &_date.card__panel {
+      flex-wrap: nowrap;
+    }
+
+    &_font {
+      justify-content: center;
+    }
+  }
+
+  &__date {
+    margin: 5px 5px 5px 0;
+
+    &.date {
+
+      @include media('<=xs') {
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      @include media('<=xs') {
+        font-size: 12px;
+      }
+
+      &::before {
+        @include media('<=xs') {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    grid-gap: 10px;
+
+    @include media('<=xs') {
+      grid-template-columns: repeat(3, 30px);
+      grid-gap: 16px;
+    }
+
+    @include media('<=xxxs') {
+      grid-template-columns: repeat(3, 26px);
+      grid-gap: 8px;
+    }
+  }
+
+  &__buttons {}
+
+  &__button {
+    max-width: 180px;
+    margin: 0 auto;
+
+    &_panel {
+      margin: 0;
+
+      &.button {
+        border-radius: 7px;
+        padding: 5px 15px;
+        height: 36px;
+        width: 100%;
+        max-width: 48%;
+        // max-width: 150px; // поставил проценты что бы кнопки не перескакивали и были резиновые
+        font-size: 15px;
+
+        @include media('<=xs') {
+          font-size: 14px;
+        }
+
+        @include media('<=xxs') {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__date_font {
+    font-size: 14px;
+    line-height: 24px;
+    color: $placeholder;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    // margin: 5px 0 0 8px;
+  }
+
+  &__date_font p {
+    // margin-bottom: 0;
+
+    //   @include media('<=lg') {
+    //     font-size: 12px;
+    //   }
+
+    //   @include media('<=md') {
+    //     font-size: 14px;
+    //   }
+
+    //   @include media('<=sm') {
+    //     font-size: 12px;
+    //   }
+
+    //   @include media('<=xs') {
+    //     font-size: 14px;
+    //   }
+
+    //   @include media('<=xxs') {
+    //     font-size: 14px;
+    //   }
+
+    @include media('<=xxxs') {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.social {
+	$self: &;
+
+	&__link {
+		width: 24px;
+		height: 24px;
+		border-radius: 3px;
+
+		@include media('<=xs') {
+			width: 30px;
+			height: 30px;
+		}
+
+		@include media('<=xxxs') {
+			width: 26px;
+			height: 26px;
+		}
+
+		&_phone {
+			background: url('#{$images-path}icons-sprite.svg#icon-phone-view-white') center / 16px 17px no-repeat $accent;
+
+			@include media('<=xs') {
+				background-size: 20px 22px;
+			}
+
+			@include media('<=xxxs') { 
+				background-size: 18px 20px;
+			}
+		}
+		
+		&_mail {
+			background: url('#{$images-path}icons-sprite.svg#icon-env-view-white') center / 18px 14px no-repeat #3B60C4;
+
+			@include media('<=xs') {
+				background-size: 22px 16px;
+			}
+			
+			@include media('<=xxxs') {
+				background-size: 18px 14px;
+			}
+		}
+		
+		&_wapp {
+			background: url('#{$images-path}icons-sprite.svg#icon-wapp-view-white') center / 18px 18px no-repeat #00D33B;
+
+			@include media('<=xs') {
+				background-size: 22px 22px;
+			}
+
+			@include media('<=xxxs') {
+				background-size: 20px 20px;
+			}
+		}
+	}
+}
